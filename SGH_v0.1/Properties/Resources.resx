@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,6 +60,7 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -68,9 +69,10 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="name" use="required" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -85,9 +87,10 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -109,9 +112,172 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Add_New" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Add New.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Add_New_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Add New-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Add_User_Group_Woman_Man" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Add User Group Woman Man.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Add_User_Group_Woman_Man_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Add User Group Woman Man-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Business_Report" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Business Report.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Business_Report_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Business Report-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cama" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\cama.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cama_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\cama-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cancel_Order" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Cancel Order.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cancel_Order_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Cancel Order-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Compress" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Compress.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Compress_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Compress-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Disponibles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Disponibles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Disponibles_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Disponibles-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Google_Web_Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Google Web Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Google_Web_Search_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Google Web Search-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Home_Page" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Home Page.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Home_Page_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Home Page-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hotel_Check_In" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Hotel Check In.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hotel_Check_In_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Hotel Check In-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hotel_Check_Out" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Hotel Check Out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hotel_Check_Out_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Hotel Check Out-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Housekeeping" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Housekeeping.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Housekeeping_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Housekeeping-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icono_Contraseña" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Icono_Contraseña.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icono_Contraseña_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Icono_Contraseña-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icono_Contraseña_1_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Icono_Contraseña-1-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icono_Contraseña_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Icono_Contraseña-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Info" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Info_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Info-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGOTIPO_FONDO1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\LOGOTIPO_FONDO1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGOTIPO_FONDO2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\LOGOTIPO_FONDO2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mantenimiento" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Mantenimiento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mantenimiento_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Mantenimiento-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Multiplication" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Multiplication.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Multiplication_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Multiplication-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ocupadas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Ocupadas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ocupadas_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Ocupadas-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Open_Door" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Open Door.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Open_Door_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Open Door-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Pay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pay_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Pay-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pencil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Pencil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pencil_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Pencil-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Profile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Profile_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Profile-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Remove_Book" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Remove Book.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Remove_Book_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Remove Book-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Room" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Room.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Room_Service" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Room Service.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Room_Service_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Room Service-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Room_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Room-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Save_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Iconos_Proyecto\Save-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
