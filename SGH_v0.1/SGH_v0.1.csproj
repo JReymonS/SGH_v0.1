@@ -56,18 +56,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -88,166 +88,166 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Add New.png" />
+    <None Include="Resources\Save-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Add New-white.png" />
+    <None Include="Resources\Room-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Add User Group Woman Man.png" />
+    <None Include="Resources\Room Service-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Add User Group Woman Man-white.png" />
+    <None Include="Resources\Remove Book-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Business Report.png" />
+    <None Include="Resources\Profile-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Business Report-white.png" />
+    <None Include="Resources\Pencil-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\cama.png" />
+    <None Include="Resources\Pay-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\cama-white.png" />
+    <None Include="Resources\Open Door-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Cancel Order.png" />
+    <None Include="Resources\Ocupadas-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Cancel Order-white.png" />
+    <None Include="Resources\Multiplication-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Compress.png" />
+    <None Include="Resources\Mantenimiento-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Compress-white.png" />
+    <None Include="Resources\Info-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Disponibles.png" />
+    <None Include="Resources\Icono_Contraseña-1-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Disponibles-white.png" />
+    <None Include="Resources\Icono_Contraseña-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Google Web Search.png" />
+    <None Include="Resources\Housekeeping-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Google Web Search-white.png" />
+    <None Include="Resources\Hotel Check Out-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Home Page.png" />
+    <None Include="Resources\Hotel Check In-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Home Page-white.png" />
+    <None Include="Resources\Home Page-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Hotel Check In.png" />
+    <None Include="Resources\Google Web Search-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Hotel Check In-white.png" />
+    <None Include="Resources\Disponibles-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Hotel Check Out.png" />
+    <None Include="Resources\Compress-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Hotel Check Out-white.png" />
+    <None Include="Resources\Cancel Order-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Housekeeping.png" />
+    <None Include="Resources\cama-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Housekeeping-white.png" />
+    <None Include="Resources\Business Report-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Icono_Contraseña.png" />
+    <None Include="Resources\Add User Group Woman Man-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Icono_Contraseña-1.png" />
+    <None Include="Resources\Add New-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Icono_Contraseña-1-white.png" />
+    <None Include="Resources\LOGOTIPO_FONDO1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Icono_Contraseña-white.png" />
+    <None Include="Resources\LOGOTIPO_FONDO2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Info.png" />
+    <None Include="Resources\Add New.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Info-white.png" />
+    <None Include="Resources\Add User Group Woman Man.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\LOGOTIPO_FONDO1.png" />
+    <None Include="Resources\Business Report.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\LOGOTIPO_FONDO2.png" />
+    <None Include="Resources\cama.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Mantenimiento.png" />
+    <None Include="Resources\Cancel Order.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Mantenimiento-white.png" />
+    <None Include="Resources\Compress.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Multiplication.png" />
+    <None Include="Resources\Disponibles.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Multiplication-white.png" />
+    <None Include="Resources\Google Web Search.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Ocupadas.png" />
+    <None Include="Resources\Home Page.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Ocupadas-white.png" />
+    <None Include="Resources\Hotel Check In.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Open Door.png" />
+    <None Include="Resources\Hotel Check Out.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Open Door-white.png" />
+    <None Include="Resources\Housekeeping.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Pay.png" />
+    <None Include="Resources\Icono_Contraseña.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Pay-white.png" />
+    <None Include="Resources\Icono_Contraseña-1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Pencil.png" />
+    <None Include="Resources\Info.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Pencil-white.png" />
+    <None Include="Resources\Mantenimiento.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Profile.png" />
+    <None Include="Resources\Multiplication.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Profile-white.png" />
+    <None Include="Resources\Ocupadas.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Remove Book.png" />
+    <None Include="Resources\Open Door.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Remove Book-white.png" />
+    <None Include="Resources\Pay.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Room Service.png" />
+    <None Include="Resources\Pencil.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Room Service-white.png" />
+    <None Include="Resources\Profile.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Room.png" />
+    <None Include="Resources\Remove Book.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Room-white.png" />
+    <None Include="Resources\Room Service.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Save.png" />
+    <None Include="Resources\Room.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Iconos_Proyecto\Save-white.png" />
+    <None Include="Resources\Save.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
