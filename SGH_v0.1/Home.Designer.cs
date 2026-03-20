@@ -1,6 +1,6 @@
 ﻿namespace SGH_v0._1
 {
-    partial class Form1
+    partial class Home
     {
         /// <summary>
         /// Variable del diseñador necesaria.
