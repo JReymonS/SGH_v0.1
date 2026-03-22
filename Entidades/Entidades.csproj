@@ -41,8 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cargos.cs" />
+    <Compile Include="Facturas.cs" />
+    <Compile Include="Habitaciones.cs" />
+    <Compile Include="Huespedes.cs" />
     <Compile Include="Modulos.cs" />
     <Compile Include="Permisos.cs" />
+    <Compile Include="Reservas.cs" />
     <Compile Include="Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
