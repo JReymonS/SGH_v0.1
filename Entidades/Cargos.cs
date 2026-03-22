@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Manejadores
+namespace Entidades
 {
-    public class Class1
+    public class Cargos
     {
+        //Agregar lo necesario para esta entidad...
     }
 }
