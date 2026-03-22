@@ -1,14 +1,10 @@
 ﻿using AccesoDatos;
 using Entidades;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Net;
-using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Manejadores
 {
@@ -16,14 +12,26 @@ namespace Manejadores
     {
         Base b = new Base("localhost", "root", "2026", "SistemaGestionHotelera");
 
-        public (bool Acceso, string Mensaje, Usuarios UsuarioAcceso, Permisos Permisos) ValidarLogin (string Usuario, string Contrasena)
+
+        //Validacion de Login
+        public (bool Acceso, string Mensaje, Usuarios UsuarioAcceso) ValidarLogin (string Usuario, string Contrasena)
         {
+             if(string.IsNullOrEmpty(Usuario) || string.IsNullOrEmpty(Contrasena)) 
+            {
+                return (false, "Por favor complete todos los campos.", null);
+            }
+
+            if (Usuario.ToString().Length > 255 || Contrasena.ToString().Length > 255) 
+            {
+                return (false, "Solo se admite un maximo de 255 caracteres en cada campo.", null);
+            }
+
+
             DataSet ds = b.Consulta($"SELECT * FROM v_UsuariosLogin WHERE BINARY Nombre like '%{Usuario}%' AND Contrasena like '%{Sha1(Contrasena)}%'", "v_UsuariosLogin");
             if (ds.Tables.Count>0 && ds.Tables[0].Rows.Count >= 1) 
             {
                 DataTable dt = ds.Tables[0];
                 Usuarios user = new Usuarios(0, "", "", "", false, "");
-                Permisos permiso = new Permisos(0,0,0,false,false);
 
                 foreach (DataRow row in dt.Rows) 
                 {
@@ -33,23 +41,35 @@ namespace Manejadores
                         user.Nombre = Convert.ToString(row["Nombre"]);
                     }
 
-                    if(permiso.Id_Permiso == 0) 
-                    {
-                        permiso.Id_Permiso = Convert.ToInt32(row["Id_Permiso"]);
-                        permiso.Id_Usuario = Convert.ToInt32(row["Id_Usuario"]);
-                        permiso.Id_Modulo = Convert.ToInt32(row["Id_Modulo"]);
-                        permiso.permiso_escritura = Convert.ToBoolean(row["permiso_escritura"]);
-                        permiso.permiso_leer_abrir = Convert.ToBoolean(row["permiso_leer_abrir"]);
-                    }
+                    Permisos Permiso = new Permisos
+                    ( 
+                        Convert.ToInt32(row["Id_Permiso"]),
+                        Convert.ToInt32(row["Id_Usuario"]),
+                        Convert.ToInt32(row["Id_Modulo"]),
+                        Convert.ToBoolean(row["permiso_leer_abrir"]),
+                        Convert.ToBoolean(row["permiso_escritura"])
+                    );
+                    user.ListaPermisos.Add(Permiso);
                 }
-                return (true, "Acceso concedido", user, permiso);
+                return (true, "Acceso concedido.", user);
             }
             else 
             {
-                return (false, "Acceso denegado", null, null);
+                return (false, "Usuario y/o contraseña incorrectos.", null);
             }
 
         }
+
+
+        //Ocultar o mostrar contraseña
+        public void VisualizaContrasena(TextBox contrasena, bool mostrar) 
+        {
+            contrasena.PasswordChar = (mostrar) ? '\0' : '*';
+        }
+
+        //Limpiar campos
+        public void LimpiarCampos(TextBox usuario, TextBox contrasena) { usuario.Clear(); contrasena.Clear();}
+
 
         public static string Sha1(string texto) 
         {

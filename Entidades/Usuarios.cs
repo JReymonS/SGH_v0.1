@@ -1,4 +1,6 @@
-﻿namespace Entidades
+﻿using System.Collections.Generic;
+
+namespace Entidades
 {
     public class Usuarios
     {
@@ -10,6 +12,7 @@
             Rol = rol;
             Estatus = estatus;
             FechaRegistro = fechaRegistro;
+            ListaPermisos = new List<Permisos>();
         }
 
         public int Id_Usuario { get; set; }
@@ -18,5 +21,6 @@
         public string Rol { get; set;}
         public bool Estatus { get ; set; }
         public string FechaRegistro { get; set; }
-    }
+        public List<Permisos> ListaPermisos { get; set; }
+    }   
 }
