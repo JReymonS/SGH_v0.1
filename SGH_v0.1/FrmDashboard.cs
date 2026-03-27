@@ -16,5 +16,10 @@ namespace SGH_v0._1
         {
             InitializeComponent();
         }
+
+        private void FrmDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
