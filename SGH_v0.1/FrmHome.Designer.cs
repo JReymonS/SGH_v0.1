@@ -138,6 +138,7 @@
             this.tsbUsuarios.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
             this.tsbUsuarios.Size = new System.Drawing.Size(85, 50);
             this.tsbUsuarios.Text = "USUARIOS";
+            this.tsbUsuarios.Click += new System.EventHandler(this.tsbUsuarios_Click);
             // 
             // tsbLogout
             // 

@@ -43,6 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ManejadoLogin.cs" />
+    <Compile Include="ManejadorPermisos.cs" />
+    <Compile Include="ManejadorUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

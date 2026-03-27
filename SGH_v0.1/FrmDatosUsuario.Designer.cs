@@ -29,14 +29,16 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtContrasena = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.txtRol = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -51,16 +53,6 @@
             this.panel1.Size = new System.Drawing.Size(841, 65);
             this.panel1.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(316, 42);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "DATOS DEL USUARIO";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::SGH_v0._1.Properties.Resources.Room_white;
@@ -70,6 +62,16 @@
             this.pictureBox1.Size = new System.Drawing.Size(47, 50);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Montserrat SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(28, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(316, 42);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "DATOS DEL USUARIO";
             // 
             // label2
             // 
@@ -107,31 +109,59 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "CONTRASEÑA:";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(223, 169);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(260, 25);
-            this.dateTimePicker1.TabIndex = 5;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(30, 168);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(189, 25);
+            this.label4.Size = new System.Drawing.Size(161, 25);
             this.label4.TabIndex = 6;
-            this.label4.Text = "FECHA DE REGISTRO:";
+            this.label4.Text = "ROL DE USUARIO:";
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackgroundImage = global::SGH_v0._1.Properties.Resources.Save;
+            this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Location = new System.Drawing.Point(711, 213);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(40, 40);
+            this.btnGuardar.TabIndex = 9;
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackgroundImage = global::SGH_v0._1.Properties.Resources.Multiplication;
+            this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Location = new System.Drawing.Point(779, 213);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(40, 40);
+            this.btnCancelar.TabIndex = 10;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // txtRol
+            // 
+            this.txtRol.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRol.Location = new System.Drawing.Point(195, 165);
+            this.txtRol.Name = "txtRol";
+            this.txtRol.Size = new System.Drawing.Size(191, 33);
+            this.txtRol.TabIndex = 5;
             // 
             // FrmDatosUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(873, 320);
+            this.ClientSize = new System.Drawing.Size(873, 279);
+            this.Controls.Add(this.txtRol);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.txtContrasena);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNombre);
@@ -160,7 +190,9 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.TextBox txtRol;
     }
 }

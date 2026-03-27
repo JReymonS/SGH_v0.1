@@ -52,5 +52,12 @@ namespace SGH_v0._1
         {
             Application.Restart();
         }
+
+        private void tsbUsuarios_Click(object sender, EventArgs e)
+        {
+            FrmUsuarios frmUsuarios = new FrmUsuarios();
+            frmUsuarios.MdiParent = this;
+            frmUsuarios.Show();
+        }
     }
 }
