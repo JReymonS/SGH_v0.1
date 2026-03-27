@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.pEncabezado = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dtgDatos = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
@@ -60,16 +60,6 @@
             this.pEncabezado.Size = new System.Drawing.Size(792, 65);
             this.pEncabezado.TabIndex = 1;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(25, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 42);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "PERMISOS";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::SGH_v0._1.Properties.Resources.Room_white;
@@ -79,6 +69,16 @@
             this.pictureBox1.Size = new System.Drawing.Size(47, 50);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Montserrat SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(25, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(168, 42);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "PERMISOS";
             // 
             // label2
             // 
@@ -102,6 +102,7 @@
             this.dtgDatos.ReadOnly = true;
             this.dtgDatos.Size = new System.Drawing.Size(360, 150);
             this.dtgDatos.TabIndex = 6;
+            this.dtgDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgDatos_CellClick);
             // 
             // label3
             // 
@@ -193,6 +194,7 @@
             this.btnAgregar.Size = new System.Drawing.Size(35, 35);
             this.btnAgregar.TabIndex = 15;
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnGuardar
             // 
@@ -217,6 +219,7 @@
             this.btnBorrar.Size = new System.Drawing.Size(40, 40);
             this.btnBorrar.TabIndex = 17;
             this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnCancelar
             // 
