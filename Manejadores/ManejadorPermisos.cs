@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using AccesoDatos;
 using Entidades;
 
@@ -27,7 +20,7 @@ namespace Manejadores
         //Eliminar permisos
         public void EliminarPermisos(Permisos permisos, string modulo) 
         {
-            var rs = MessageBox.Show($"¿Esta seguro de elminar el permiso para: {modulo}?","¡Atención!",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var rs = MessageBox.Show($"¿Esta seguro de eliminar el permiso para: {modulo}?","¡Atención!",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes)
             {
                 var rs1 = b.Consulta($"CALL p_EliminarPermiso({permisos.Id_Permiso},{permisos.Id_Usuario},{permisos.Id_Modulo})", "msg");
@@ -52,6 +45,19 @@ namespace Manejadores
             return rs;
         }
 
+
+        //Validar permisos en checklist
+        public bool ValidarPermisos(CheckBox leer, CheckBox escribir) 
+        {
+            bool rs = false;
+            if(!leer.Checked && !escribir.Checked) 
+            {
+                rs = false;
+                MessageBox.Show("Debe seleccionar al menos un permiso para poder agregarlo.", "¡Atención!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else { rs = true; }
+            return rs;
+        }
 
 
         //Mostrar permisos asignados

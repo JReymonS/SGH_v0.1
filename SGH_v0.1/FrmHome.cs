@@ -47,17 +47,19 @@ namespace SGH_v0._1
         }
 
 
-        //Cerrar sesion
-        private void tsbLogout_Click(object sender, EventArgs e)
-        {
-            Application.Restart();
-        }
-
+        //Administrar usuarios
         private void tsbUsuarios_Click(object sender, EventArgs e)
         {
             FrmUsuarios frmUsuarios = new FrmUsuarios();
             frmUsuarios.MdiParent = this;
             frmUsuarios.Show();
+        }
+
+
+        //Cerrar sesion
+        private void tsbLogout_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
     }
 }

@@ -1,13 +1,6 @@
 ﻿using Entidades;
 using Manejadores;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SGH_v0._1
@@ -23,16 +16,24 @@ namespace SGH_v0._1
             mp=new ManejadorPermisos();
             mp.Mostrar($"SELECT * FROM v_UsuariosPermisos WHERE Id_Usuario='{FrmUsuarios.usuario.Id_Usuario}'", dtgDatos, "v_UsuariosPermisos");
             cmbModulos.SelectedIndex = 0;
-
         }
+
+
+        //Agregar un nuevo permiso
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (usuario_permiso.Id_Usuario == 0) 
+            Permisos nuevo_permiso = new Permisos(0, 0, 0, false, false);
+
+            nuevo_permiso.Id_Usuario = FrmUsuarios.usuario.Id_Usuario;
+            nuevo_permiso.Id_Modulo =  mp.IndicesModulos(cmbModulos.SelectedItem.ToString());
+            nuevo_permiso.permiso_leer_abrir = chkLectura.Checked;
+            nuevo_permiso.permiso_escritura = chkEscritura.Checked;
+
+            if (mp.ValidarPermisos(chkLectura, chkEscritura))
             {
-                usuario_permiso.Id_Usuario = FrmUsuarios.usuario.Id_Usuario;
-                usuario_permiso.Id_Modulo =  mp.IndicesModulos(cmbModulos.SelectedItem.ToString());
-                MessageBox.Show(usuario_permiso.Id_Modulo.ToString());
-                usuario_permiso.Id_Usuario = 0;
+                mp.GuardarPermisos(nuevo_permiso);
+                dtgDatos.Columns.Clear();
+                mp.Mostrar($"SELECT * FROM v_UsuariosPermisos WHERE Id_Usuario='{FrmUsuarios.usuario.Id_Usuario}'", dtgDatos, "v_UsuariosPermisos");
             }
         }
 
@@ -59,7 +60,7 @@ namespace SGH_v0._1
         }
 
 
-        //Obtener datos de registros
+        //Evento par obtener datos de registros
         private void dtgDatos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0 || dtgDatos.CurrentCell == null) return;
@@ -70,6 +71,22 @@ namespace SGH_v0._1
             usuario_permiso.permiso_escritura = bool.Parse(dtgDatos.Rows[indice].Cells["ESCRITURA"].Value.ToString());
             usuario_permiso.permiso_leer_abrir = bool.Parse(dtgDatos.Rows[indice].Cells["LECTURA"].Value.ToString());
             nombreModulo = dtgDatos.Rows[indice].Cells["MODULO"].Value.ToString();
+        }
+
+
+        //Evento par cargar configuracion de interfaz
+        private void FrmPermisosUsuario_Shown(object sender, EventArgs e)
+        {
+            var rs = FrmHome._usuarioActivo.ListaPermisos.Find(x => x.Id_Modulo == 1);
+            btnAgregar.Enabled = rs.permiso_escritura;
+            btnBorrar.Enabled = rs.permiso_escritura;
+            cmbModulos.Enabled = rs.permiso_escritura;
+            chkLectura.Enabled = rs.permiso_escritura;
+            chkEscritura.Enabled = rs.permiso_escritura;
+
+            //DataGridView no seleccion
+            dtgDatos.ClearSelection();
+            dtgDatos.CurrentCell = null;
         }
     }
 }

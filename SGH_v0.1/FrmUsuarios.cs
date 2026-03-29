@@ -1,13 +1,6 @@
 ﻿using Entidades;
 using Manejadores;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SGH_v0._1
@@ -41,7 +34,9 @@ namespace SGH_v0._1
             usuario.Estatus = false;
             usuario.FechaRegistro = "";
             FrmDatosUsuario frmDatosUsuario = new FrmDatosUsuario();
+            this.Hide();
             frmDatosUsuario.ShowDialog();
+            this.Show();
             dtgDatos.Columns.Clear();
         }
 
@@ -52,7 +47,9 @@ namespace SGH_v0._1
             if(usuario.Id_Usuario != 0) 
             {
                 FrmPermisosUsuario frmPermisosUsuario = new FrmPermisosUsuario();
+                this.Hide();
                 frmPermisosUsuario.ShowDialog();
+                this.Show();
                 dtgDatos.Columns.Clear();
                 usuario.Id_Usuario = 0;
             }
@@ -66,7 +63,9 @@ namespace SGH_v0._1
             if(usuario.Id_Usuario != 0) 
             {
                 FrmDatosUsuario frmDatosUsuario = new FrmDatosUsuario();
+                this.Hide();
                 frmDatosUsuario.ShowDialog();
+                this.Show();
                 dtgDatos.Columns.Clear();
                 usuario.Id_Usuario = 0;
             }
@@ -97,6 +96,16 @@ namespace SGH_v0._1
             usuario.Nombre = dtgDatos.Rows[indice].Cells["NOMBRE"].Value.ToString();
             usuario.Contrasena = dtgDatos.Rows[indice].Cells["CONTRASEÑA"].Value.ToString(); 
             usuario.Rol = dtgDatos.Rows[indice].Cells["ROL"].Value.ToString();
+        }
+
+
+        //Evento para carga configuracion de interfaz
+        private void FrmUsuarios_Shown(object sender, EventArgs e)
+        {
+            var rs = FrmHome._usuarioActivo.ListaPermisos.Find(x => x.Id_Modulo == 1);
+            btnAgregar.Enabled = rs.permiso_escritura;
+            btnEditar.Enabled = rs.permiso_escritura;
+            btnBorrar.Enabled = rs.permiso_escritura;
         }
     }
 }

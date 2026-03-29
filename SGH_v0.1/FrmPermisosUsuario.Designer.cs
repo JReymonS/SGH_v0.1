@@ -41,7 +41,6 @@
             this.chkLectura = new System.Windows.Forms.CheckBox();
             this.chkEscritura = new System.Windows.Forms.CheckBox();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.pEncabezado.SuspendLayout();
@@ -108,7 +107,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(63, 398);
+            this.label3.Location = new System.Drawing.Point(58, 313);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(303, 15);
             this.label3.TabIndex = 9;
@@ -118,7 +117,7 @@
             // 
             this.pictureBox2.BackgroundImage = global::SGH_v0._1.Properties.Resources.Info;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(32, 395);
+            this.pictureBox2.Location = new System.Drawing.Point(32, 310);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(20, 20);
             this.pictureBox2.TabIndex = 8;
@@ -128,7 +127,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(427, 142);
+            this.label4.Location = new System.Drawing.Point(414, 144);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 25);
             this.label4.TabIndex = 10;
@@ -145,7 +144,7 @@
             "Housekeeping",
             "Cargos",
             "Reportes"});
-            this.cmbModulos.Location = new System.Drawing.Point(527, 140);
+            this.cmbModulos.Location = new System.Drawing.Point(514, 140);
             this.cmbModulos.Name = "cmbModulos";
             this.cmbModulos.Size = new System.Drawing.Size(223, 33);
             this.cmbModulos.TabIndex = 11;
@@ -154,7 +153,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(427, 193);
+            this.label5.Location = new System.Drawing.Point(414, 199);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(104, 25);
             this.label5.TabIndex = 12;
@@ -164,7 +163,7 @@
             // 
             this.chkLectura.AutoSize = true;
             this.chkLectura.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkLectura.Location = new System.Drawing.Point(550, 196);
+            this.chkLectura.Location = new System.Drawing.Point(536, 202);
             this.chkLectura.Name = "chkLectura";
             this.chkLectura.Size = new System.Drawing.Size(76, 24);
             this.chkLectura.TabIndex = 13;
@@ -175,7 +174,7 @@
             // 
             this.chkEscritura.AutoSize = true;
             this.chkEscritura.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkEscritura.Location = new System.Drawing.Point(666, 196);
+            this.chkEscritura.Location = new System.Drawing.Point(653, 202);
             this.chkEscritura.Name = "chkEscritura";
             this.chkEscritura.Size = new System.Drawing.Size(84, 24);
             this.chkEscritura.TabIndex = 14;
@@ -189,24 +188,12 @@
             this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnAgregar.FlatAppearance.BorderSize = 0;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Location = new System.Drawing.Point(766, 138);
+            this.btnAgregar.Location = new System.Drawing.Point(750, 197);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(35, 35);
             this.btnAgregar.TabIndex = 15;
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackgroundImage = global::SGH_v0._1.Properties.Resources.Save;
-            this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Location = new System.Drawing.Point(618, 373);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(40, 40);
-            this.btnGuardar.TabIndex = 16;
-            this.btnGuardar.UseVisualStyleBackColor = true;
             // 
             // btnBorrar
             // 
@@ -214,7 +201,7 @@
             this.btnBorrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnBorrar.FlatAppearance.BorderSize = 0;
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBorrar.Location = new System.Drawing.Point(762, 186);
+            this.btnBorrar.Location = new System.Drawing.Point(668, 300);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(40, 40);
             this.btnBorrar.TabIndex = 17;
@@ -227,7 +214,7 @@
             this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Location = new System.Drawing.Point(710, 373);
+            this.btnCancelar.Location = new System.Drawing.Point(745, 300);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(40, 40);
             this.btnCancelar.TabIndex = 18;
@@ -238,10 +225,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 436);
+            this.ClientSize = new System.Drawing.Size(819, 360);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnBorrar);
-            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.chkEscritura);
             this.Controls.Add(this.chkLectura);
@@ -257,6 +243,7 @@
             this.Name = "FrmPermisosUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Permisos";
+            this.Shown += new System.EventHandler(this.FrmPermisosUsuario_Shown);
             this.pEncabezado.ResumeLayout(false);
             this.pEncabezado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -282,7 +269,6 @@
         private System.Windows.Forms.CheckBox chkLectura;
         private System.Windows.Forms.CheckBox chkEscritura;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnCancelar;
     }
