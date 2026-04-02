@@ -43,15 +43,17 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pEncabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pEncabezado
             // 
-            this.pEncabezado.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pEncabezado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
             this.pEncabezado.Controls.Add(this.pictureBox1);
             this.pEncabezado.Controls.Add(this.label1);
             this.pEncabezado.Location = new System.Drawing.Point(0, 16);
@@ -73,6 +75,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(25, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(168, 42);
@@ -95,6 +98,7 @@
             this.dtgDatos.AllowUserToDeleteRows = false;
             this.dtgDatos.AllowUserToResizeColumns = false;
             this.dtgDatos.AllowUserToResizeRows = false;
+            this.dtgDatos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.dtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgDatos.Location = new System.Drawing.Point(32, 140);
             this.dtgDatos.Name = "dtgDatos";
@@ -135,6 +139,7 @@
             // 
             // cmbModulos
             // 
+            this.cmbModulos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmbModulos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbModulos.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbModulos.FormattingEnabled = true;
@@ -144,16 +149,16 @@
             "Housekeeping",
             "Cargos",
             "Reportes"});
-            this.cmbModulos.Location = new System.Drawing.Point(514, 140);
+            this.cmbModulos.Location = new System.Drawing.Point(1, 1);
             this.cmbModulos.Name = "cmbModulos";
-            this.cmbModulos.Size = new System.Drawing.Size(223, 33);
+            this.cmbModulos.Size = new System.Drawing.Size(221, 33);
             this.cmbModulos.TabIndex = 11;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(414, 199);
+            this.label5.Location = new System.Drawing.Point(414, 209);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(104, 25);
             this.label5.TabIndex = 12;
@@ -163,7 +168,7 @@
             // 
             this.chkLectura.AutoSize = true;
             this.chkLectura.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkLectura.Location = new System.Drawing.Point(536, 202);
+            this.chkLectura.Location = new System.Drawing.Point(536, 212);
             this.chkLectura.Name = "chkLectura";
             this.chkLectura.Size = new System.Drawing.Size(76, 24);
             this.chkLectura.TabIndex = 13;
@@ -174,7 +179,7 @@
             // 
             this.chkEscritura.AutoSize = true;
             this.chkEscritura.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkEscritura.Location = new System.Drawing.Point(653, 202);
+            this.chkEscritura.Location = new System.Drawing.Point(659, 212);
             this.chkEscritura.Name = "chkEscritura";
             this.chkEscritura.Size = new System.Drawing.Size(84, 24);
             this.chkEscritura.TabIndex = 14;
@@ -188,7 +193,7 @@
             this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnAgregar.FlatAppearance.BorderSize = 0;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Location = new System.Drawing.Point(750, 197);
+            this.btnAgregar.Location = new System.Drawing.Point(750, 206);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(35, 35);
             this.btnAgregar.TabIndex = 15;
@@ -221,18 +226,29 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.panel1.Controls.Add(this.cmbModulos);
+            this.panel1.Location = new System.Drawing.Point(514, 140);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(1);
+            this.panel1.Size = new System.Drawing.Size(223, 35);
+            this.panel1.TabIndex = 19;
+            // 
             // FrmPermisosUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(819, 360);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.chkEscritura);
             this.Controls.Add(this.chkLectura);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.cmbModulos);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
@@ -249,6 +265,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,5 +288,6 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -68,7 +68,9 @@ namespace Manejadores
             tabla.Columns["Id_Usuario"].Visible = false;
             tabla.Columns["Id_Permiso"].Visible = false;
             tabla.Columns["Id_Modulo"].Visible = false;
-            tabla.AutoResizeColumns();
+            tabla.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            tabla.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            tabla.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             tabla.AutoResizeColumns();
         }
     }

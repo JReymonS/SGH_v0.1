@@ -41,15 +41,17 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.pDiseño = new System.Windows.Forms.Panel();
             this.pEncabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pDiseño.SuspendLayout();
             this.SuspendLayout();
             // 
             // pEncabezado
             // 
-            this.pEncabezado.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pEncabezado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
             this.pEncabezado.Controls.Add(this.pictureBox1);
             this.pEncabezado.Controls.Add(this.label1);
             this.pEncabezado.Location = new System.Drawing.Point(0, 15);
@@ -71,6 +73,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(25, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(166, 42);
@@ -89,10 +92,12 @@
             // 
             // txtBuscar
             // 
+            this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBuscar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(118, 104);
+            this.txtBuscar.Location = new System.Drawing.Point(1, 1);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(557, 33);
+            this.txtBuscar.Size = new System.Drawing.Size(554, 26);
             this.txtBuscar.TabIndex = 2;
             // 
             // dtgDatos
@@ -101,6 +106,7 @@
             this.dtgDatos.AllowUserToDeleteRows = false;
             this.dtgDatos.AllowUserToResizeColumns = false;
             this.dtgDatos.AllowUserToResizeRows = false;
+            this.dtgDatos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.dtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgDatos.Location = new System.Drawing.Point(24, 164);
             this.dtgDatos.Name = "dtgDatos";
@@ -121,11 +127,14 @@
             // 
             // btnPermisos
             // 
-            this.btnPermisos.Location = new System.Drawing.Point(485, 426);
+            this.btnPermisos.BackgroundImage = global::SGH_v0._1.Properties.Resources.Query;
+            this.btnPermisos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnPermisos.FlatAppearance.BorderSize = 0;
+            this.btnPermisos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPermisos.Location = new System.Drawing.Point(578, 426);
             this.btnPermisos.Name = "btnPermisos";
-            this.btnPermisos.Size = new System.Drawing.Size(105, 33);
+            this.btnPermisos.Size = new System.Drawing.Size(40, 40);
             this.btnPermisos.TabIndex = 13;
-            this.btnPermisos.Text = "Permisos";
             this.btnPermisos.UseVisualStyleBackColor = true;
             this.btnPermisos.Click += new System.EventHandler(this.btnPermisos_Click);
             // 
@@ -193,11 +202,23 @@
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // pDiseño
+            // 
+            this.pDiseño.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
+            this.pDiseño.Controls.Add(this.txtBuscar);
+            this.pDiseño.Location = new System.Drawing.Point(115, 108);
+            this.pDiseño.Name = "pDiseño";
+            this.pDiseño.Padding = new System.Windows.Forms.Padding(1);
+            this.pDiseño.Size = new System.Drawing.Size(556, 28);
+            this.pDiseño.TabIndex = 14;
+            // 
             // FrmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(819, 490);
+            this.Controls.Add(this.pDiseño);
             this.Controls.Add(this.btnPermisos);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnEditar);
@@ -206,7 +227,6 @@
             this.Controls.Add(this.dtgDatos);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pEncabezado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -221,6 +241,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.pDiseño.ResumeLayout(false);
+            this.pDiseño.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,5 +263,6 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnPermisos;
+        private System.Windows.Forms.Panel pDiseño;
     }
 }
