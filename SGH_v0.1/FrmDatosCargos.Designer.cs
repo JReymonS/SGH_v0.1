@@ -40,6 +40,8 @@
             this.TxtBebida = new System.Windows.Forms.TextBox();
             this.TxtDescripcion = new System.Windows.Forms.TextBox();
             this.TxtCostoBebida = new System.Windows.Forms.TextBox();
+            this.BtnGuardar = new System.Windows.Forms.Button();
+            this.BtnCerrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -121,10 +123,10 @@
             this.TxtDesayuno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtDesayuno.Enabled = false;
             this.TxtDesayuno.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDesayuno.Location = new System.Drawing.Point(120, 121);
+            this.TxtDesayuno.Location = new System.Drawing.Point(120, 118);
             this.TxtDesayuno.Multiline = true;
             this.TxtDesayuno.Name = "TxtDesayuno";
-            this.TxtDesayuno.Size = new System.Drawing.Size(100, 20);
+            this.TxtDesayuno.Size = new System.Drawing.Size(100, 25);
             this.TxtDesayuno.TabIndex = 7;
             this.TxtDesayuno.Text = "Desayuno";
             this.TxtDesayuno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -134,10 +136,10 @@
             this.TxtCostoDesayuno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtCostoDesayuno.Enabled = false;
             this.TxtCostoDesayuno.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCostoDesayuno.Location = new System.Drawing.Point(313, 121);
+            this.TxtCostoDesayuno.Location = new System.Drawing.Point(313, 118);
             this.TxtCostoDesayuno.Multiline = true;
             this.TxtCostoDesayuno.Name = "TxtCostoDesayuno";
-            this.TxtCostoDesayuno.Size = new System.Drawing.Size(100, 20);
+            this.TxtCostoDesayuno.Size = new System.Drawing.Size(100, 25);
             this.TxtCostoDesayuno.TabIndex = 8;
             this.TxtCostoDesayuno.Text = "150.00";
             this.TxtCostoDesayuno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -146,10 +148,10 @@
             // 
             this.TxtBebida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtBebida.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtBebida.Location = new System.Drawing.Point(507, 119);
+            this.TxtBebida.Location = new System.Drawing.Point(507, 117);
             this.TxtBebida.Multiline = true;
             this.TxtBebida.Name = "TxtBebida";
-            this.TxtBebida.Size = new System.Drawing.Size(100, 20);
+            this.TxtBebida.Size = new System.Drawing.Size(100, 25);
             this.TxtBebida.TabIndex = 9;
             this.TxtBebida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -170,18 +172,45 @@
             // 
             this.TxtCostoBebida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtCostoBebida.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCostoBebida.Location = new System.Drawing.Point(692, 120);
+            this.TxtCostoBebida.Location = new System.Drawing.Point(692, 118);
             this.TxtCostoBebida.Multiline = true;
             this.TxtCostoBebida.Name = "TxtCostoBebida";
-            this.TxtCostoBebida.Size = new System.Drawing.Size(100, 20);
+            this.TxtCostoBebida.Size = new System.Drawing.Size(100, 25);
             this.TxtCostoBebida.TabIndex = 11;
             this.TxtCostoBebida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // BtnGuardar
+            // 
+            this.BtnGuardar.BackgroundImage = global::SGH_v0._1.Properties.Resources.Save;
+            this.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnGuardar.FlatAppearance.BorderSize = 0;
+            this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGuardar.Location = new System.Drawing.Point(717, 217);
+            this.BtnGuardar.Name = "BtnGuardar";
+            this.BtnGuardar.Size = new System.Drawing.Size(40, 40);
+            this.BtnGuardar.TabIndex = 12;
+            this.BtnGuardar.UseVisualStyleBackColor = true;
+            // 
+            // BtnCerrar
+            // 
+            this.BtnCerrar.BackgroundImage = global::SGH_v0._1.Properties.Resources.Multiplication;
+            this.BtnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnCerrar.FlatAppearance.BorderSize = 0;
+            this.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCerrar.Location = new System.Drawing.Point(782, 217);
+            this.BtnCerrar.Name = "BtnCerrar";
+            this.BtnCerrar.Size = new System.Drawing.Size(40, 40);
+            this.BtnCerrar.TabIndex = 13;
+            this.BtnCerrar.UseVisualStyleBackColor = true;
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // FrmDatosCargos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(857, 281);
+            this.Controls.Add(this.BtnCerrar);
+            this.Controls.Add(this.BtnGuardar);
             this.Controls.Add(this.TxtCostoBebida);
             this.Controls.Add(this.TxtDescripcion);
             this.Controls.Add(this.TxtBebida);
@@ -217,5 +246,7 @@
         private System.Windows.Forms.TextBox TxtBebida;
         private System.Windows.Forms.TextBox TxtDescripcion;
         private System.Windows.Forms.TextBox TxtCostoBebida;
+        private System.Windows.Forms.Button BtnGuardar;
+        private System.Windows.Forms.Button BtnCerrar;
     }
 }

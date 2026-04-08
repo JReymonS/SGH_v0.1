@@ -16,5 +16,10 @@ namespace SGH_v0._1
         {
             InitializeComponent();
         }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
