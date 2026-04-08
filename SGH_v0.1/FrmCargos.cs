@@ -16,5 +16,7 @@ namespace SGH_v0._1
         {
             InitializeComponent();
         }
+
+
     }
 }
