@@ -52,5 +52,13 @@ namespace SGH_v0._1
         {
             Application.Restart();
         }
+
+        private void tsbHousekeeping_Click(object sender, EventArgs e)
+        {
+            // Creamos la instancia
+            FrmHousekeeping ventanaHouse = new FrmHousekeeping();
+            // La mostramos como cuadro de diálogo (bloquea lo de atrás)
+            ventanaHouse.ShowDialog();
+        }
     }
 }

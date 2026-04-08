@@ -57,7 +57,7 @@
             this.tsbLogout});
             this.tsMenu.Location = new System.Drawing.Point(0, 0);
             this.tsMenu.Name = "tsMenu";
-            this.tsMenu.Size = new System.Drawing.Size(100, 755);
+            this.tsMenu.Size = new System.Drawing.Size(133, 929);
             this.tsMenu.TabIndex = 0;
             this.tsMenu.Text = "MENU";
             // 
@@ -99,6 +99,7 @@
             this.tsbHousekeeping.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
             this.tsbHousekeeping.Size = new System.Drawing.Size(85, 50);
             this.tsbHousekeeping.Text = "HOUSEKEEPING";
+            this.tsbHousekeeping.Click += new System.EventHandler(this.tsbHousekeeping_Click);
             // 
             // tsbCargos
             // 
@@ -156,20 +157,22 @@
             // lblUsuarioActivo
             // 
             this.lblUsuarioActivo.AutoSize = true;
-            this.lblUsuarioActivo.Location = new System.Drawing.Point(194, 52);
+            this.lblUsuarioActivo.Location = new System.Drawing.Point(259, 64);
+            this.lblUsuarioActivo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsuarioActivo.Name = "lblUsuarioActivo";
-            this.lblUsuarioActivo.Size = new System.Drawing.Size(54, 13);
+            this.lblUsuarioActivo.Size = new System.Drawing.Size(66, 16);
             this.lblUsuarioActivo.TabIndex = 1;
             this.lblUsuarioActivo.Text = "NOMBRE";
             // 
             // FrmHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1443, 755);
+            this.ClientSize = new System.Drawing.Size(1924, 929);
             this.Controls.Add(this.lblUsuarioActivo);
             this.Controls.Add(this.tsMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOME";
