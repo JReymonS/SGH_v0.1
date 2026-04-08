@@ -52,5 +52,11 @@ namespace SGH_v0._1
         {
             Application.Restart();
         }
+
+        private void tsbReportes_Click(object sender, EventArgs e)
+        {
+            FrmReportes fr = new FrmReportes();
+            fr.ShowDialog();
+        }
     }
 }

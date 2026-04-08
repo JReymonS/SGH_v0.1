@@ -60,89 +60,89 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(41, 139);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 28);
+            this.label2.Size = new System.Drawing.Size(161, 31);
             this.label2.TabIndex = 2;
             this.label2.Text = "TIPO REPORTE";
             // 
             // cmbReporte
             // 
             this.cmbReporte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbReporte.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbReporte.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbReporte.FormattingEnabled = true;
             this.cmbReporte.Items.AddRange(new object[] {
             "General",
             "Especifico"});
-            this.cmbReporte.Location = new System.Drawing.Point(195, 135);
+            this.cmbReporte.Location = new System.Drawing.Point(242, 131);
             this.cmbReporte.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbReporte.Name = "cmbReporte";
-            this.cmbReporte.Size = new System.Drawing.Size(275, 36);
+            this.cmbReporte.Size = new System.Drawing.Size(265, 39);
             this.cmbReporte.TabIndex = 3;
             this.cmbReporte.SelectedIndexChanged += new System.EventHandler(this.cmbReporte_SelectedIndexChanged);
             // 
             // lblFechaInicial
             // 
             this.lblFechaInicial.AutoSize = true;
-            this.lblFechaInicial.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaInicial.Location = new System.Drawing.Point(41, 276);
+            this.lblFechaInicial.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaInicial.Location = new System.Drawing.Point(41, 277);
             this.lblFechaInicial.Name = "lblFechaInicial";
-            this.lblFechaInicial.Size = new System.Drawing.Size(135, 28);
+            this.lblFechaInicial.Size = new System.Drawing.Size(157, 31);
             this.lblFechaInicial.TabIndex = 4;
             this.lblFechaInicial.Text = "FECHA INCIAL";
             this.lblFechaInicial.Visible = false;
             // 
             // dtpFechaReporteIni
             // 
-            this.dtpFechaReporteIni.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaReporteIni.Location = new System.Drawing.Point(192, 270);
+            this.dtpFechaReporteIni.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaReporteIni.Location = new System.Drawing.Point(217, 272);
             this.dtpFechaReporteIni.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpFechaReporteIni.Name = "dtpFechaReporteIni";
-            this.dtpFechaReporteIni.Size = new System.Drawing.Size(323, 34);
+            this.dtpFechaReporteIni.Size = new System.Drawing.Size(323, 38);
             this.dtpFechaReporteIni.TabIndex = 5;
             this.dtpFechaReporteIni.Visible = false;
             // 
             // cmbEspecifico
             // 
             this.cmbEspecifico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEspecifico.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEspecifico.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEspecifico.FormattingEnabled = true;
-            this.cmbEspecifico.Location = new System.Drawing.Point(611, 132);
+            this.cmbEspecifico.Location = new System.Drawing.Point(709, 131);
             this.cmbEspecifico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbEspecifico.Name = "cmbEspecifico";
-            this.cmbEspecifico.Size = new System.Drawing.Size(275, 36);
+            this.cmbEspecifico.Size = new System.Drawing.Size(265, 39);
             this.cmbEspecifico.TabIndex = 8;
             this.cmbEspecifico.Visible = false;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(505, 135);
+            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(561, 139);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(93, 28);
+            this.lblNombre.Size = new System.Drawing.Size(108, 31);
             this.lblNombre.TabIndex = 9;
             this.lblNombre.Text = "NOMBRE";
             this.lblNombre.Visible = false;
             // 
             // dtpFechaReporteFini
             // 
-            this.dtpFechaReporteFini.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaReporteFini.Location = new System.Drawing.Point(681, 270);
+            this.dtpFechaReporteFini.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaReporteFini.Location = new System.Drawing.Point(725, 272);
             this.dtpFechaReporteFini.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpFechaReporteFini.Name = "dtpFechaReporteFini";
-            this.dtpFechaReporteFini.Size = new System.Drawing.Size(323, 34);
+            this.dtpFechaReporteFini.Size = new System.Drawing.Size(323, 38);
             this.dtpFechaReporteFini.TabIndex = 11;
             this.dtpFechaReporteFini.Visible = false;
             // 
             // lblFechaFinal
             // 
             this.lblFechaFinal.AutoSize = true;
-            this.lblFechaFinal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaFinal.Location = new System.Drawing.Point(539, 276);
+            this.lblFechaFinal.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaFinal.Location = new System.Drawing.Point(561, 277);
             this.lblFechaFinal.Name = "lblFechaFinal";
-            this.lblFechaFinal.Size = new System.Drawing.Size(128, 28);
+            this.lblFechaFinal.Size = new System.Drawing.Size(148, 31);
             this.lblFechaFinal.TabIndex = 10;
             this.lblFechaFinal.Text = "FECHA FINAL";
             this.lblFechaFinal.Visible = false;
@@ -156,7 +156,7 @@
             this.btnCerrar.Location = new System.Drawing.Point(968, 430);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(0);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(44, 44);
+            this.btnCerrar.Size = new System.Drawing.Size(40, 40);
             this.btnCerrar.TabIndex = 7;
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -171,7 +171,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(850, 430);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(0);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(44, 44);
+            this.btnBuscar.Size = new System.Drawing.Size(40, 40);
             this.btnBuscar.TabIndex = 6;
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);

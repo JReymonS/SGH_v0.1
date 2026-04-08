@@ -37,7 +37,6 @@
             this.tsbUsuarios = new System.Windows.Forms.ToolStripButton();
             this.tsbLogout = new System.Windows.Forms.ToolStripButton();
             this.lblUsuarioActivo = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.tsMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -126,6 +125,7 @@
             this.tsbReportes.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
             this.tsbReportes.Size = new System.Drawing.Size(85, 50);
             this.tsbReportes.Text = "REPORTES";
+            this.tsbReportes.Click += new System.EventHandler(this.tsbReportes_Click);
             // 
             // tsbUsuarios
             // 
@@ -164,24 +164,15 @@
             this.lblUsuarioActivo.TabIndex = 1;
             this.lblUsuarioActivo.Text = "NOMBRE";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Location = new System.Drawing.Point(464, 234);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1200, 500);
-            this.panel1.TabIndex = 2;
-            // 
             // FrmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 929);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblUsuarioActivo);
             this.Controls.Add(this.tsMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOME";
@@ -205,7 +196,6 @@
         private System.Windows.Forms.ToolStripButton tsbUsuarios;
         private System.Windows.Forms.ToolStripButton tsbLogout;
         private System.Windows.Forms.Label lblUsuarioActivo;
-        private System.Windows.Forms.Panel panel1;
     }
 }
 
