@@ -123,6 +123,16 @@ namespace SGH_v0._1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Business_Report_x64 {
+            get {
+                object obj = ResourceManager.GetObject("Business_Report_x64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cama {
             get {
                 object obj = ResourceManager.GetObject("cama", resourceCulture);
@@ -216,6 +226,16 @@ namespace SGH_v0._1.Properties {
         internal static System.Drawing.Bitmap Google_Web_Search_white {
             get {
                 object obj = ResourceManager.GetObject("Google_Web_Search_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Google_Web_Search_x64 {
+            get {
+                object obj = ResourceManager.GetObject("Google_Web_Search_x64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -423,6 +443,16 @@ namespace SGH_v0._1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Multiplication_x64 {
+            get {
+                object obj = ResourceManager.GetObject("Multiplication_x64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ocupadas {
             get {
                 object obj = ResourceManager.GetObject("Ocupadas", resourceCulture);
@@ -596,6 +626,16 @@ namespace SGH_v0._1.Properties {
         internal static System.Drawing.Bitmap Room_white {
             get {
                 object obj = ResourceManager.GetObject("Room_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Room_white_x64 {
+            get {
+                object obj = ResourceManager.GetObject("Room_white_x64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

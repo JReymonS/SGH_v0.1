@@ -136,6 +136,9 @@
   <data name="Business_Report_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Business Report-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Business_Report_x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Business Report x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cama" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cama.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -165,6 +168,9 @@
   </data>
   <data name="Google_Web_Search_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Google Web Search-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Google_Web_Search_x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Google Web Search x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Home_Page" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Home Page.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,6 +232,9 @@
   <data name="Multiplication_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Multiplication-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Multiplication_x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Multiplication x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Ocupadas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ocupadas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -279,6 +288,9 @@
   </data>
   <data name="Room_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Room-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Room_white_x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Room-white x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Save" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
