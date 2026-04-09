@@ -7,15 +7,51 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
+using Manejadores;
 
 namespace SGH_v0._1
 {
     public partial class FrmCargos : Form
     {
+        ManejadorCargos mc;
+        public static Cargos cargos = new Cargos(0, "", "", 0m, 0); //El 0m es porque es un valor decimal.
+        int fila = 0, columna = 0;
+        public static int seleccion = 0; //Saber a que reserva se le va a cobrar a partir de la id de la reserva.
+
         public FrmCargos()
         {
             InitializeComponent();
+            mc = new ManejadorCargos();
         }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            string consulta = $"SELECT r.Id_Reserva, h.Nombre, h.Apellidos, h.Telefono, h.Correo, h.RFC" +
+                              $"FROM Huespedes h INNER JOIN Reservas r ON h.RFC = r.RFC" +
+                              $"WHERE h.Nombre LIKE '%{TxtHuesped.Text}%' AND r.Estado_Pago = 'Pendiente'";
+
+            mc.Mostrar(consulta, DtgDatosHuesped, "Reservas");
+        }
+
+        private void DtgDatosHuesped_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            seleccion = int.Parse(DtgDatosHuesped.Rows[e.RowIndex].Cells["Id_Reserva"].Value.ToString());
+
+            ActualizarCargos();
+        }
+
+        private void ActualizarCargos()
+        {
+            string cargosConsulta = $"SELECT Id_Cargo, Descripcion, Monto FROM Cargos WHERE Id_Reserva = {seleccion}";
+            mc.Mostrar(cargosConsulta, DtgDatosCargo, "Cargos");
+        }
+
+
+
+       
+
+
 
 
     }

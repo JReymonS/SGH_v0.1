@@ -42,7 +42,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.BtnPagar = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
-            this.BtnModificar = new System.Windows.Forms.Button();
+            this.BtnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtgDatosHuesped)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtgDatosCargo)).BeginInit();
@@ -100,6 +100,7 @@
             this.DtgDatosHuesped.Name = "DtgDatosHuesped";
             this.DtgDatosHuesped.Size = new System.Drawing.Size(625, 124);
             this.DtgDatosHuesped.TabIndex = 5;
+            this.DtgDatosHuesped.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgDatosHuesped_CellClick);
             // 
             // DtgDatosCargo
             // 
@@ -121,6 +122,7 @@
             this.BtnBuscar.Size = new System.Drawing.Size(40, 40);
             this.BtnBuscar.TabIndex = 7;
             this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // BtnAgregarCargo
             // 
@@ -197,17 +199,17 @@
             this.BtnEditar.TabIndex = 14;
             this.BtnEditar.UseVisualStyleBackColor = true;
             // 
-            // BtnModificar
+            // BtnEliminar
             // 
-            this.BtnModificar.BackgroundImage = global::SGH_v0._1.Properties.Resources.Remove_Book;
-            this.BtnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnModificar.FlatAppearance.BorderSize = 0;
-            this.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnModificar.Location = new System.Drawing.Point(708, 430);
-            this.BtnModificar.Name = "BtnModificar";
-            this.BtnModificar.Size = new System.Drawing.Size(40, 40);
-            this.BtnModificar.TabIndex = 15;
-            this.BtnModificar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.BackgroundImage = global::SGH_v0._1.Properties.Resources.Remove_Book;
+            this.BtnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnEliminar.FlatAppearance.BorderSize = 0;
+            this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEliminar.Location = new System.Drawing.Point(708, 430);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(40, 40);
+            this.BtnEliminar.TabIndex = 15;
+            this.BtnEliminar.UseVisualStyleBackColor = true;
             // 
             // FrmCargos
             // 
@@ -215,7 +217,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(776, 490);
-            this.Controls.Add(this.BtnModificar);
+            this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnEditar);
             this.Controls.Add(this.BtnPagar);
             this.Controls.Add(this.label4);
@@ -259,6 +261,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button BtnPagar;
         private System.Windows.Forms.Button BtnEditar;
-        private System.Windows.Forms.Button BtnModificar;
+        private System.Windows.Forms.Button BtnEliminar;
     }
 }
