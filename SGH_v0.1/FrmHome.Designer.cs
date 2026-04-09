@@ -126,6 +126,7 @@
             this.tsbReportes.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
             this.tsbReportes.Size = new System.Drawing.Size(85, 50);
             this.tsbReportes.Text = "REPORTES";
+            this.tsbReportes.Click += new System.EventHandler(this.tsbReportes_Click);
             // 
             // tsbUsuarios
             // 
