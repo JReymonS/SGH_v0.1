@@ -52,5 +52,11 @@ namespace SGH_v0._1
         {
             Application.Restart();
         }
+
+        private void tsbHabitacionReserva_Click(object sender, EventArgs e)
+        {
+            FrmHabitaciones fh = new FrmHabitaciones();
+            fh.ShowDialog();
+        }
     }
 }
