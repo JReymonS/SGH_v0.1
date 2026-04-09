@@ -86,6 +86,7 @@
             this.tsbHabitacionReserva.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
             this.tsbHabitacionReserva.Size = new System.Drawing.Size(85, 50);
             this.tsbHabitacionReserva.Text = "HABITACIONES - RESERVAS";
+            this.tsbHabitacionReserva.Click += new System.EventHandler(this.tsbHabitacionReserva_Click);
             // 
             // tsbHousekeeping
             // 

@@ -58,5 +58,11 @@ namespace SGH_v0._1
             FrmReportes fr = new FrmReportes();
             fr.ShowDialog();
         }
+        
+        private void tsbHabitacionReserva_Click(object sender, EventArgs e)
+        {
+            FrmHabitaciones fh = new FrmHabitaciones();
+            fh.ShowDialog();
+        }
     }
 }
