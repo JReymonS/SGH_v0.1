@@ -100,6 +100,7 @@
             this.tsbHousekeeping.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
             this.tsbHousekeeping.Size = new System.Drawing.Size(85, 50);
             this.tsbHousekeeping.Text = "HOUSEKEEPING";
+            this.tsbHousekeeping.Click += new System.EventHandler(this.tsbHousekeeping_Click);
             // 
             // tsbCargos
             // 
