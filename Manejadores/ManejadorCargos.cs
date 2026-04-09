@@ -25,13 +25,13 @@ namespace Manejadores
 
             if (rs == DialogResult.Yes)
             {
-                b.Comando($"Call p_ElimarCargo('{cargos.Id_Cargo}')");
+                b.Comando($"Call p_EliminarCargo('{cargos.Id_Cargo}')");
             } 
         }
 
         public void Modificar(Cargos cargos)
         {
-            b.Comando($"Call p_ModificarCargo('{cargos.Id_Cargo},'{cargos.Concepto},'{cargos.Monto}')");
+            b.Comando($"Call p_ModificarCargo('{cargos.Id_Cargo}','{cargos.Concepto},'{cargos.Monto}')");
         }
 
         public void Mostrar(string consulta, DataGridView tabla, string datos)
