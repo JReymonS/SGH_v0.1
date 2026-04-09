@@ -47,6 +47,15 @@ namespace SGH_v0._1
         }
 
 
+        //Administrar usuarios
+        private void tsbUsuarios_Click(object sender, EventArgs e)
+        {
+            FrmUsuarios frmUsuarios = new FrmUsuarios();
+            frmUsuarios.MdiParent = this;
+            frmUsuarios.Show();
+        }
+
+
         //Cerrar sesion
         private void tsbLogout_Click(object sender, EventArgs e)
         {
@@ -59,6 +68,18 @@ namespace SGH_v0._1
             FrmHousekeeping ventanaHouse = new FrmHousekeeping();
             // La mostramos como cuadro de diálogo (bloquea lo de atrás)
             ventanaHouse.ShowDialog();
+        }
+        
+        private void tsbReportes_Click(object sender, EventArgs e)
+        {
+            FrmReportes fr = new FrmReportes();
+            fr.ShowDialog();
+        }
+        
+        private void tsbHabitacionReserva_Click(object sender, EventArgs e)
+        {
+            FrmHabitaciones fh = new FrmHabitaciones();
+            fh.ShowDialog();
         }
     }
 }

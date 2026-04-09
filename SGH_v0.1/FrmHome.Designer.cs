@@ -86,6 +86,7 @@
             this.tsbHabitacionReserva.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
             this.tsbHabitacionReserva.Size = new System.Drawing.Size(85, 50);
             this.tsbHabitacionReserva.Text = "HABITACIONES - RESERVAS";
+            this.tsbHabitacionReserva.Click += new System.EventHandler(this.tsbHabitacionReserva_Click);
             // 
             // tsbHousekeeping
             // 
@@ -126,6 +127,7 @@
             this.tsbReportes.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
             this.tsbReportes.Size = new System.Drawing.Size(85, 50);
             this.tsbReportes.Text = "REPORTES";
+            this.tsbReportes.Click += new System.EventHandler(this.tsbReportes_Click);
             // 
             // tsbUsuarios
             // 
@@ -139,6 +141,7 @@
             this.tsbUsuarios.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
             this.tsbUsuarios.Size = new System.Drawing.Size(85, 50);
             this.tsbUsuarios.Text = "USUARIOS";
+            this.tsbUsuarios.Click += new System.EventHandler(this.tsbUsuarios_Click);
             // 
             // tsbLogout
             // 
@@ -172,7 +175,8 @@
             this.Controls.Add(this.lblUsuarioActivo);
             this.Controls.Add(this.tsMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOME";

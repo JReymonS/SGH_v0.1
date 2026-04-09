@@ -9,6 +9,7 @@ namespace Entidades
 {
     public class Habitaciones
     {
+        public Habitaciones() { }
         public Habitaciones(string numero_Habitacion, string tipo_Habitacion, double costo_Noche, int piso, int capacidad, string descripcion, string estado, int id_Reserva)
         {
             Numero_Habitacion = numero_Habitacion;
