@@ -124,6 +124,27 @@
   <data name="Add_New" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add New.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Add_New_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add New-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Add_User_Group_Woman_Man" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add User Group Woman Man.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Add_User_Group_Woman_Man_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add User Group Woman Man-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Business_Report" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Business Report.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Business_Report_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Business Report-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Business_Report_x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Business Report x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cama" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cama.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cama_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cama-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,8 +178,11 @@
   <data name="Multiplication_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Multiplication-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Add_User_Group_Woman_Man" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Add User Group Woman Man.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Google_Web_Search_x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Google Web Search x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Home_Page" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Home Page.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Hotel_Check_In" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hotel Check In.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,9 +205,6 @@
   <data name="Cancel_Order" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cancel Order.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Add_New_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Add New-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Room_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Room-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -205,17 +226,17 @@
   <data name="Google_Web_Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Google Web Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Save" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Multiplication_x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Multiplication x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ocupadas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ocupadas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icono_Contraseña" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icono_Contraseña.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Room" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Room.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Business_Report_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Business Report-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Info" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -241,17 +262,14 @@
   <data name="Hotel_Check_Out_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hotel Check Out-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Home_Page" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Home Page.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Open_Door_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Open Door-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Add_User_Group_Woman_Man_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Add User Group Woman Man-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Query" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Query.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cama" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cama.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Query_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Query-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icono_Contraseña_1_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icono_Contraseña-1-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -268,17 +286,17 @@
   <data name="Mantenimiento" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mantenimiento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Room_white_x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Room-white x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Save_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Save-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Ocupadas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ocupadas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Hotel_Check_In_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hotel Check In-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Business_Report" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Business Report.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Imagen_hotel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Imagen_hotel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
