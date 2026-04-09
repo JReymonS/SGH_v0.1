@@ -82,5 +82,18 @@ namespace Manejadores
                 Id_Reserva = r["Id_Reserva"] != DBNull.Value ? Convert.ToInt32(r["Id_Reserva"]) : 0
             };
         }
+        public bool ExisteHabitacion(string numero)
+        {
+            // Ejecuta el procedimiento almacenado
+            DataSet ds = b.Consulta($"CALL HabitacionExiste('{numero}');", "habitacion");
+
+            if (ds.Tables["habitacion"].Rows.Count > 0)
+            {
+                int existe = Convert.ToInt32(ds.Tables["habitacion"].Rows[0][0]);
+                return existe > 0;
+            }
+
+            return false;
+        }
     }
 }

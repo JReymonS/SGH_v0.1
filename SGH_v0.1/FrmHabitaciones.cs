@@ -61,7 +61,7 @@ namespace SGH_v0._1
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            FrmHabitaciones.habitacion = null;
+            FrmHabitaciones.habitacion = new Habitaciones(); // NO null
             new FrmDatosHabitacion().ShowDialog();
             DtgDatos.Columns.Clear();
         }
