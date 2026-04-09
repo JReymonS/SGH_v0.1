@@ -140,6 +140,7 @@
             this.tsbUsuarios.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
             this.tsbUsuarios.Size = new System.Drawing.Size(85, 50);
             this.tsbUsuarios.Text = "USUARIOS";
+            this.tsbUsuarios.Click += new System.EventHandler(this.tsbUsuarios_Click);
             // 
             // tsbLogout
             // 
@@ -173,6 +174,7 @@
             this.Controls.Add(this.lblUsuarioActivo);
             this.Controls.Add(this.tsMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
