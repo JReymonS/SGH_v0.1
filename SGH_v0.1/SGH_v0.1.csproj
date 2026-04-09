@@ -84,6 +84,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDashboard.Designer.cs">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDatosUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmDashboard.resx">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDatosHabitacion.resx">
       <DependentUpon>FrmDatosHabitacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -382,6 +391,7 @@
     <None Include="Resources\Save.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Imagen_hotel.png" />
     <None Include="Resources\Query.png" />
   </ItemGroup>
   <ItemGroup>
