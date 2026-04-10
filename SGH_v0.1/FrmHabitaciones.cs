@@ -39,22 +39,23 @@ namespace SGH_v0._1
             habitacion.Descripcion = DtgDatos.Rows[fila].Cells[2].Value.ToString();
             habitacion.Capacidad = int.Parse(DtgDatos.Rows[fila].Cells[3].Value.ToString());
             habitacion.Piso = int.Parse(DtgDatos.Rows[fila].Cells[4].Value.ToString());
+            habitacion.Costo_Noche = double.Parse(DtgDatos.Rows[fila].Cells[8].Value.ToString());
 
             switch (columna)
             {
                 case 5:
                     {
-                        FrmReservas fr = new FrmReservas();
-                        fr.ShowDialog();
+                        new FrmReservas().ShowDialog();
                         DtgDatos.Columns.Clear();
                     }; break;
                 case 6:
                     {
-                        //CHECK IN
+                        new FrmCheckIn().ShowDialog();
+                        DtgDatos.Columns.Clear();
                     }; break;
                 case 7:
                     {
-                        //CHECK OUT
+                        
                     }; break;
             }
         }

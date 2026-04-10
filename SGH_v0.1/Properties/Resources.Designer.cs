@@ -103,6 +103,16 @@ namespace SGH_v0._1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap booking64px {
+            get {
+                object obj = ResourceManager.GetObject("booking64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Business_Report {
             get {
                 object obj = ResourceManager.GetObject("Business_Report", resourceCulture);
@@ -296,6 +306,16 @@ namespace SGH_v0._1.Properties {
         internal static System.Drawing.Bitmap Hotel_Check_Out_white {
             get {
                 object obj = ResourceManager.GetObject("Hotel_Check_Out_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hotelupgrade64x {
+            get {
+                object obj = ResourceManager.GetObject("hotelupgrade64x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

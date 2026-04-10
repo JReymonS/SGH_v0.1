@@ -84,6 +84,7 @@
     <Compile Include="ManejadoLogin.cs" />
     <Compile Include="ManejadorCargos.cs" />
     <Compile Include="ManejadorPermisos.cs" />
+    <Compile Include="ManejadorReservas.cs" />
     <Compile Include="ManejadorUsuarios.cs" />
     <Compile Include="ManejadorReportes.cs" />
     <Compile Include="ManejadorHabitaciones.cs" />
