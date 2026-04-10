@@ -47,9 +47,32 @@ namespace SGH_v0._1
             mc.Mostrar(cargosConsulta, DtgDatosCargo, "Cargos");
         }
 
+        private void DtgDatosCargo_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            fila = e.RowIndex;
+            columna = e.ColumnIndex;
+        }
+
+        private void DtgDatosCargo_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            cargos.Id_Cargo = int.Parse(DtgDatosCargo.Rows[fila].Cells["Id_Cargo"].Value.ToString());
+            //cargos.Fecha = DtgDatosCargo.Rows[fila].Cells["Fecha"].Value.ToString();
+            cargos.Concepto = DtgDatosCargo.Rows[fila].Cells["Concepto"].Value.ToString();
+            cargos.Monto = decimal.Parse(DtgDatosCargo.Rows[fila].Cells["Monto"].Value.ToString());
+            cargos.Id_Reserva = seleccion;
+
+        }
+
+        //switch(columna){
+            //case    
 
 
-       
+
+
+
+
+
+
 
 
 

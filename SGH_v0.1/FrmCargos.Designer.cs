@@ -110,6 +110,8 @@
             this.DtgDatosCargo.Name = "DtgDatosCargo";
             this.DtgDatosCargo.Size = new System.Drawing.Size(433, 113);
             this.DtgDatosCargo.TabIndex = 6;
+            this.DtgDatosCargo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgDatosCargo_CellClick);
+            this.DtgDatosCargo.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgDatosCargo_CellEnter);
             // 
             // BtnBuscar
             // 

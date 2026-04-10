@@ -16,7 +16,7 @@ namespace SGH_v0._1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmDatosCargos());
+            Application.Run(new FrmCargos());
         }
     }
 }
