@@ -47,6 +47,44 @@ namespace SGH_v0._1
         }
 
 
+        //Administrar habitaciones y reservas
+        private void tsbHabitacionReserva_Click(object sender, EventArgs e)
+        {
+            FrmHabitaciones frmHabitaciones = new FrmHabitaciones();
+            frmHabitaciones.MdiParent = this;
+            frmHabitaciones.Show();
+        }
+
+
+        //Administrar housekeeping
+
+        private void tsbHousekeeping_Click(object sender, EventArgs e)
+        {
+            FrmHousekeeping frmHousekeeping = new FrmHousekeeping();
+            frmHousekeeping.MdiParent = this;
+            frmHousekeeping.Show();
+        }
+
+
+        //Administrar cargos
+        private void tsbCargos_Click(object sender, EventArgs e)
+        {
+            FrmCargos frmCargos = new FrmCargos();
+            frmCargos.MdiParent = this;
+            frmCargos.Show();
+
+        }
+
+
+        //Administrar reportes
+        private void tsbReportes_Click(object sender, EventArgs e)
+        {
+            FrmReportes frmReportes = new FrmReportes();
+            frmReportes.MdiParent = this;
+            frmReportes.Show();
+        }
+
+
         //Administrar usuarios
         private void tsbUsuarios_Click(object sender, EventArgs e)
         {
@@ -60,26 +98,6 @@ namespace SGH_v0._1
         private void tsbLogout_Click(object sender, EventArgs e)
         {
             Application.Restart();
-        }
-
-        private void tsbHousekeeping_Click(object sender, EventArgs e)
-        {
-            // Creamos la instancia
-            FrmHousekeeping ventanaHouse = new FrmHousekeeping();
-            // La mostramos como cuadro de diálogo (bloquea lo de atrás)
-            ventanaHouse.ShowDialog();
-        }
-        
-        private void tsbReportes_Click(object sender, EventArgs e)
-        {
-            FrmReportes fr = new FrmReportes();
-            fr.ShowDialog();
-        }
-        
-        private void tsbHabitacionReserva_Click(object sender, EventArgs e)
-        {
-            FrmHabitaciones fh = new FrmHabitaciones();
-            fh.ShowDialog();
         }
     }
 }
