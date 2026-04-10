@@ -53,6 +53,56 @@ namespace SGH_v0._1
             columna = e.ColumnIndex;
         }
 
+<<<<<<< Updated upstream
+=======
+        private void BtnAgregarCargo_Click(object sender, EventArgs e)
+        {
+            cargos.Id_Cargo = 0; cargos.Concepto = ""; cargos.Monto = 0m; 
+
+            FrmDatosCargos fdc = new FrmDatosCargos();
+            fdc.ShowDialog();
+            //DtgDatosCargo.Columns.Clear();
+
+            ActualizarCargos();
+        }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+            if (DtgDatosCargo.CurrentRow != null) //Validar que se haya dado clic en una fila del DtgDatosCargo
+            {
+                cargos.Id_Cargo = int.Parse(DtgDatosCargo.CurrentRow.Cells["Id_Cargo"].Value.ToString());
+                cargos.Concepto = DtgDatosCargo.CurrentRow.Cells["Concepto"].Value.ToString();
+                cargos.Monto = decimal.Parse(DtgDatosCargo.CurrentRow.Cells["Monto"].Value.ToString());
+
+                FrmDatosCargos fdc = new FrmDatosCargos();
+                fdc.ShowDialog();
+
+                ActualizarCargos();
+
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un cargo para editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            if (DtgDatosCargo.CurrentRow != null)
+            {
+                cargos.Id_Cargo = int.Parse(DtgDatosCargo.CurrentRow.Cells["Id_Cargo"].Value.ToString());
+                cargos.Concepto=  DtgDatosCargo.CurrentRow.Cells["Concepto"].Value.ToString();
+                mc.Borrar(cargos);
+                ActualizarCargos();
+
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un cargo para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+>>>>>>> Stashed changes
         private void DtgDatosCargo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             cargos.Id_Cargo = int.Parse(DtgDatosCargo.Rows[fila].Cells["Id_Cargo"].Value.ToString());
