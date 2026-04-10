@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ManejadoLogin.cs" />
+    <Compile Include="ManejadorCargos.cs" />
     <Compile Include="ManejadorPermisos.cs" />
     <Compile Include="ManejadorUsuarios.cs" />
     <Compile Include="ManejadorReportes.cs" />
