@@ -23,6 +23,9 @@ namespace SGH_v0._1
         {
             InitializeComponent();
             mc = new ManejadorCargos();
+
+            DiseñoDTG(DtgDatosHuesped);
+            DiseñoDTG(DtgDatosCargo);
         }
 
         private void BtnBuscar_Click(object sender, EventArgs e)
@@ -135,6 +138,45 @@ namespace SGH_v0._1
                 }
             }
             TxtMonto.Text = total.ToString("C2"); //Formato de moneda: $0.00
+        }
+
+        // Diseño para el DataGridView 
+        private void DiseñoDTG (DataGridView dgv)
+        {
+
+            dgv.RowHeadersVisible = false;
+
+            // Ocultar la flecha selectora y el renglón extra
+            dgv.RowHeadersVisible = false;
+            dgv.AllowUserToAddRows = false;
+
+            // Estilo de encabezados de columnas
+            dgv.EnableHeadersVisualStyles = false;
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(244, 244, 244);
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+
+            // Tamaño de encabezados de columnas
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10F);
+
+            dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+
+            // Celdas
+            dgv.DefaultCellStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            dgv.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.DefaultCellStyle.BackColor = Color.FromArgb(244, 244, 244);
+
+            // Selección Azul
+            dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(210, 232, 245);
+            dgv.DefaultCellStyle.SelectionForeColor = Color.Black;
+
+            // Líneas divisorias
+            dgv.GridColor = Color.LightGray;
+            dgv.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+
+            //dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            //dgv.AllowUserToResizeRows = false;
+
         }
     }
 }
