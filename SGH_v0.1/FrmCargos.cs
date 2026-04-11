@@ -39,9 +39,19 @@ namespace SGH_v0._1
 
         private void DtgDatosHuesped_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            seleccion = int.Parse(DtgDatosHuesped.Rows[e.RowIndex].Cells["Id_Reserva"].Value.ToString());
+            if (e.RowIndex >= 0)
+            {
+                seleccion = int.Parse(DtgDatosHuesped.Rows[e.RowIndex].Cells["Id_Reserva"].Value.ToString());
+                string nombre = DtgDatosHuesped.Rows[e.RowIndex].Cells["NOMBRE"].Value.ToString(); //Nombre del huesped
+                ActualizarCargos(); //Mostrar los cargos del huesped seleccionado
 
-            ActualizarCargos();
+                if(DtgDatosCargo.Rows.Count == 0)
+                {
+                    MessageBox.Show($"No hay cargos registrados para el huésped {nombre}.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+            }
+            
         }
 
         private void ActualizarCargos()
