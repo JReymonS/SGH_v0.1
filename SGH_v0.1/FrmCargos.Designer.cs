@@ -94,6 +94,7 @@
             // 
             // DtgDatosHuesped
             // 
+            this.DtgDatosHuesped.AllowUserToAddRows = false;
             this.DtgDatosHuesped.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.DtgDatosHuesped.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtgDatosHuesped.Location = new System.Drawing.Point(36, 160);
@@ -104,6 +105,7 @@
             // 
             // DtgDatosCargo
             // 
+            this.DtgDatosCargo.AllowUserToAddRows = false;
             this.DtgDatosCargo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.DtgDatosCargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtgDatosCargo.Location = new System.Drawing.Point(36, 301);
@@ -137,6 +139,7 @@
             this.BtnAgregarCargo.Size = new System.Drawing.Size(40, 40);
             this.BtnAgregarCargo.TabIndex = 8;
             this.BtnAgregarCargo.UseVisualStyleBackColor = true;
+            this.BtnAgregarCargo.Click += new System.EventHandler(this.BtnAgregarCargo_Click_1);
             // 
             // label3
             // 
@@ -200,6 +203,7 @@
             this.BtnEditar.Size = new System.Drawing.Size(40, 40);
             this.BtnEditar.TabIndex = 14;
             this.BtnEditar.UseVisualStyleBackColor = true;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click_1);
             // 
             // BtnEliminar
             // 
@@ -212,6 +216,7 @@
             this.BtnEliminar.Size = new System.Drawing.Size(40, 40);
             this.BtnEliminar.TabIndex = 15;
             this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click_1);
             // 
             // FrmCargos
             // 

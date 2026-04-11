@@ -190,6 +190,7 @@
             this.BtnGuardar.Size = new System.Drawing.Size(40, 40);
             this.BtnGuardar.TabIndex = 12;
             this.BtnGuardar.UseVisualStyleBackColor = true;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // BtnCerrar
             // 

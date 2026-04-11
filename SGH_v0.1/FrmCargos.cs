@@ -27,11 +27,11 @@ namespace SGH_v0._1
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
-            string consulta = $"SELECT r.Id_Reserva, h.Nombre, h.Apellidos, h.Telefono, h.Correo, h.RFC" +
-                              $"FROM Huespedes h INNER JOIN Reservas r ON h.RFC = r.RFC" +
-                              $"WHERE h.Nombre LIKE '%{TxtHuesped.Text}%' AND r.Estado_Pago = 'Pendiente'";
+            string consulta = $"SELECT Id_Reserva, NOMBRE, APELLIDOS, TELEFONO, EMAIL, RFC " +
+                              $"FROM v_CargoHuesped " +
+                              $"WHERE NOMBRE LIKE '%{TxtHuesped.Text}%' AND PAGO = 'Pendiente'";
 
-            mc.Mostrar(consulta, DtgDatosHuesped, "Reservas");
+            mc.Mostrar(consulta, DtgDatosHuesped, "v_CargoHuesped");
         }
 
         private void DtgDatosHuesped_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -43,7 +43,7 @@ namespace SGH_v0._1
 
         private void ActualizarCargos()
         {
-            string cargosConsulta = $"SELECT Id_Cargo, Descripcion, Monto FROM Cargos WHERE Id_Reserva = {seleccion}";
+            string cargosConsulta = $"SELECT Id_Cargo, Concepto, Monto FROM Cargos WHERE Id_Reserva = {seleccion}";
             mc.Mostrar(cargosConsulta, DtgDatosCargo, "Cargos");
         }
 
@@ -53,11 +53,9 @@ namespace SGH_v0._1
             columna = e.ColumnIndex;
         }
 
-<<<<<<< Updated upstream
-=======
-        private void BtnAgregarCargo_Click(object sender, EventArgs e)
+        private void BtnAgregarCargo_Click_1(object sender, EventArgs e)
         {
-            cargos.Id_Cargo = 0; cargos.Concepto = ""; cargos.Monto = 0m; 
+            cargos.Id_Cargo = 0; cargos.Concepto = ""; cargos.Monto = 0m;
 
             FrmDatosCargos fdc = new FrmDatosCargos();
             fdc.ShowDialog();
@@ -66,7 +64,7 @@ namespace SGH_v0._1
             ActualizarCargos();
         }
 
-        private void BtnEditar_Click(object sender, EventArgs e)
+        private void BtnEditar_Click_1(object sender, EventArgs e)
         {
             if (DtgDatosCargo.CurrentRow != null) //Validar que se haya dado clic en una fila del DtgDatosCargo
             {
@@ -86,12 +84,12 @@ namespace SGH_v0._1
             }
         }
 
-        private void BtnEliminar_Click(object sender, EventArgs e)
+        private void BtnEliminar_Click_1(object sender, EventArgs e)
         {
             if (DtgDatosCargo.CurrentRow != null)
             {
                 cargos.Id_Cargo = int.Parse(DtgDatosCargo.CurrentRow.Cells["Id_Cargo"].Value.ToString());
-                cargos.Concepto=  DtgDatosCargo.CurrentRow.Cells["Concepto"].Value.ToString();
+                cargos.Concepto = DtgDatosCargo.CurrentRow.Cells["Concepto"].Value.ToString();
                 mc.Borrar(cargos);
                 ActualizarCargos();
 
@@ -102,7 +100,6 @@ namespace SGH_v0._1
             }
         }
 
->>>>>>> Stashed changes
         private void DtgDatosCargo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             cargos.Id_Cargo = int.Parse(DtgDatosCargo.Rows[fila].Cells["Id_Cargo"].Value.ToString());
@@ -112,20 +109,5 @@ namespace SGH_v0._1
             cargos.Id_Reserva = seleccion;
 
         }
-
-        //switch(columna){
-            //case    
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
