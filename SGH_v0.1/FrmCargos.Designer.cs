@@ -79,19 +79,19 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(32, 123);
+            this.label2.Location = new System.Drawing.Point(35, 120);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 17);
             this.label2.TabIndex = 2;
-            this.label2.Text = "HUESPED.";
+            this.label2.Text = "HUESPED:";
             // 
             // TxtHuesped
             // 
             this.TxtHuesped.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxtHuesped.Location = new System.Drawing.Point(104, 116);
+            this.TxtHuesped.Location = new System.Drawing.Point(107, 117);
             this.TxtHuesped.Multiline = true;
             this.TxtHuesped.Name = "TxtHuesped";
-            this.TxtHuesped.Size = new System.Drawing.Size(486, 30);
+            this.TxtHuesped.Size = new System.Drawing.Size(486, 24);
             this.TxtHuesped.TabIndex = 3;
             // 
             // DtgDatosHuesped
@@ -109,7 +109,7 @@
             this.DtgDatosHuesped.DefaultCellStyle = dataGridViewCellStyle1;
             this.DtgDatosHuesped.GridColor = System.Drawing.SystemColors.ControlText;
             this.DtgDatosHuesped.ImeMode = System.Windows.Forms.ImeMode.Katakana;
-            this.DtgDatosHuesped.Location = new System.Drawing.Point(36, 160);
+            this.DtgDatosHuesped.Location = new System.Drawing.Point(36, 155);
             this.DtgDatosHuesped.Name = "DtgDatosHuesped";
             this.DtgDatosHuesped.Size = new System.Drawing.Size(625, 124);
             this.DtgDatosHuesped.TabIndex = 5;
@@ -143,7 +143,7 @@
             this.BtnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BtnBuscar.FlatAppearance.BorderSize = 0;
             this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBuscar.Location = new System.Drawing.Point(591, 109);
+            this.BtnBuscar.Location = new System.Drawing.Point(592, 109);
             this.BtnBuscar.Name = "BtnBuscar";
             this.BtnBuscar.Size = new System.Drawing.Size(40, 40);
             this.BtnBuscar.TabIndex = 7;
@@ -167,7 +167,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(529, 305);
+            this.label3.Location = new System.Drawing.Point(537, 305);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 17);
             this.label3.TabIndex = 9;
@@ -176,11 +176,13 @@
             // TxtMonto
             // 
             this.TxtMonto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtMonto.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtMonto.Location = new System.Drawing.Point(599, 301);
             this.TxtMonto.Multiline = true;
             this.TxtMonto.Name = "TxtMonto";
-            this.TxtMonto.Size = new System.Drawing.Size(61, 25);
+            this.TxtMonto.Size = new System.Drawing.Size(61, 23);
             this.TxtMonto.TabIndex = 10;
+            this.TxtMonto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox2
             // 
@@ -246,6 +248,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(776, 490);
+            this.Controls.Add(this.TxtHuesped);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnEditar);
             this.Controls.Add(this.BtnPagar);
@@ -257,7 +260,6 @@
             this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.DtgDatosCargo);
             this.Controls.Add(this.DtgDatosHuesped);
-            this.Controls.Add(this.TxtHuesped);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
