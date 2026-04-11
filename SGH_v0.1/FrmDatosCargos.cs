@@ -23,7 +23,7 @@ namespace SGH_v0._1
             if(mc != null)
             {
                 TxtBebida.Text = FrmCargos.cargos.Concepto.Replace("Bebida - ", ""); 
-
+                  
                 TxtCostoBebida.Text = FrmCargos.cargos.Monto.ToString();
             }
         }
