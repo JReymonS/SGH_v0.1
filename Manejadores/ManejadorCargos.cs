@@ -38,7 +38,10 @@ namespace Manejadores
         {
             tabla.Columns.Clear();
             tabla.DataSource = b.Consulta(consulta, datos).Tables[datos];
-            //tabla.Columns["Id_Cargo"].Visible = false;
+
+            if (tabla.Columns.Contains("Id_Cargo")) { tabla.Columns["Id_Cargo"].Visible = false; }
+            if(tabla.Columns.Contains("Id_Reserva")) { tabla.Columns["Id_Reserva"].Visible = false; }
+
             tabla.AutoResizeColumns();
             tabla.AutoResizeRows();
         }
