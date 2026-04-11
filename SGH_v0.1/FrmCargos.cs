@@ -46,7 +46,8 @@ namespace SGH_v0._1
 
         private void ActualizarCargos()
         {
-            string cargosConsulta = $"SELECT Id_Cargo, Concepto, Monto FROM Cargos WHERE Id_Reserva = {seleccion}";
+            string cargosConsulta = $"SELECT Id_Cargo, Concepto AS \"CONCEPTO\", Monto AS \"COSTO\" FROM Cargos " +
+                                    $"WHERE Id_Reserva = {seleccion}";
             mc.Mostrar(cargosConsulta, DtgDatosCargo, "Cargos");
 
             CalcularCargoTotal();
@@ -74,7 +75,7 @@ namespace SGH_v0._1
             if (DtgDatosCargo.CurrentRow != null) //Validar que se haya dado clic en una fila del DtgDatosCargo
             {
                 // Extraer los datos de la fila seleccionada
-                string conceptoSeleccionado = DtgDatosCargo.CurrentRow.Cells["Concepto"].Value.ToString();
+                string conceptoSeleccionado = DtgDatosCargo.CurrentRow.Cells["CONCEPTO"].Value.ToString();
                 if (conceptoSeleccionado.Contains("Desayuno"))
                 {
                     MessageBox.Show("El paquete de Desayuno no se puede modificar. Si desea corregirlo, " +
@@ -86,7 +87,7 @@ namespace SGH_v0._1
                 cargos.Id_Cargo = int.Parse(DtgDatosCargo.CurrentRow.Cells["Id_Cargo"].Value.ToString());
                 //cargos.Concepto = DtgDatosCargo.CurrentRow.Cells["Concepto"].Value.ToString();
                 cargos.Concepto = conceptoSeleccionado;
-                cargos.Monto = decimal.Parse(DtgDatosCargo.CurrentRow.Cells["Monto"].Value.ToString());
+                cargos.Monto = decimal.Parse(DtgDatosCargo.CurrentRow.Cells["COSTO"].Value.ToString());
 
                 FrmDatosCargos fdc = new FrmDatosCargos();
                 fdc.ShowDialog();
@@ -105,7 +106,7 @@ namespace SGH_v0._1
             if (DtgDatosCargo.CurrentRow != null)
             {
                 cargos.Id_Cargo = int.Parse(DtgDatosCargo.CurrentRow.Cells["Id_Cargo"].Value.ToString());
-                cargos.Concepto = DtgDatosCargo.CurrentRow.Cells["Concepto"].Value.ToString();
+                cargos.Concepto = DtgDatosCargo.CurrentRow.Cells["CONCEPTO"].Value.ToString();
                 mc.Borrar(cargos);
                 ActualizarCargos();
 
@@ -120,8 +121,8 @@ namespace SGH_v0._1
         {
             cargos.Id_Cargo = int.Parse(DtgDatosCargo.Rows[fila].Cells["Id_Cargo"].Value.ToString());
             //cargos.Fecha = DtgDatosCargo.Rows[fila].Cells["Fecha"].Value.ToString();
-            cargos.Concepto = DtgDatosCargo.Rows[fila].Cells["Concepto"].Value.ToString();
-            cargos.Monto = decimal.Parse(DtgDatosCargo.Rows[fila].Cells["Monto"].Value.ToString());
+            cargos.Concepto = DtgDatosCargo.Rows[fila].Cells["CONCEPTO"].Value.ToString();
+            cargos.Monto = decimal.Parse(DtgDatosCargo.Rows[fila].Cells["COSTO"].Value.ToString());
             cargos.Id_Reserva = seleccion;
 
         }
@@ -132,12 +133,12 @@ namespace SGH_v0._1
 
             foreach(DataGridViewRow renglon in DtgDatosCargo.Rows)
             {
-                if (renglon.Cells["Monto"].Value != null)
+                if (renglon.Cells["COSTO"].Value != null)
                 {
-                    total += decimal.Parse(renglon.Cells["Monto"].Value.ToString());
+                    total += decimal.Parse(renglon.Cells["COSTO"].Value.ToString());
                 }
             }
-            TxtMonto.Text = total.ToString("C2"); //Formato de moneda: $0.00
+            TxtMonto.Text = total.ToString(); 
         }
 
         // Diseño para el DataGridView 
