@@ -60,7 +60,7 @@ namespace SGH_v0._1
                 decimal.TryParse(TxtCostoBebida.Text, out costo);
 
                 string conceptoCargo = "Bebida - " + TxtBebida.Text;
-                mc.Guardar(new Cargos(FrmCargos.cargos.Id_Cargo, "", conceptoCargo, costo, FrmCargos.cargos.Id_Reserva));
+                mc.Modificar(new Cargos(FrmCargos.cargos.Id_Cargo, "", conceptoCargo, costo, FrmCargos.cargos.Id_Reserva));
 
             }
             Close ();
