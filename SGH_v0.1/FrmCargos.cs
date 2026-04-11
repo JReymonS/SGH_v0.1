@@ -75,7 +75,7 @@ namespace SGH_v0._1
                 if (conceptoSeleccionado.Contains("Desayuno"))
                 {
                     MessageBox.Show("El paquete de Desayuno no se puede modificar. Si desea corregirlo, " +
-                                    "elimine el cargo y vuelva a agregarlo", "Acción denegada",
+                                    "elimine el cargo y vuelva a agregarlo.", "Acción denegada",
                                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
