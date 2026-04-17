@@ -45,6 +45,7 @@ namespace Manejadores
             tabla.Columns.Insert(6, Boton("CHECK-IN", Color.Green));
             tabla.Columns.Insert(7, Boton("CHECK-OUT", Color.Red));
             tabla.Columns["COSTO_NOCHE"].Visible = false;
+            tabla.Columns["ESTADO"].Visible = false;
             tabla.AutoResizeColumns();
             tabla.AutoResizeRows();
         }

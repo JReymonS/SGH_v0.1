@@ -55,22 +55,29 @@ namespace SGH_v0._1
 
         private void btnConfirmarPago_Click(object sender, EventArgs e)
         {
-            if(!decimal.TryParse(txtPagar.Text, out decimal monto) || monto <= 0)
+            if (!decimal.TryParse(txtPagar.Text, out decimal monto) || monto <= 0)
             {
-                MessageBox.Show("Ingrese un monto valido.", "Valicacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ingrese un monto válido.", "Validación",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            string resultado = mr.RegistrarCheckIn(datos.Id_Reserva, monto);
-            if(resultado == "OK")
+
+            if (monto < datos.Restante)
             {
-                MessageBox.Show("Pago registrado correctamente", "Check-In completo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                MessageBox.Show(
+                    $"El monto ingresado (${monto:F2}) no cubre el total restante (${datos.Restante:F2}).\n" +
+                    "Debe pagar el total para completar el Check-In.",
+                    "Monto insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            else if (resultado == "PARCIAL")
+
+            string resultado = mr.RegistrarCheckIn(datos.Id_Reserva, monto);
+
+            if (resultado == "OK")
             {
-                MessageBox.Show("Pago parcial registado. La reserva sigue pendiente.","Pago parcial",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                //Recargar para actual el restante
-                FrmCheckIn_Load(null, null);
+                MessageBox.Show("Pago registrado. Check-In completado.", "Éxito",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
             else
             {

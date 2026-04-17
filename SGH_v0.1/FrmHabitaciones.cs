@@ -41,17 +41,44 @@ namespace SGH_v0._1
             habitacion.Piso = int.Parse(DtgDatos.Rows[fila].Cells[4].Value.ToString());
             habitacion.Costo_Noche = double.Parse(DtgDatos.Rows[fila].Cells[8].Value.ToString());
 
+            string estado = DtgDatos.Rows[fila].Cells["ESTADO"].Value.ToString();
             switch (columna)
             {
                 case 5:
                     {
-                        new FrmReservas().ShowDialog();
-                        DtgDatos.Columns.Clear();
+                        if (estado == "Disponible")
+                        {
+                            new FrmReservas().ShowDialog();
+                            DtgDatos.Columns.Clear();
+                        }
+                        else
+                        {
+                            if (estado == "Ocupada")
+                            {
+                                new FrmReservas().ShowDialog();
+                                DtgDatos.Columns.Clear();
+                            }
+                            else
+                            {
+                                MessageBox.Show(
+                                    $"La habitación está en estado '{estado}' y no puede reservarse.",
+                                    "No disponible", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                        }
                     }; break;
                 case 6:
                     {
-                        new FrmCheckIn().ShowDialog();
-                        DtgDatos.Columns.Clear();
+                        if (estado == "Ocupada")
+                        {
+                            new FrmCheckIn().ShowDialog();
+                            DtgDatos.Columns.Clear();
+                        }
+                        else
+                        {
+                            MessageBox.Show(
+                                "Solo se puede hacer Check-In a habitaciones con reserva activa como Ocupada.",
+                                "No disponible", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }; break;
                 case 7:
                     {

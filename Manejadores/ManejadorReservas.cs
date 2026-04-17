@@ -109,12 +109,13 @@ namespace Manejadores
         public Reservas ObtenerReservaPorHabitacion(string numeroHabitacion)
         {
             DataSet ds = b.Consulta(
-                $"SELECT r.Id_Reserva, r.Fecha_Entrada, r.Fecha_Salida, r.Estado_Pago, " +
-                $"r.Anticipo, r.RFC, hg.Nombre, hg.Apellidos, hg.Correo, hg.Telefono " +
-                $"FROM Habitaciones h " +
-                $"JOIN Reservas r ON r.Id_Reserva = h.Id_Reserva " +
-                $"JOIN Huespedes hg ON hg.RFC = r.RFC " +
-                $"WHERE h.Numero_Habitacion = '{numeroHabitacion}';", "reserva");
+            $"SELECT r.Id_Reserva, r.Fecha_Entrada, r.Fecha_Salida, r.Estado_Pago, " +
+            $"r.Anticipo, r.RFC, hg.Nombre, hg.Apellidos, hg.Correo, hg.Telefono " +
+            $"FROM Habitaciones h " +
+            $"JOIN Reservas r ON r.Id_Reserva = h.Id_Reserva " +
+            $"JOIN Huespedes hg ON hg.RFC = r.RFC " +
+            $"WHERE h.Numero_Habitacion = '{numeroHabitacion}' " +
+            $"AND r.Estado_Pago != 'Cancelado' AND r.Estado_Pago != 'Finalizado';", "reserva"); // ← filtro agregado
 
             if (ds.Tables["reserva"] == null || ds.Tables["reserva"].Rows.Count == 0)
                 return null;

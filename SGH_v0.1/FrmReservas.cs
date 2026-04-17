@@ -113,7 +113,7 @@ namespace SGH_v0._1
         private void btnCancelarReserva_Click(object sender, EventArgs e)
         {
             var conf = MessageBox.Show(
-            $"¿Cancelar la reserva #{reservaActual.Id_Reserva} de {reservaActual.Nombre} {reservaActual.Apellidos}?",
+            $"¿Desea cancelar la reserva de {reservaActual.Nombre} {reservaActual.Apellidos}?",
             "Confirmar cancelación",
             MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
