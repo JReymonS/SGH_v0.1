@@ -48,6 +48,14 @@ namespace Manejadores
             tabla.AutoResizeRows();
         }
 
+        // Housekeeping (Sin botones extra)
+        public void MostrarHousekeeping(string consulta, DataGridView tabla, string datos)
+        {
+            tabla.Columns.Clear();
+            tabla.DataSource = b.Consulta(consulta, datos).Tables[0];
+            tabla.AutoResizeColumns();
+            tabla.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; 
+        }
         public static DataGridViewButtonColumn Boton(string titulo, Color fondo)
         {
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
@@ -94,6 +102,16 @@ namespace Manejadores
             }
 
             return false;
+        }
+        public void ActualizarEstado(string numero, string nuevoEstado)
+        {
+            b.Comando($"UPDATE Habitaciones SET Estado = '{nuevoEstado}' WHERE Numero_Habitacion = '{numero}';");
+        }
+
+        public int ContarTotalHabitaciones()
+        {
+            DataSet ds = b.Consulta("SELECT COUNT(*) FROM Habitaciones", "count");
+            return Convert.ToInt32(ds.Tables["count"].Rows[0][0]);
         }
     }
 }

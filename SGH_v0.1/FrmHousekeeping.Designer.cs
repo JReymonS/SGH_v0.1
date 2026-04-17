@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DtgDatos = new System.Windows.Forms.DataGridView();
             this.noHabitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoHabitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,10 +68,10 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.Lblinformacion = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DtgDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -89,7 +89,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 17);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(903, 53);
             this.panel1.TabIndex = 0;
@@ -111,93 +111,103 @@
             // 
             this.pictureBox1.Image = global::SGH_v0._1.Properties.Resources.Room_white;
             this.pictureBox1.Location = new System.Drawing.Point(853, 9);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // dataGridView1
+            // DtgDatos
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DtgDatos.AllowUserToAddRows = false;
+            this.DtgDatos.AllowUserToDeleteRows = false;
+            this.DtgDatos.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.DtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DtgDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.noHabitacion,
             this.Tipo,
             this.estadoHabitacion,
             this.Capacidad,
             this.Piso});
-            this.dataGridView1.Location = new System.Drawing.Point(36, 171);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(690, 315);
-            this.dataGridView1.TabIndex = 1;
+            this.DtgDatos.Location = new System.Drawing.Point(36, 171);
+            this.DtgDatos.Margin = new System.Windows.Forms.Padding(2);
+            this.DtgDatos.MultiSelect = false;
+            this.DtgDatos.Name = "DtgDatos";
+            this.DtgDatos.ReadOnly = true;
+            this.DtgDatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DtgDatos.RowHeadersVisible = false;
+            this.DtgDatos.RowHeadersWidth = 51;
+            this.DtgDatos.RowTemplate.Height = 24;
+            this.DtgDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DtgDatos.Size = new System.Drawing.Size(690, 315);
+            this.DtgDatos.TabIndex = 1;
+            this.DtgDatos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DtgDatos_CellFormatting);
             // 
             // noHabitacion
             // 
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            this.noHabitacion.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black;
+            this.noHabitacion.DefaultCellStyle = dataGridViewCellStyle21;
             this.noHabitacion.HeaderText = "NO.";
             this.noHabitacion.MinimumWidth = 6;
             this.noHabitacion.Name = "noHabitacion";
+            this.noHabitacion.ReadOnly = true;
             this.noHabitacion.Width = 140;
             // 
             // Tipo
             // 
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            this.Tipo.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.Black;
+            this.Tipo.DefaultCellStyle = dataGridViewCellStyle22;
             this.Tipo.HeaderText = "TIPO";
             this.Tipo.MinimumWidth = 6;
             this.Tipo.Name = "Tipo";
+            this.Tipo.ReadOnly = true;
             this.Tipo.Width = 180;
             // 
             // estadoHabitacion
             // 
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            this.estadoHabitacion.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.Black;
+            this.estadoHabitacion.DefaultCellStyle = dataGridViewCellStyle23;
             this.estadoHabitacion.HeaderText = "ESTADO_HABITACION";
             this.estadoHabitacion.MinimumWidth = 6;
             this.estadoHabitacion.Name = "estadoHabitacion";
+            this.estadoHabitacion.ReadOnly = true;
             this.estadoHabitacion.Width = 200;
             // 
             // Capacidad
             // 
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            this.Capacidad.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Black;
+            this.Capacidad.DefaultCellStyle = dataGridViewCellStyle24;
             this.Capacidad.HeaderText = "CAPACIDAD";
             this.Capacidad.MinimumWidth = 6;
             this.Capacidad.Name = "Capacidad";
+            this.Capacidad.ReadOnly = true;
             this.Capacidad.Width = 140;
             // 
             // Piso
             // 
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
-            this.Piso.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.Black;
+            this.Piso.DefaultCellStyle = dataGridViewCellStyle25;
             this.Piso.HeaderText = "PISO";
             this.Piso.MinimumWidth = 6;
             this.Piso.Name = "Piso";
+            this.Piso.ReadOnly = true;
             this.Piso.Width = 140;
             // 
             // label2
@@ -216,7 +226,7 @@
             this.TxtBuscarHabitacion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtBuscarHabitacion.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.TxtBuscarHabitacion.Location = new System.Drawing.Point(75, 130);
-            this.TxtBuscarHabitacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtBuscarHabitacion.Margin = new System.Windows.Forms.Padding(2);
             this.TxtBuscarHabitacion.Multiline = true;
             this.TxtBuscarHabitacion.Name = "TxtBuscarHabitacion";
             this.TxtBuscarHabitacion.Size = new System.Drawing.Size(604, 29);
@@ -231,7 +241,7 @@
             this.BtnBuscar.BackgroundImage = global::SGH_v0._1.Properties.Resources.Google_Web_Search;
             this.BtnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnBuscar.Location = new System.Drawing.Point(699, 126);
-            this.BtnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnBuscar.Name = "BtnBuscar";
             this.BtnBuscar.Size = new System.Drawing.Size(30, 32);
             this.BtnBuscar.TabIndex = 4;
@@ -242,18 +252,19 @@
             this.BtnGuardar.BackgroundImage = global::SGH_v0._1.Properties.Resources.Save;
             this.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnGuardar.Location = new System.Drawing.Point(813, 499);
-            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(30, 32);
             this.BtnGuardar.TabIndex = 5;
             this.BtnGuardar.UseVisualStyleBackColor = true;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // BtnSalir
             // 
             this.BtnSalir.BackgroundImage = global::SGH_v0._1.Properties.Resources.Multiplication;
             this.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnSalir.Location = new System.Drawing.Point(862, 499);
-            this.BtnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(30, 32);
             this.BtnSalir.TabIndex = 6;
@@ -266,7 +277,7 @@
             this.TxtHabitacionesDisponibles.Enabled = false;
             this.TxtHabitacionesDisponibles.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtHabitacionesDisponibles.Location = new System.Drawing.Point(50, 82);
-            this.TxtHabitacionesDisponibles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtHabitacionesDisponibles.Margin = new System.Windows.Forms.Padding(2);
             this.TxtHabitacionesDisponibles.Multiline = true;
             this.TxtHabitacionesDisponibles.Name = "TxtHabitacionesDisponibles";
             this.TxtHabitacionesDisponibles.ReadOnly = true;
@@ -293,7 +304,7 @@
             this.pictureBox2.BackgroundImage = global::SGH_v0._1.Properties.Resources.Disponibles;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(54, 86);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(26, 28);
             this.pictureBox2.TabIndex = 9;
@@ -305,7 +316,7 @@
             this.pictureBox3.BackgroundImage = global::SGH_v0._1.Properties.Resources.Ocupadas;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Location = new System.Drawing.Point(269, 86);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(26, 28);
             this.pictureBox3.TabIndex = 12;
@@ -330,7 +341,7 @@
             this.TxtHabitacionesOcupadas.Enabled = false;
             this.TxtHabitacionesOcupadas.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtHabitacionesOcupadas.Location = new System.Drawing.Point(265, 82);
-            this.TxtHabitacionesOcupadas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtHabitacionesOcupadas.Margin = new System.Windows.Forms.Padding(2);
             this.TxtHabitacionesOcupadas.Multiline = true;
             this.TxtHabitacionesOcupadas.Name = "TxtHabitacionesOcupadas";
             this.TxtHabitacionesOcupadas.ReadOnly = true;
@@ -345,7 +356,7 @@
             this.pictureBox4.BackgroundImage = global::SGH_v0._1.Properties.Resources.Housekeeping;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Location = new System.Drawing.Point(485, 86);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(26, 28);
             this.pictureBox4.TabIndex = 15;
@@ -369,7 +380,7 @@
             this.TxtHabitacionesLimpieza.Enabled = false;
             this.TxtHabitacionesLimpieza.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtHabitacionesLimpieza.Location = new System.Drawing.Point(481, 82);
-            this.TxtHabitacionesLimpieza.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtHabitacionesLimpieza.Margin = new System.Windows.Forms.Padding(2);
             this.TxtHabitacionesLimpieza.Multiline = true;
             this.TxtHabitacionesLimpieza.Name = "TxtHabitacionesLimpieza";
             this.TxtHabitacionesLimpieza.ReadOnly = true;
@@ -384,7 +395,7 @@
             this.pictureBox5.BackgroundImage = global::SGH_v0._1.Properties.Resources.Mantenimiento;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.Location = new System.Drawing.Point(700, 86);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(26, 28);
             this.pictureBox5.TabIndex = 18;
@@ -408,7 +419,7 @@
             this.TxtHabitacionesMantenimiento.Enabled = false;
             this.TxtHabitacionesMantenimiento.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtHabitacionesMantenimiento.Location = new System.Drawing.Point(696, 82);
-            this.TxtHabitacionesMantenimiento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtHabitacionesMantenimiento.Margin = new System.Windows.Forms.Padding(2);
             this.TxtHabitacionesMantenimiento.Multiline = true;
             this.TxtHabitacionesMantenimiento.Name = "TxtHabitacionesMantenimiento";
             this.TxtHabitacionesMantenimiento.ReadOnly = true;
@@ -423,13 +434,14 @@
             this.BtnDisponible.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDisponible.ForeColor = System.Drawing.Color.White;
             this.BtnDisponible.Location = new System.Drawing.Point(739, 201);
-            this.BtnDisponible.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnDisponible.Margin = new System.Windows.Forms.Padding(2);
             this.BtnDisponible.Name = "BtnDisponible";
             this.BtnDisponible.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.BtnDisponible.Size = new System.Drawing.Size(165, 28);
             this.BtnDisponible.TabIndex = 19;
             this.BtnDisponible.Text = " COMO DISPONIBLE";
             this.BtnDisponible.UseVisualStyleBackColor = false;
+            this.BtnDisponible.Click += new System.EventHandler(this.BtnDisponible_Click);
             // 
             // BtnOcupada
             // 
@@ -437,12 +449,13 @@
             this.BtnOcupada.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnOcupada.ForeColor = System.Drawing.Color.White;
             this.BtnOcupada.Location = new System.Drawing.Point(739, 253);
-            this.BtnOcupada.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnOcupada.Margin = new System.Windows.Forms.Padding(2);
             this.BtnOcupada.Name = "BtnOcupada";
             this.BtnOcupada.Size = new System.Drawing.Size(165, 28);
             this.BtnOcupada.TabIndex = 20;
             this.BtnOcupada.Text = "COMO OCUPADA";
             this.BtnOcupada.UseVisualStyleBackColor = false;
+            this.BtnOcupada.Click += new System.EventHandler(this.BtnOcupada_Click);
             // 
             // BtnEnLimpieza
             // 
@@ -450,12 +463,13 @@
             this.BtnEnLimpieza.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEnLimpieza.ForeColor = System.Drawing.Color.White;
             this.BtnEnLimpieza.Location = new System.Drawing.Point(739, 305);
-            this.BtnEnLimpieza.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnEnLimpieza.Margin = new System.Windows.Forms.Padding(2);
             this.BtnEnLimpieza.Name = "BtnEnLimpieza";
             this.BtnEnLimpieza.Size = new System.Drawing.Size(165, 28);
             this.BtnEnLimpieza.TabIndex = 21;
             this.BtnEnLimpieza.Text = "EN LIMPIEZA";
             this.BtnEnLimpieza.UseVisualStyleBackColor = false;
+            this.BtnEnLimpieza.Click += new System.EventHandler(this.BtnEnLimpieza_Click);
             // 
             // BtnEnMantenimiento
             // 
@@ -463,12 +477,13 @@
             this.BtnEnMantenimiento.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEnMantenimiento.ForeColor = System.Drawing.Color.White;
             this.BtnEnMantenimiento.Location = new System.Drawing.Point(739, 354);
-            this.BtnEnMantenimiento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnEnMantenimiento.Margin = new System.Windows.Forms.Padding(2);
             this.BtnEnMantenimiento.Name = "BtnEnMantenimiento";
             this.BtnEnMantenimiento.Size = new System.Drawing.Size(165, 28);
             this.BtnEnMantenimiento.TabIndex = 22;
             this.BtnEnMantenimiento.Text = "EN MANTENIMIENTO";
             this.BtnEnMantenimiento.UseVisualStyleBackColor = false;
+            this.BtnEnMantenimiento.Click += new System.EventHandler(this.BtnEnMantenimiento_Click);
             // 
             // pictureBox6
             // 
@@ -476,7 +491,7 @@
             this.pictureBox6.BackgroundImage = global::SGH_v0._1.Properties.Resources.Mantenimiento_white;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox6.Location = new System.Drawing.Point(743, 359);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(17, 19);
             this.pictureBox6.TabIndex = 23;
@@ -488,7 +503,7 @@
             this.pictureBox7.BackgroundImage = global::SGH_v0._1.Properties.Resources.Housekeeping_white;
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox7.Location = new System.Drawing.Point(744, 310);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(17, 19);
             this.pictureBox7.TabIndex = 24;
@@ -500,7 +515,7 @@
             this.pictureBox8.BackgroundImage = global::SGH_v0._1.Properties.Resources.Ocupadas_white;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox8.Location = new System.Drawing.Point(743, 258);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(17, 19);
             this.pictureBox8.TabIndex = 25;
@@ -512,7 +527,7 @@
             this.pictureBox9.BackgroundImage = global::SGH_v0._1.Properties.Resources.Disponibles_white;
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox9.Location = new System.Drawing.Point(744, 206);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(17, 19);
             this.pictureBox9.TabIndex = 26;
@@ -523,29 +538,29 @@
             this.pictureBox10.BackgroundImage = global::SGH_v0._1.Properties.Resources.Info;
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox10.Location = new System.Drawing.Point(34, 504);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(20, 23);
             this.pictureBox10.TabIndex = 27;
             this.pictureBox10.TabStop = false;
             // 
-            // label3
+            // Lblinformacion
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(58, 508);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(175, 15);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "Mostrando 8 de 20 habitaciones";
+            this.Lblinformacion.AutoSize = true;
+            this.Lblinformacion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lblinformacion.Location = new System.Drawing.Point(58, 508);
+            this.Lblinformacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lblinformacion.Name = "Lblinformacion";
+            this.Lblinformacion.Size = new System.Drawing.Size(175, 15);
+            this.Lblinformacion.TabIndex = 28;
+            this.Lblinformacion.Text = "Mostrando 8 de 20 habitaciones";
             // 
             // FrmHousekeeping
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(917, 542);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.Lblinformacion);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
@@ -572,10 +587,10 @@
             this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.TxtBuscarHabitacion);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DtgDatos);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmHousekeeping";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmHousekeeping";
@@ -583,7 +598,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DtgDatos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -603,7 +618,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DtgDatos;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TxtBuscarHabitacion;
         private System.Windows.Forms.Button BtnBuscar;
@@ -630,7 +645,7 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label Lblinformacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn noHabitacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoHabitacion;
