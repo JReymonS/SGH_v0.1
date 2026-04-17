@@ -22,7 +22,7 @@ namespace SGH_v0._1
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
-            mh.Mostrar($"SELECT * FROM v_Habitaciones;", DtgDatos, "Habitaciones");
+            mh.Mostrar($"SELECT * FROM v_Habitaciones WHERE NO LIKE '%{TxtBuscar.Text.Trim('\'')}%';", DtgDatos, "Habitaciones");
         }
 
         private void DtgDatos_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -39,29 +39,59 @@ namespace SGH_v0._1
             habitacion.Descripcion = DtgDatos.Rows[fila].Cells[2].Value.ToString();
             habitacion.Capacidad = int.Parse(DtgDatos.Rows[fila].Cells[3].Value.ToString());
             habitacion.Piso = int.Parse(DtgDatos.Rows[fila].Cells[4].Value.ToString());
+            habitacion.Costo_Noche = double.Parse(DtgDatos.Rows[fila].Cells[8].Value.ToString());
 
+            string estado = DtgDatos.Rows[fila].Cells["ESTADO"].Value.ToString();
             switch (columna)
             {
                 case 5:
                     {
-                        FrmReservas fr = new FrmReservas();
-                        fr.ShowDialog();
-                        DtgDatos.Columns.Clear();
+                        if (estado == "Disponible")
+                        {
+                            new FrmReservas().ShowDialog();
+                            DtgDatos.Columns.Clear();
+                        }
+                        else
+                        {
+                            if (estado == "Ocupada")
+                            {
+                                new FrmReservas().ShowDialog();
+                                DtgDatos.Columns.Clear();
+                            }
+                            else
+                            {
+                                MessageBox.Show(
+                                    $"La habitación está en estado '{estado}' y no puede reservarse.",
+                                    "No disponible", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                        }
                     }; break;
                 case 6:
                     {
-                        //CHECK IN
+                        if (estado == "Ocupada")
+                        {
+                            new FrmCheckIn().ShowDialog();
+                            DtgDatos.Columns.Clear();
+                        }
+                        else
+                        {
+                            MessageBox.Show(
+                                "Solo se puede hacer Check-In a habitaciones con reserva activa como Ocupada.",
+                                "No disponible", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }; break;
                 case 7:
                     {
-                        //CHECK OUT
+                        
                     }; break;
             }
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            FrmHabitaciones.habitacion = new Habitaciones(); // NO null
+            FrmHabitaciones.habitacionSeleccionada = null; // 🔥 LIMPIAR
+            FrmHabitaciones.habitacion = new Habitaciones();
+
             new FrmDatosHabitacion().ShowDialog();
             DtgDatos.Columns.Clear();
         }
@@ -82,7 +112,6 @@ namespace SGH_v0._1
 
             DtgDatos.Columns.Clear();
         }
-
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
             if (DtgDatos.SelectedRows.Count == 0)
@@ -91,7 +120,22 @@ namespace SGH_v0._1
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
             string numero = DtgDatos.SelectedRows[0].Cells["NO"].Value.ToString();
+            string estado = DtgDatos.SelectedRows[0].Cells["ESTADO"].Value.ToString();
+
+            // 🔥 VALIDACIÓN
+            if (estado != "Disponible")
+            {
+                MessageBox.Show(
+                    $"No se puede eliminar la habitación porque está en estado '{estado}'.",
+                    "Operación no permitida",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+
             habitacion.Numero_Habitacion = numero;
 
             mh.Borrar(habitacion);

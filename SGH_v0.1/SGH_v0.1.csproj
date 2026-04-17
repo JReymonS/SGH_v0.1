@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
+    <Reference Include="System" />
     <Reference Include="ClosedXML, Version=0.105.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
       <HintPath>..\packages\ClosedXML.0.105.0\lib\netstandard2.0\ClosedXML.dll</HintPath>
     </Reference>
@@ -89,6 +89,12 @@
     </Compile>
     <Compile Include="FrmCargos.Designer.cs">
       <DependentUpon>FrmCargos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCheckIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCheckIn.Designer.cs">
+      <DependentUpon>FrmCheckIn.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmDashboard.cs">
       <SubType>Form</SubType>
@@ -150,6 +156,9 @@
     <Compile Include="FrmUsuarios.Designer.cs">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmCheckIn.resx">
+      <DependentUpon>FrmCheckIn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDatosUsuario.resx">
       <DependentUpon>FrmDatosUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,7 +211,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
-     </EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMostrarReporte.resx">
       <DependentUpon>FrmMostrarReporte.cs</DependentUpon>
     </EmbeddedResource>
@@ -427,6 +436,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Business Report x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotelupgrade64x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\booking64px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
