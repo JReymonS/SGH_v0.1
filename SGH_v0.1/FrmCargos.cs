@@ -185,9 +185,10 @@ namespace SGH_v0._1
             dgv.GridColor = Color.LightGray;
             dgv.CellBorderStyle = DataGridViewCellBorderStyle.Single;
 
-            //dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             //dgv.AllowUserToResizeRows = false;
 
+            dgv.ReadOnly = true;
         }
     }
 }
