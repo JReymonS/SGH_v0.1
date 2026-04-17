@@ -101,6 +101,7 @@
             // DtgDatosHuesped
             // 
             this.DtgDatosHuesped.AllowUserToAddRows = false;
+            this.DtgDatosHuesped.AllowUserToDeleteRows = false;
             this.DtgDatosHuesped.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.DtgDatosHuesped.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;

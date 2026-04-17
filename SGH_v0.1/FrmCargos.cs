@@ -32,7 +32,7 @@ namespace SGH_v0._1
         {
             string consulta = $"SELECT Id_Reserva, NOMBRE, APELLIDOS, TELEFONO, EMAIL, RFC " +
                               $"FROM v_CargoHuesped " +
-                              $"WHERE NOMBRE LIKE '%{TxtHuesped.Text}%' AND PAGO = 'Pendiente'";
+                              $"WHERE NOMBRE LIKE '%{TxtHuesped.Text}%'";
 
             mc.Mostrar(consulta, DtgDatosHuesped, "v_CargoHuesped");
         }
@@ -163,8 +163,8 @@ namespace SGH_v0._1
 
             // Estilo de encabezados de columnas
             dgv.EnableHeadersVisualStyles = false;
-            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(244, 244, 244);
-            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            dgv.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(244, 244, 244);
+            dgv.ColumnHeadersDefaultCellStyle.SelectionForeColor = Color.Black;
 
             // Tamaño de encabezados de columnas
             dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10F);
