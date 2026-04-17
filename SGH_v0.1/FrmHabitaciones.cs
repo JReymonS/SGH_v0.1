@@ -22,7 +22,7 @@ namespace SGH_v0._1
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
-            mh.Mostrar($"SELECT * FROM v_Habitaciones;", DtgDatos, "Habitaciones");
+            mh.Mostrar($"SELECT * FROM v_Habitaciones WHERE NO LIKE '%{TxtBuscar.Text.Trim('\'')}%';", DtgDatos, "Habitaciones");
         }
 
         private void DtgDatos_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -89,7 +89,9 @@ namespace SGH_v0._1
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            FrmHabitaciones.habitacion = new Habitaciones(); // NO null
+            FrmHabitaciones.habitacionSeleccionada = null; // 🔥 LIMPIAR
+            FrmHabitaciones.habitacion = new Habitaciones();
+
             new FrmDatosHabitacion().ShowDialog();
             DtgDatos.Columns.Clear();
         }
