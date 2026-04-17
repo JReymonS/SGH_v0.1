@@ -112,7 +112,6 @@ namespace SGH_v0._1
 
             DtgDatos.Columns.Clear();
         }
-
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
             if (DtgDatos.SelectedRows.Count == 0)
@@ -121,7 +120,22 @@ namespace SGH_v0._1
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
             string numero = DtgDatos.SelectedRows[0].Cells["NO"].Value.ToString();
+            string estado = DtgDatos.SelectedRows[0].Cells["ESTADO"].Value.ToString();
+
+            // 🔥 VALIDACIÓN
+            if (estado != "Disponible")
+            {
+                MessageBox.Show(
+                    $"No se puede eliminar la habitación porque está en estado '{estado}'.",
+                    "Operación no permitida",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+
             habitacion.Numero_Habitacion = numero;
 
             mh.Borrar(habitacion);
