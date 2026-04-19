@@ -31,14 +31,17 @@ namespace Manejadores
 
         public void Modificar(Cargos cargos)
         {
-            b.Comando($"Call p_ModificarCargo('{cargos.Id_Cargo}','{cargos.Concepto},'{cargos.Monto}')");
+            b.Comando($"Call p_ModificarCargo('{cargos.Id_Cargo}','{cargos.Concepto}','{cargos.Monto}')");
         }
 
         public void Mostrar(string consulta, DataGridView tabla, string datos)
         {
             tabla.Columns.Clear();
-            tabla.DataSource = b.Consulta(consulta, datos).Tables[0];
-            tabla.Columns["Id_Cargo"].Visible = false;
+            tabla.DataSource = b.Consulta(consulta, datos).Tables[datos];
+
+            if (tabla.Columns.Contains("Id_Cargo")) { tabla.Columns["Id_Cargo"].Visible = false; }
+            if(tabla.Columns.Contains("Id_Reserva")) { tabla.Columns["Id_Reserva"].Visible = false; }
+
             tabla.AutoResizeColumns();
             tabla.AutoResizeRows();
         }

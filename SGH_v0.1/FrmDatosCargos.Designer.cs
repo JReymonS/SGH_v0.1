@@ -50,9 +50,9 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
             this.label1.Font = new System.Drawing.Font("Montserrat SemiBold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(-1, 32);
+            this.label1.Location = new System.Drawing.Point(-1, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(823, 65);
+            this.label1.Size = new System.Drawing.Size(829, 65);
             this.label1.TabIndex = 0;
             this.label1.Text = "AGREGAR CARGOS";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -62,7 +62,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
             this.pictureBox1.BackgroundImage = global::SGH_v0._1.Properties.Resources.Room_white;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(752, 43);
+            this.pictureBox1.Location = new System.Drawing.Point(754, 34);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(40, 40);
             this.pictureBox1.TabIndex = 1;
@@ -72,7 +72,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(60, 121);
+            this.label2.Location = new System.Drawing.Point(54, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 17);
             this.label2.TabIndex = 2;
@@ -82,7 +82,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(634, 120);
+            this.label3.Location = new System.Drawing.Point(639, 117);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 17);
             this.label3.TabIndex = 3;
@@ -92,7 +92,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(449, 121);
+            this.label4.Location = new System.Drawing.Point(424, 118);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 17);
             this.label4.TabIndex = 4;
@@ -102,7 +102,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(255, 121);
+            this.label5.Location = new System.Drawing.Point(249, 118);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 17);
             this.label5.TabIndex = 5;
@@ -112,7 +112,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(60, 181);
+            this.label6.Location = new System.Drawing.Point(54, 178);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 17);
             this.label6.TabIndex = 6;
@@ -123,7 +123,7 @@
             this.TxtDesayuno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtDesayuno.Enabled = false;
             this.TxtDesayuno.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDesayuno.Location = new System.Drawing.Point(120, 118);
+            this.TxtDesayuno.Location = new System.Drawing.Point(114, 115);
             this.TxtDesayuno.Multiline = true;
             this.TxtDesayuno.Name = "TxtDesayuno";
             this.TxtDesayuno.Size = new System.Drawing.Size(100, 25);
@@ -136,7 +136,7 @@
             this.TxtCostoDesayuno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtCostoDesayuno.Enabled = false;
             this.TxtCostoDesayuno.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCostoDesayuno.Location = new System.Drawing.Point(313, 118);
+            this.TxtCostoDesayuno.Location = new System.Drawing.Point(307, 115);
             this.TxtCostoDesayuno.Multiline = true;
             this.TxtCostoDesayuno.Name = "TxtCostoDesayuno";
             this.TxtCostoDesayuno.Size = new System.Drawing.Size(100, 25);
@@ -148,10 +148,10 @@
             // 
             this.TxtBebida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtBebida.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtBebida.Location = new System.Drawing.Point(507, 117);
+            this.TxtBebida.Location = new System.Drawing.Point(482, 114);
             this.TxtBebida.Multiline = true;
             this.TxtBebida.Name = "TxtBebida";
-            this.TxtBebida.Size = new System.Drawing.Size(100, 25);
+            this.TxtBebida.Size = new System.Drawing.Size(140, 25);
             this.TxtBebida.TabIndex = 9;
             this.TxtBebida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -160,7 +160,7 @@
             this.TxtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtDescripcion.Enabled = false;
             this.TxtDescripcion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDescripcion.Location = new System.Drawing.Point(157, 172);
+            this.TxtDescripcion.Location = new System.Drawing.Point(151, 169);
             this.TxtDescripcion.Multiline = true;
             this.TxtDescripcion.Name = "TxtDescripcion";
             this.TxtDescripcion.Size = new System.Drawing.Size(175, 39);
@@ -172,7 +172,7 @@
             // 
             this.TxtCostoBebida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtCostoBebida.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCostoBebida.Location = new System.Drawing.Point(692, 118);
+            this.TxtCostoBebida.Location = new System.Drawing.Point(698, 114);
             this.TxtCostoBebida.Multiline = true;
             this.TxtCostoBebida.Name = "TxtCostoBebida";
             this.TxtCostoBebida.Size = new System.Drawing.Size(100, 25);
@@ -190,6 +190,7 @@
             this.BtnGuardar.Size = new System.Drawing.Size(40, 40);
             this.BtnGuardar.TabIndex = 12;
             this.BtnGuardar.UseVisualStyleBackColor = true;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // BtnCerrar
             // 
