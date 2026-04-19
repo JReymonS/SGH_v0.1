@@ -32,7 +32,7 @@ namespace SGH_v0._1
         {
             string consulta = $"SELECT Id_Reserva, NOMBRE, APELLIDOS, TELEFONO, EMAIL, RFC " +
                               $"FROM v_CargoHuesped " +
-                              $"WHERE NOMBRE LIKE '%{TxtHuesped.Text}%'";
+                              $"WHERE NOMBRE LIKE '%{TxtHuesped.Text}%' AND PAGO = 'Pagado'";
 
             mc.Mostrar(consulta, DtgDatosHuesped, "v_CargoHuesped");
         }
