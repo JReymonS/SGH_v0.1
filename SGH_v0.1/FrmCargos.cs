@@ -24,15 +24,28 @@ namespace SGH_v0._1
             InitializeComponent();
             mc = new ManejadorCargos();
 
+            TxtHuesped.Text = "Buscar huesped...";
+            TxtHuesped.ForeColor = Color.Gray;
+
+            this.ActiveControl = BtnBuscar;
+
             DiseñoDTG(DtgDatosHuesped);
             DiseñoDTG(DtgDatosCargo);
         }
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
+            string busqueda = TxtHuesped.Text;
+
+            if(busqueda == TxtHuesped.Text)
+            {
+                busqueda = "";
+            }
+
             string consulta = $"SELECT Id_Reserva, NOMBRE, APELLIDOS, TELEFONO, EMAIL, RFC " +
                               $"FROM v_CargoHuesped " +
-                              $"WHERE NOMBRE LIKE '%{TxtHuesped.Text}%' AND PAGO = 'Pagado'";
+                              $"WHERE NOMBRE LIKE '%{busqueda}%' AND PAGO = 'Pagado'";
+
 
             mc.Mostrar(consulta, DtgDatosHuesped, "v_CargoHuesped");
         }
@@ -149,6 +162,39 @@ namespace SGH_v0._1
                 }
             }
             TxtMonto.Text = total.ToString(); 
+        }
+
+        private void TxtHuesped_Enter(object sender, EventArgs e)
+        {
+            if(TxtHuesped.Text == "Buscar huesped...")
+            {
+                TxtHuesped.Text = "";
+                TxtHuesped.ForeColor = Color.Black;
+            }
+
+        }
+
+        private void TxtHuesped_Leave(object sender, EventArgs e)
+        {
+            if(string.IsNullOrWhiteSpace(TxtHuesped.Text))
+            {
+                TxtHuesped.Text = "Buscar huesped...";
+                TxtHuesped.ForeColor = Color.Gray;
+
+                if(DtgDatosHuesped.DataSource != null)
+                {
+                    ((DataTable)DtgDatosHuesped.DataSource).DefaultView.RowFilter = ""; // Quitar el filtro para mostrar todos los huespedes
+                }
+            }
+        }
+
+        private void TxtHuesped_TextChanged(object sender, EventArgs e)
+        {
+            if(TxtHuesped.Text != "Buscar huesped..." && DtgDatosHuesped.DataSource != null)
+            {
+                DataTable dt = (DataTable)DtgDatosHuesped.DataSource;
+                dt.DefaultView.RowFilter = $"NOMBRE LIKE '%{TxtHuesped.Text}%'"; // Filtrar por nombre
+            }
         }
 
         // Diseño para el DataGridView 
