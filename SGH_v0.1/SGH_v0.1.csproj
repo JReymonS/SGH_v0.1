@@ -443,5 +443,8 @@
   <ItemGroup>
     <None Include="Resources\booking64px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoLogin.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

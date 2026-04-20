@@ -1,4 +1,6 @@
-﻿using Manejadores;
+﻿using DocumentFormat.OpenXml.Office2010.PowerPoint;
+using Manejadores;
+using SGH_v0._1.Properties;
 using System;
 using System.Threading;
 using System.Windows.Forms;
@@ -69,11 +71,32 @@ namespace SGH_v0._1
         {
             visualizarContrasena = !visualizarContrasena;
             ml.VisualizaContrasena(txtContrasena, visualizarContrasena);
+            btnVisibilidad.FlatStyle=FlatStyle.Flat;
+            btnVisibilidad.FlatAppearance.BorderSize = 0;
+            btnVisibilidad.BackgroundImage = visualizarContrasena ? Properties.Resources.Icono_Contraseña_1 : Properties.Resources.Icono_Contraseña;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            if(string.IsNullOrWhiteSpace(txtUsuario.Text))
+            {
+                txtUsuario.Text = "Ingrese su usuario...";
+                txtUsuario.ForeColor = System.Drawing.Color.Gray;
+            }
+        }
+
+        private void txtUsuario_Enter(object sender, EventArgs e)
+        {
+            if(txtUsuario.Text == "Ingrese su usuario...")
+            {
+                txtUsuario.Text = "";
+                txtUsuario.ForeColor = System.Drawing.Color.Black;
+            }
         }
     }
 }
