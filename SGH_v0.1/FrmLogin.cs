@@ -1,6 +1,4 @@
-﻿using DocumentFormat.OpenXml.Office2010.PowerPoint;
-using Manejadores;
-using SGH_v0._1.Properties;
+﻿using Manejadores;
 using System;
 using System.Threading;
 using System.Windows.Forms;
@@ -55,12 +53,14 @@ namespace SGH_v0._1
                     btnVisibilidad.Enabled = true;
                     btnAcceder.Enabled = true;
                     intentosFallidos = 0;
-                    ml.LimpiarCampos(txtUsuario, txtContrasena);
+                    ml.LimpiarCampos(txtUsuario, txtContrasena,btnVisibilidad);
+                    ml.ReinicioEstadoVisibilidad(btnVisibilidad, Properties.Resources.Icono_Contraseña);
                 }
                 else 
                 {
                     MessageBox.Show(rs.Mensaje, "¡ERROR DE AUTENTICACIÓN!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    ml.LimpiarCampos(txtUsuario,txtContrasena);
+                    ml.LimpiarCampos(txtUsuario,txtContrasena,btnVisibilidad);
+                    ml.ReinicioEstadoVisibilidad(btnVisibilidad, Properties.Resources.Icono_Contraseña);
                     intentosFallidos++;
                 }
             }
@@ -76,26 +76,56 @@ namespace SGH_v0._1
             btnVisibilidad.BackgroundImage = visualizarContrasena ? Properties.Resources.Icono_Contraseña_1 : Properties.Resources.Icono_Contraseña;
         }
 
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+
+        //Eventos para el campo de usuario
         private void txtUsuario_Leave(object sender, EventArgs e)
         {
             if(string.IsNullOrWhiteSpace(txtUsuario.Text))
             {
-                txtUsuario.Text = "Ingrese su usuario...";
+                txtUsuario.Text = " Ingrese su usuario...";
                 txtUsuario.ForeColor = System.Drawing.Color.Gray;
             }
         }
 
+
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
-            if(txtUsuario.Text == "Ingrese su usuario...")
+            if(txtUsuario.Text == " Ingrese su usuario...")
             {
                 txtUsuario.Text = "";
                 txtUsuario.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+
+        //Eventos para el campo de contraseña
+        private void txtContrasena_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtContrasena.Text)) 
+            {
+                txtContrasena.PasswordChar = '\0';
+                txtContrasena.Text = " Ingrese su contraseña...";
+                txtContrasena.ForeColor = System.Drawing.Color.Gray;
+                btnVisibilidad.Visible = false;
+                ml.ReinicioEstadoVisibilidad(btnVisibilidad, Properties.Resources.Icono_Contraseña); //Reinicia el icono de visibilidad a su estado inicial
+            }
+        }
+
+
+        private void txtContrasena_Enter(object sender, EventArgs e)
+        {
+            if(txtContrasena.Text == " Ingrese su contraseña...")
+            {
+                txtContrasena.PasswordChar = '*';
+                txtContrasena.Text = "";
+                txtContrasena.ForeColor = System.Drawing.Color.Black;
+                btnVisibilidad.Visible = true;
             }
         }
     }

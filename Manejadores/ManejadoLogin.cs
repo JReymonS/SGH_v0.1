@@ -1,8 +1,8 @@
 ﻿using AccesoDatos;
-using DocumentFormat.OpenXml.CustomProperties;
 using Entidades;
 using System;
 using System.Data;
+using System.Drawing;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
@@ -17,7 +17,7 @@ namespace Manejadores
         //Validacion de Login
         public (bool Acceso, string Mensaje, Usuarios UsuarioAcceso) ValidarLogin (string Usuario, string Contrasena)
         {
-             if(string.IsNullOrEmpty(Usuario) || string.IsNullOrEmpty(Contrasena)) 
+             if(string.IsNullOrEmpty(Usuario) || string.IsNullOrEmpty(Contrasena) || Usuario == " Ingrese su usuario..." || Contrasena == " Ingrese su contraseña...") 
             {
                 return (false, "Por favor complete todos los campos.", null);
             }
@@ -28,7 +28,7 @@ namespace Manejadores
             }
 
 
-            DataSet ds = b.Consulta($"SELECT * FROM v_UsuariosLogin WHERE BINARY Nombre like '%{Usuario}%' AND Contrasena like '%{Sha1(Contrasena)}%'", "v_UsuariosLogin");
+            DataSet ds = b.Consulta($"SELECT * FROM v_UsuariosLogin WHERE BINARY Nombre='{Usuario}' AND Contrasena ='{Sha1(Contrasena)}'", "v_UsuariosLogin");
             if (ds.Tables.Count>0 && ds.Tables[0].Rows.Count >= 1) 
             {
                 DataTable dt = ds.Tables[0];
@@ -65,11 +65,30 @@ namespace Manejadores
         //Ocultar o mostrar contraseña
         public void VisualizaContrasena(TextBox contrasena, bool mostrar) 
         {
-            contrasena.PasswordChar = (mostrar) ? '\0' : '*';
+            if (!contrasena.Text.Equals(" Ingrese su contraseña..."))
+            {
+                contrasena.PasswordChar = (mostrar) ? '\0' : '*';
+            }
         }
 
         //Limpiar campos
-        public void LimpiarCampos(TextBox usuario, TextBox contrasena) { usuario.Clear(); contrasena.Clear();}
+        public void LimpiarCampos(TextBox usuario, TextBox contrasena, Button visibilidad) 
+        {
+            contrasena.ForeColor = System.Drawing.Color.Gray;
+            usuario.ForeColor = System.Drawing.Color.Gray;
+            usuario.Clear(); contrasena.Clear(); 
+            usuario.Text=" Ingrese su usuario..."; contrasena.Text=" Ingrese su contraseña..."; contrasena.PasswordChar = '\0';
+            visibilidad.Visible = false;
+        }
+
+
+        //Reiniciar el icono de visibilidad de contraseña
+        public void ReinicioEstadoVisibilidad(Button btnVisibilidad, Bitmap Imagen) 
+        {
+            btnVisibilidad.FlatStyle = FlatStyle.Flat;
+            btnVisibilidad.FlatAppearance.BorderSize = 0;
+            btnVisibilidad.BackgroundImage = Imagen;
+        }
 
 
         public static string Sha1(string texto) 

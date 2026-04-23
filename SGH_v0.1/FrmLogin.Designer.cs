@@ -36,12 +36,12 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnVisibilidad = new System.Windows.Forms.Button();
             this.PLogin = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.PLogin.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtUsuario
@@ -53,7 +53,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(319, 26);
             this.txtUsuario.TabIndex = 0;
-            this.txtUsuario.Text = "Ingrese su usuario...";
+            this.txtUsuario.Text = " Ingrese su usuario...";
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
             this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
@@ -81,11 +81,14 @@
             // 
             this.txtContrasena.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContrasena.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContrasena.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.txtContrasena.Location = new System.Drawing.Point(1, 1);
             this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.PasswordChar = '*';
             this.txtContrasena.Size = new System.Drawing.Size(319, 26);
             this.txtContrasena.TabIndex = 3;
+            this.txtContrasena.Text = " Ingrese su contraseña...";
+            this.txtContrasena.Enter += new System.EventHandler(this.txtContrasena_Enter);
+            this.txtContrasena.Leave += new System.EventHandler(this.txtContrasena_Leave);
             // 
             // btnAcceder
             // 
@@ -134,6 +137,7 @@
             this.btnVisibilidad.Size = new System.Drawing.Size(40, 40);
             this.btnVisibilidad.TabIndex = 6;
             this.btnVisibilidad.UseVisualStyleBackColor = true;
+            this.btnVisibilidad.Visible = false;
             this.btnVisibilidad.Click += new System.EventHandler(this.btnVisibilidad_Click);
             // 
             // PLogin
@@ -151,6 +155,15 @@
             this.PLogin.Name = "PLogin";
             this.PLogin.Size = new System.Drawing.Size(450, 525);
             this.PLogin.TabIndex = 7;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.panel2.Controls.Add(this.txtContrasena);
+            this.panel2.Location = new System.Drawing.Point(53, 255);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(321, 28);
+            this.panel2.TabIndex = 9;
             // 
             // label3
             // 
@@ -171,15 +184,6 @@
             this.panel1.Size = new System.Drawing.Size(321, 28);
             this.panel1.TabIndex = 8;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.panel2.Controls.Add(this.txtContrasena);
-            this.panel2.Location = new System.Drawing.Point(53, 255);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(321, 28);
-            this.panel2.TabIndex = 9;
-            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -195,10 +199,10 @@
             this.Text = "LOGIN";
             this.PLogin.ResumeLayout(false);
             this.PLogin.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
