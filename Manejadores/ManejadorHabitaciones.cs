@@ -115,5 +115,19 @@ namespace Manejadores
             DataSet ds = b.Consulta("SELECT COUNT(*) FROM Habitaciones", "count");
             return Convert.ToInt32(ds.Tables["count"].Rows[0][0]);
         }
+        public string Check_Out(Habitaciones habitacion)
+        {
+            DataSet ds = b.Consulta(
+                $"CALL SP_CheckOut('{habitacion.Numero_Habitacion}');",
+                "resultado"
+            );
+
+            if (ds.Tables["resultado"].Rows.Count > 0)
+            {
+                return ds.Tables["resultado"].Rows[0]["Resultado"].ToString();
+            }
+
+            return "ERROR: No se obtuvo respuesta del procedimiento";
+        }
     }
 }

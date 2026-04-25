@@ -82,8 +82,40 @@ namespace SGH_v0._1
                     }; break;
                 case 7:
                     {
-                        
-                    }; break;
+                        if (estado == "Ocupada")
+                        {
+                            DialogResult resp = MessageBox.Show(
+                                "¿Desea realizar el Check-Out de esta habitación?",
+                                "Confirmar",
+                                MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Question
+                            );
+
+                            if (resp == DialogResult.Yes)
+                            {
+                                string resultado = mh.Check_Out(habitacion);
+
+                                MessageBox.Show(
+                                    resultado,
+                                    "Resultado",
+                                    MessageBoxButtons.OK,
+                                    resultado.StartsWith("OK") ? MessageBoxIcon.Information : MessageBoxIcon.Warning
+                                );
+
+                                DtgDatos.Columns.Clear(); // recarga después
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show(
+                                $"No se puede hacer Check-Out porque la habitación está en estado '{estado}'.",
+                                "Operación no permitida",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning
+                            );
+                        }
+                    }
+                    break;
             }
         }
 
@@ -104,7 +136,21 @@ namespace SGH_v0._1
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            string numero = DtgDatos.SelectedRows[0].Cells[0].Value.ToString();
+
+            string numero = DtgDatos.SelectedRows[0].Cells["NO"].Value.ToString();
+            string estado = DtgDatos.SelectedRows[0].Cells["ESTADO"].Value.ToString();
+
+            // 🔥 VALIDACIÓN
+            if (estado != "Disponible" && estado != "Mantenimiento")
+            {
+                MessageBox.Show(
+                    $"No se puede editar la habitación porque está en estado '{estado}'.",
+                    "Operación no permitida",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
 
             FrmHabitaciones.habitacionSeleccionada = mh.ObtenerHabitacion(numero);
 
