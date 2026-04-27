@@ -60,5 +60,17 @@ namespace SGH_v0._1
             FrmReservas frmReservas = new FrmReservas();
             frmReservas.ShowDialog();
         }
+
+        private void BtnHouseKeeping_Click(object sender, EventArgs e)
+        {
+            FrmHousekeeping frmHousek = new FrmHousekeeping();
+            frmHousek.ShowDialog();
+        }
+
+        private void BtnReportes_Click(object sender, EventArgs e)
+        {
+            FrmReportes frmReportes = new FrmReportes();
+            frmReportes.ShowDialog();
+        }
     }
 }

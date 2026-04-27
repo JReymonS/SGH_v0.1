@@ -336,6 +336,7 @@
             this.BtnHouseKeeping.Text = "Ir a Housekeeping";
             this.BtnHouseKeeping.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnHouseKeeping.UseVisualStyleBackColor = false;
+            this.BtnHouseKeeping.Click += new System.EventHandler(this.BtnHouseKeeping_Click);
             // 
             // BtnReportes
             // 
@@ -355,6 +356,7 @@
             this.BtnReportes.Text = "Ir a Reportes";
             this.BtnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnReportes.UseVisualStyleBackColor = false;
+            this.BtnReportes.Click += new System.EventHandler(this.BtnReportes_Click);
             // 
             // DtgDatosActividad
             // 
