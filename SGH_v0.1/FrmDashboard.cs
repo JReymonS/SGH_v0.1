@@ -53,8 +53,6 @@ namespace SGH_v0._1
             Redondear(BtnHouseKeeping, 10);
             Redondear(BtnReportes, 10);
 
-            
-
         }
 
 

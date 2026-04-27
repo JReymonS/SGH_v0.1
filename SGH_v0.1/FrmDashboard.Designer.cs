@@ -114,11 +114,11 @@
             // LblDisponibles
             // 
             this.LblDisponibles.AutoSize = true;
-            this.LblDisponibles.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDisponibles.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblDisponibles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(145)))), ((int)(((byte)(0)))));
             this.LblDisponibles.Location = new System.Drawing.Point(161, 38);
             this.LblDisponibles.Name = "LblDisponibles";
-            this.LblDisponibles.Size = new System.Drawing.Size(15, 17);
+            this.LblDisponibles.Size = new System.Drawing.Size(18, 20);
             this.LblDisponibles.TabIndex = 2;
             this.LblDisponibles.Text = "0";
             // 
@@ -156,11 +156,11 @@
             // LblOcupadas
             // 
             this.LblOcupadas.AutoSize = true;
-            this.LblOcupadas.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblOcupadas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(145)))), ((int)(((byte)(0)))));
-            this.LblOcupadas.Location = new System.Drawing.Point(159, 39);
+            this.LblOcupadas.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblOcupadas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(17)))), ((int)(((byte)(37)))));
+            this.LblOcupadas.Location = new System.Drawing.Point(160, 38);
             this.LblOcupadas.Name = "LblOcupadas";
-            this.LblOcupadas.Size = new System.Drawing.Size(15, 17);
+            this.LblOcupadas.Size = new System.Drawing.Size(18, 20);
             this.LblOcupadas.TabIndex = 3;
             this.LblOcupadas.Text = "0";
             // 
@@ -198,11 +198,11 @@
             // LblLimpieza
             // 
             this.LblLimpieza.AutoSize = true;
-            this.LblLimpieza.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblLimpieza.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(145)))), ((int)(((byte)(0)))));
-            this.LblLimpieza.Location = new System.Drawing.Point(161, 39);
+            this.LblLimpieza.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblLimpieza.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(108)))), ((int)(((byte)(39)))));
+            this.LblLimpieza.Location = new System.Drawing.Point(161, 38);
             this.LblLimpieza.Name = "LblLimpieza";
-            this.LblLimpieza.Size = new System.Drawing.Size(15, 17);
+            this.LblLimpieza.Size = new System.Drawing.Size(18, 20);
             this.LblLimpieza.TabIndex = 6;
             this.LblLimpieza.Text = "0";
             // 
@@ -240,11 +240,11 @@
             // LblMantenimiento
             // 
             this.LblMantenimiento.AutoSize = true;
-            this.LblMantenimiento.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMantenimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(145)))), ((int)(((byte)(0)))));
-            this.LblMantenimiento.Location = new System.Drawing.Point(170, 40);
+            this.LblMantenimiento.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMantenimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
+            this.LblMantenimiento.Location = new System.Drawing.Point(170, 38);
             this.LblMantenimiento.Name = "LblMantenimiento";
-            this.LblMantenimiento.Size = new System.Drawing.Size(15, 17);
+            this.LblMantenimiento.Size = new System.Drawing.Size(18, 20);
             this.LblMantenimiento.TabIndex = 7;
             this.LblMantenimiento.Text = "0";
             // 
