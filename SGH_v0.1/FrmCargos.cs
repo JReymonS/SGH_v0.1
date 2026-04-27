@@ -151,6 +151,27 @@ namespace SGH_v0._1
             TxtMonto.Text = total.ToString(); 
         }
 
+        private void FrmCargos_Shown(object sender, EventArgs e)
+        {
+            var permiso = FrmHome._usuarioActivo.ListaPermisos.Find(x => x.Id_Modulo == 4);
+
+            if (permiso == null || !permiso.permiso_leer_abrir)
+            {
+                MessageBox.Show("No tienes permiso para acceder a Cargos.",
+                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.Close();
+                return;
+            }
+
+            if (!permiso.permiso_escritura)
+            {
+                BtnAgregarCargo.Enabled = false;
+                BtnPagar.Enabled = false;
+                BtnEditar.Enabled = false;
+                BtnEliminar.Enabled = false;
+            }
+        }
+
         // Diseño para el DataGridView 
         private void DiseñoDTG (DataGridView dgv)
         {

@@ -25,6 +25,7 @@ namespace SGH_v0._1
         //Cargar permisos de acceso.
         private void FrmHome_Load(object sender, EventArgs e)
         {
+
             lblUsuarioActivo.Text = $" {_usuarioActivo.Nombre} ";
             tsbHabitacionReserva.Enabled = false;
             tsbHousekeeping.Enabled = false;
@@ -32,7 +33,7 @@ namespace SGH_v0._1
             tsbReportes.Enabled = false;
             tsbUsuarios.Enabled = false;
 
-            foreach(var permiso in _usuarioActivo.ListaPermisos)
+            foreach(var permiso in FrmHome._usuarioActivo.ListaPermisos)
             {
                 switch (permiso.Id_Modulo) 
                 {
