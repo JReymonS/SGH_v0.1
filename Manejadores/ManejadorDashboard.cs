@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Manejadores
 {
-    internal class ManejadorDashboard
+    public class ManejadorDashboard
     {
+        
     }
 }

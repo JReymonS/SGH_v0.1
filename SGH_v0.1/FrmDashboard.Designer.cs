@@ -79,7 +79,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "DASHBOARD";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -195,7 +194,6 @@
             this.panelHabitacionesLimpieza.Name = "panelHabitacionesLimpieza";
             this.panelHabitacionesLimpieza.Size = new System.Drawing.Size(198, 61);
             this.panelHabitacionesLimpieza.TabIndex = 6;
-            this.panelHabitacionesLimpieza.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHabitacionesLimpieza_Paint);
             // 
             // LblLimpieza
             // 
@@ -207,7 +205,6 @@
             this.LblLimpieza.Size = new System.Drawing.Size(15, 17);
             this.LblLimpieza.TabIndex = 6;
             this.LblLimpieza.Text = "0";
-            this.LblLimpieza.Click += new System.EventHandler(this.label10_Click);
             // 
             // label7
             // 
@@ -218,7 +215,6 @@
             this.label7.Size = new System.Drawing.Size(83, 34);
             this.label7.TabIndex = 6;
             this.label7.Text = "Habitaciones\r\nen limpieza";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // pictureBox4
             // 
@@ -229,7 +225,6 @@
             this.pictureBox4.Size = new System.Drawing.Size(35, 32);
             this.pictureBox4.TabIndex = 4;
             this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // panelHabitacionesMantenimiento
             // 
@@ -241,7 +236,6 @@
             this.panelHabitacionesMantenimiento.Name = "panelHabitacionesMantenimiento";
             this.panelHabitacionesMantenimiento.Size = new System.Drawing.Size(200, 61);
             this.panelHabitacionesMantenimiento.TabIndex = 7;
-            this.panelHabitacionesMantenimiento.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHabitacionesMantenimiento_Paint);
             // 
             // LblMantenimiento
             // 
@@ -253,7 +247,6 @@
             this.LblMantenimiento.Size = new System.Drawing.Size(15, 17);
             this.LblMantenimiento.TabIndex = 7;
             this.LblMantenimiento.Text = "0";
-            this.LblMantenimiento.Click += new System.EventHandler(this.label11_Click);
             // 
             // label8
             // 
@@ -264,7 +257,6 @@
             this.label8.Size = new System.Drawing.Size(112, 34);
             this.label8.TabIndex = 7;
             this.label8.Text = "Habitaciones\r\nen mantenimiento";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // pictureBox3
             // 
@@ -275,7 +267,6 @@
             this.pictureBox3.Size = new System.Drawing.Size(35, 32);
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // button1
             // 
@@ -325,6 +316,7 @@
             this.BtnNuevaReserva.Text = "Nueva Reserva";
             this.BtnNuevaReserva.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnNuevaReserva.UseVisualStyleBackColor = false;
+            this.BtnNuevaReserva.Click += new System.EventHandler(this.BtnNuevaReserva_Click);
             // 
             // BtnHouseKeeping
             // 

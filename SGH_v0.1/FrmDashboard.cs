@@ -8,16 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+using Manejadores;
+using Entidades; 
 
 namespace SGH_v0._1
 {
     public partial class FrmDashboard : Form
     {
+        ManejadorDashboard md;
         public FrmDashboard()
         {
             InitializeComponent();
+            md = new ManejadorDashboard();
         }
 
+
+        // Método para redondear los bordes de los eleme
         private void Redondear(Control control, int radio)
         {
             GraphicsPath path = new GraphicsPath();
@@ -43,54 +49,16 @@ namespace SGH_v0._1
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void BtnNuevaReserva_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void panelHabitacionesMantenimiento_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelHabitacionesLimpieza_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
+            FrmReservas frmReservas = new FrmReservas();
+            frmReservas.ShowDialog();
         }
     }
 }
