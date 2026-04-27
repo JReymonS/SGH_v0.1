@@ -20,6 +20,12 @@ namespace SGH_v0._1
         {
             InitializeComponent();
             md = new ManejadorDashboard();
+
+            // Mostrar la suma del estado de la habitacion
+            var total = md.SumaDeEstado();
+            LblDisponibles.Text = total.disponibles.ToString();
+            LblOcupadas.Text = total.ocupadas.ToString();
+            LblLimpieza.Text = total.limpieza.ToString();
         }
 
 
@@ -46,6 +52,8 @@ namespace SGH_v0._1
             Redondear(BtnNuevaReserva, 10);
             Redondear(BtnHouseKeeping, 10);
             Redondear(BtnReportes, 10);
+
+            
 
         }
 
