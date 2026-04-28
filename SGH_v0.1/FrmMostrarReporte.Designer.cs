@@ -43,6 +43,7 @@
             // DtgReporte
             // 
             this.DtgReporte.AllowUserToAddRows = false;
+            this.DtgReporte.AllowUserToDeleteRows = false;
             this.DtgReporte.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.DtgReporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -54,8 +55,9 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DtgReporte.DefaultCellStyle = dataGridViewCellStyle1;
             this.DtgReporte.Location = new System.Drawing.Point(38, 74);
-            this.DtgReporte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DtgReporte.Margin = new System.Windows.Forms.Padding(2);
             this.DtgReporte.Name = "DtgReporte";
+            this.DtgReporte.ReadOnly = true;
             this.DtgReporte.RowHeadersWidth = 51;
             this.DtgReporte.RowTemplate.Height = 24;
             this.DtgReporte.Size = new System.Drawing.Size(750, 271);
@@ -106,7 +108,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = global::SGH_v0._1.Properties.Resources.Room_white_x64;
             this.pictureBox1.Location = new System.Drawing.Point(755, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(49, 61);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -138,7 +140,7 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.DtgReporte);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmMostrarReporte";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMostrarReporte";
