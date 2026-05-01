@@ -29,6 +29,7 @@ namespace SGH_v0._1
             DtgDatosActividad.DataSource = md.ActividadReciente();
 
             DiseñoDTG(DtgDatosActividad);
+
         }
 
 
@@ -55,6 +56,8 @@ namespace SGH_v0._1
             Redondear(BtnNuevaReserva, 10);
             Redondear(BtnHouseKeeping, 10);
             Redondear(BtnReportes, 10);
+
+            DtgDatosActividad.ClearSelection();
 
         }
 
@@ -87,6 +90,7 @@ namespace SGH_v0._1
 
             dgv.RowHeadersVisible = false;
 
+
             // Ocultar la flecha selectora y el renglón extra
             dgv.RowHeadersVisible = false;
             dgv.AllowUserToAddRows = false;
@@ -118,7 +122,7 @@ namespace SGH_v0._1
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             //dgv.AllowUserToResizeRows = false;
 
-            dgv.ReadOnly = true;
+
         }
 
 

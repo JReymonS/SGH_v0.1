@@ -389,6 +389,7 @@
             this.DtgDatosActividad.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DtgDatosActividad.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.DtgDatosActividad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DtgDatosActividad.Enabled = false;
             this.DtgDatosActividad.Location = new System.Drawing.Point(836, 279);
             this.DtgDatosActividad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DtgDatosActividad.Name = "DtgDatosActividad";
