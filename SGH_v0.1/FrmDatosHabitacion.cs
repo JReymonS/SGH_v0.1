@@ -72,40 +72,60 @@ namespace SGH_v0._1
                 MessageBox.Show("La descripción de habitación no puede quedar vacía.");
                 return;
             }
+
+            // === VALIDACIONES DE LONGITUD (SEGÚN BD) ===
+
             if (TxtNo.Text.Length > 5)
             {
                 MessageBox.Show("El número de habitación no puede exceder 5 caracteres.");
                 return;
             }
-            int capacidad;
 
+            if (TxtTipo.Text.Length > 255)
+            {
+                MessageBox.Show("El tipo de habitación no puede exceder 255 caracteres.");
+                return;
+            }
+
+            if (TxtDescripcion.Text.Length > 255)
+            {
+                MessageBox.Show("La descripción no puede exceder 255 caracteres.");
+                return;
+            }
+
+            // === VALIDACIONES NUMÉRICAS ===
+
+            int capacidad;
             if (!int.TryParse(TxtCapacidad.Text, out capacidad) || capacidad <= 0)
             {
                 MessageBox.Show("La capacidad debe ser un número entero mayor que 0.");
                 return;
             }
-            int piso;
 
+            int piso;
             if (!int.TryParse(TxtPiso.Text, out piso) || piso <= 0)
             {
                 MessageBox.Show("El piso debe ser un número entero mayor que 0.");
                 return;
             }
-            decimal costo;
 
+            decimal costo;
             if (!decimal.TryParse(TxtCosto.Text, out costo) || costo <= 0)
             {
                 MessageBox.Show("El costo por noche debe ser un número válido mayor que 0.");
                 return;
             }
 
-            if (costo >= 1000000)
+            // DECIMAL(6,2) → máximo 9999.99
+            if (costo > 9999.99m)
             {
-                MessageBox.Show("El costo excede el límite permitido (DECIMAL 6,2). Máximo: 999999.99");
+                MessageBox.Show("El costo excede el límite permitido. Máximo: 9999.99");
                 return;
             }
 
-            if (FrmHabitaciones.habitacion == null) // Modo AGREGAR
+            // === VALIDACIÓN DE EXISTENCIA ===
+
+            if (FrmHabitaciones.habitacion == null) // AGREGAR
             {
                 if (mh.ExisteHabitacion(TxtNo.Text.Trim()))
                 {
@@ -113,7 +133,7 @@ namespace SGH_v0._1
                     return;
                 }
             }
-            else // Modo EDITAR
+            else // EDITAR
             {
                 if (TxtNo.Text.Trim() != FrmHabitaciones.habitacion.Numero_Habitacion)
                 {
@@ -125,13 +145,14 @@ namespace SGH_v0._1
                 }
             }
 
+            // === GUARDADO ===
 
             Habitaciones h = new Habitaciones();
             h.Numero_Habitacion = TxtNo.Text;
             h.Tipo_Habitacion = TxtTipo.Text;
-            h.Capacidad = int.Parse(TxtCapacidad.Text);
-            h.Piso = int.Parse(TxtPiso.Text);
-            h.Costo_Noche = double.Parse(TxtCosto.Text);
+            h.Capacidad = capacidad;
+            h.Piso = piso;
+            h.Costo_Noche = (double)costo;
             h.Descripcion = TxtDescripcion.Text;
 
             if (FrmHabitaciones.habitacionSeleccionada == null)

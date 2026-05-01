@@ -94,15 +94,17 @@ namespace SGH_v0._1
                             if (resp == DialogResult.Yes)
                             {
                                 string resultado = mh.Check_Out(habitacion);
+                                string titulo = resultado.StartsWith("OK") ? "Éxito" : "Error";
+                                string mensaje = resultado.Replace("ERROR: ", "").Replace("OK: ", "");
 
                                 MessageBox.Show(
-                                    resultado,
-                                    "Resultado",
+                                    mensaje,
+                                    titulo,
                                     MessageBoxButtons.OK,
                                     resultado.StartsWith("OK") ? MessageBoxIcon.Information : MessageBoxIcon.Warning
                                 );
 
-                                DtgDatos.Columns.Clear(); // recarga después
+                                DtgDatos.Columns.Clear();
                             }
                         }
                         else
