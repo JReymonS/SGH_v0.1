@@ -386,11 +386,13 @@
             // DtgDatosActividad
             // 
             this.DtgDatosActividad.AllowUserToAddRows = false;
+            this.DtgDatosActividad.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DtgDatosActividad.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.DtgDatosActividad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtgDatosActividad.Location = new System.Drawing.Point(836, 279);
             this.DtgDatosActividad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DtgDatosActividad.Name = "DtgDatosActividad";
+            this.DtgDatosActividad.ReadOnly = true;
             this.DtgDatosActividad.RowHeadersWidth = 51;
             this.DtgDatosActividad.Size = new System.Drawing.Size(520, 449);
             this.DtgDatosActividad.TabIndex = 13;
