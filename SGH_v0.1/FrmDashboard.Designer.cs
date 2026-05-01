@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.LblBienvenido = new System.Windows.Forms.Label();
             this.panelHabitacionesDisponibles = new System.Windows.Forms.Panel();
             this.LblDisponibles = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -80,28 +78,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "DASHBOARD";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(75, 118);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 23);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Bienvenido, ";
-            // 
-            // LblBienvenido
-            // 
-            this.LblBienvenido.AutoSize = true;
-            this.LblBienvenido.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblBienvenido.Location = new System.Drawing.Point(168, 118);
-            this.LblBienvenido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblBienvenido.Name = "LblBienvenido";
-            this.LblBienvenido.Size = new System.Drawing.Size(59, 23);
-            this.LblBienvenido.TabIndex = 2;
-            this.LblBienvenido.Text = "label3";
             // 
             // panelHabitacionesDisponibles
             // 
@@ -427,8 +403,6 @@
             this.Controls.Add(this.panelHabitacionesOcupadas);
             this.Controls.Add(this.panelHabitacionesDisponibles);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.LblBienvenido);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -458,8 +432,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label LblBienvenido;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelHabitacionesDisponibles;
         private System.Windows.Forms.Label LblDisponibles;
