@@ -37,6 +37,15 @@ namespace Manejadores
 
         }
 
+        public DataTable ActividadReciente()
+        {
+            string consulta = "SELECT HABITACION, ACCION, HORA FROM v_ActividadReciente ORDER BY HORA DESC LIMIT 10";
+
+            DataSet ds = b.Consulta(consulta, ""); return ds.Tables[0];
+
+        }
+
+
 
     }
 }

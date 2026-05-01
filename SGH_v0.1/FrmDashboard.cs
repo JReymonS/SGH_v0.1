@@ -26,6 +26,7 @@ namespace SGH_v0._1
             LblDisponibles.Text = total.disponibles.ToString();
             LblOcupadas.Text = total.ocupadas.ToString();
             LblLimpieza.Text = total.limpieza.ToString();
+            DtgDatosActividad.DataSource = md.ActividadReciente();
         }
 
 
@@ -78,5 +79,7 @@ namespace SGH_v0._1
             FrmReportes frmReportes = new FrmReportes();
             frmReportes.ShowDialog();
         }
+
+
     }
 }

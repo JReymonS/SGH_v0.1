@@ -366,6 +366,7 @@
             this.DtgDatosActividad.Name = "DtgDatosActividad";
             this.DtgDatosActividad.Size = new System.Drawing.Size(390, 365);
             this.DtgDatosActividad.TabIndex = 13;
+//            this.DtgDatosActividad.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgDatosActividad_CellContentClick);
             // 
             // label12
             // 
