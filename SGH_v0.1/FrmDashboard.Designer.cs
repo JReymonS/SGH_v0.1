@@ -45,7 +45,6 @@
             this.LblMantenimiento = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnNuevaReserva = new System.Windows.Forms.Button();
@@ -263,17 +262,6 @@
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1089, 39);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 28);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Close";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::SGH_v0._1.Properties.Resources.Imagen_hotel;
@@ -287,7 +275,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
-            this.pictureBox1.BackgroundImage = global::SGH_v0._1.Properties.Resources.Room_white;
+            this.pictureBox1.BackgroundImage = global::SGH_v0._1.Properties.Resources.Home_Page_white;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Location = new System.Drawing.Point(1300, 39);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -397,7 +385,6 @@
             this.Controls.Add(this.BtnHouseKeeping);
             this.Controls.Add(this.BtnNuevaReserva);
             this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.panelHabitacionesMantenimiento);
             this.Controls.Add(this.panelHabitacionesLimpieza);
             this.Controls.Add(this.panelHabitacionesOcupadas);
@@ -440,7 +427,6 @@
         private System.Windows.Forms.Panel panelHabitacionesOcupadas;
         private System.Windows.Forms.Panel panelHabitacionesLimpieza;
         private System.Windows.Forms.Panel panelHabitacionesMantenimiento;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label LblOcupadas;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox5;

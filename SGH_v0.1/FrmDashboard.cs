@@ -122,6 +122,10 @@ namespace SGH_v0._1
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             //dgv.AllowUserToResizeRows = false;
 
+            foreach (DataGridViewColumn col in dgv.Columns)
+            {
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
 
         }
 
