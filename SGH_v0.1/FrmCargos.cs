@@ -18,6 +18,8 @@ namespace SGH_v0._1
         public static Cargos cargos = new Cargos(0, "", "", 0m, 0); //El 0m es porque es un valor decimal.
         int fila = 0, columna = 0;
         public static int seleccion = 0; //Saber a que reserva se le va a cobrar a partir de la id de la reserva.
+        public static decimal montoTotal = 0; //Saber el monto total y cantidad a pagar.
+       
 
         public FrmCargos()
         {
@@ -161,6 +163,7 @@ namespace SGH_v0._1
                     total += decimal.Parse(renglon.Cells["COSTO"].Value.ToString());
                 }
             }
+            montoTotal = total;
             TxtMonto.Text = total.ToString(); 
         }
 
@@ -194,6 +197,19 @@ namespace SGH_v0._1
             {
                 DataTable dt = (DataTable)DtgDatosHuesped.DataSource;
                 dt.DefaultView.RowFilter = $"NOMBRE LIKE '%{TxtHuesped.Text}%'"; // Filtrar por nombre
+            }
+        }
+
+        private void BtnPagar_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(TxtMonto.Text) && TxtMonto.Text != "0")
+            {
+                FrmPagoCargos fpc = new FrmPagoCargos();
+                fpc.ShowDialog();
+            }
+            else 
+            {
+                MessageBox.Show("No hay cargos que pagar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
