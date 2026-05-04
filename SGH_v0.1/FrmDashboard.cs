@@ -23,8 +23,8 @@ namespace SGH_v0._1
 
             // Mostrar la suma del estado de la habitacion
             var total = md.SumaDeEstado();
-            LblDisponibles.Text = total.disponibles.ToString();
-            LblOcupadas.Text = total.ocupadas.ToString();
+            LblDisponibles.Text = total.disponible.ToString();
+            LblOcupadas.Text = total.ocupada.ToString();
             LblLimpieza.Text = total.limpieza.ToString();
             DtgDatosActividad.DataSource = md.ActividadReciente();
 

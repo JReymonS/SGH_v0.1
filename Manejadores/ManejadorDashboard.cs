@@ -15,7 +15,7 @@ namespace Manejadores
         Base b = new Base("localhost", "root", "2026", "SistemaGestionHotelera", 3311);
 
         // Tupla
-        public (int disponibles, int ocupadas, int limpieza, int mantenimiento) SumaDeEstado()
+        public (int disponible, int ocupada, int limpieza, int mantenimiento) SumaDeEstado()
         {
             DataSet ds = b.Consulta("CALL p_SumaDeEstadoDashboard()", "Habitaciones");
 
@@ -27,8 +27,8 @@ namespace Manejadores
             {
                 DataRow fila = dt.Rows[0];
 
-                dispo = Convert.ToInt32(fila["Disponibles"]);
-                ocupa = Convert.ToInt32(fila["Ocupadas"]);
+                dispo = Convert.ToInt32(fila["Disponible"]);
+                ocupa = Convert.ToInt32(fila["Ocupada"]);
                 limpi = Convert.ToInt32(fila["Limpieza"]);
                 mante = Convert.ToInt32(fila["Mantenimiento"]);
 
