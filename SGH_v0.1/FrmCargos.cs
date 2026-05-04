@@ -16,6 +16,8 @@ namespace SGH_v0._1
     {
         ManejadorCargos mc;
         public static Cargos cargos = new Cargos(0, "", "", 0m, 0); //El 0m es porque es un valor decimal.
+        public static Huespedes huesped = new Huespedes("", "", "", "", ""); //Huesped para factura.
+        public static List<Cargos> listaCargos = new List<Cargos>(); //Lista para almacenar los cargos del huesped seleccionado y mostrar el monto total a pagar.
         int fila = 0, columna = 0;
         public static int seleccion = 0; //Saber a que reserva se le va a cobrar a partir de la id de la reserva.
         public static decimal montoTotal = 0; //Saber el monto total y cantidad a pagar.
@@ -35,6 +37,8 @@ namespace SGH_v0._1
             DiseñoDTG(DtgDatosCargo);
         }
 
+
+        //Buscar huesped
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
             string busqueda = TxtHuesped.Text;
@@ -48,53 +52,69 @@ namespace SGH_v0._1
                               $"FROM v_CargoHuesped " +
                               $"WHERE NOMBRE LIKE '%{busqueda}%' AND PAGO = 'Pagado'";
 
-
             mc.Mostrar(consulta, DtgDatosHuesped, "v_CargoHuesped");
         }
 
+
+        //Seleccionar un huesped para mostrar sus cargos
         private void DtgDatosHuesped_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
                 seleccion = int.Parse(DtgDatosHuesped.Rows[e.RowIndex].Cells["Id_Reserva"].Value.ToString());
                 string nombre = DtgDatosHuesped.Rows[e.RowIndex].Cells["NOMBRE"].Value.ToString(); //Nombre del huesped
+                string apellidos = DtgDatosHuesped.Rows[e.RowIndex].Cells["APELLIDOS"].Value.ToString(); //Apellidos del huesped
+                string telefono = DtgDatosHuesped.Rows[e.RowIndex].Cells["TELEFONO"].Value.ToString(); //Telefono del huesped
+                string correo = DtgDatosHuesped.Rows[e.RowIndex].Cells["EMAIL"].Value.ToString(); //Correo del huesped
+                string rfc = DtgDatosHuesped.Rows[e.RowIndex].Cells["RFC"].Value.ToString(); //RFC del huesped
+
+                huesped.Nombre = nombre;
+                huesped.Apellidos = apellidos;
+                huesped.Telefono = telefono;
+                huesped.Correo = correo;
+                huesped.RFC = rfc;
+
                 ActualizarCargos(); //Mostrar los cargos del huesped seleccionado
 
                 if(DtgDatosCargo.Rows.Count == 0)
                 {
                     MessageBox.Show($"No hay cargos registrados para el huésped {nombre}.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
-            }
-            
+            } 
         }
+        
 
+        //Metodo para actualizar cargos del huesped
         private void ActualizarCargos()
         {
             string cargosConsulta = $"SELECT Id_Cargo, Concepto AS \"CONCEPTO\", Monto AS \"COSTO\" FROM Cargos " +
                                     $"WHERE Id_Reserva = {seleccion}";
             mc.Mostrar(cargosConsulta, DtgDatosCargo, "Cargos");
-
+            mc.ObtenerCargos(listaCargos, DtgDatosCargo);
             CalcularCargoTotal();
         }
 
+
+        //Obtiene los datos del registro
         private void DtgDatosCargo_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             fila = e.RowIndex;
             columna = e.ColumnIndex;
         }
 
+
+        //Agrega nuevo cargo
         private void BtnAgregarCargo_Click_1(object sender, EventArgs e)
         {
             cargos.Id_Cargo = 0; cargos.Concepto = ""; cargos.Monto = 0m;
 
             FrmDatosCargos fdc = new FrmDatosCargos();
             fdc.ShowDialog();
-            //DtgDatosCargo.Columns.Clear();
-
             ActualizarCargos();
         }
 
+
+        //Edita el cargo seleccionado
         private void BtnEditar_Click_1(object sender, EventArgs e)
         {
             if (DtgDatosCargo.CurrentRow != null) //Validar que se haya dado clic en una fila del DtgDatosCargo
@@ -110,7 +130,6 @@ namespace SGH_v0._1
                 }
 
                 cargos.Id_Cargo = int.Parse(DtgDatosCargo.CurrentRow.Cells["Id_Cargo"].Value.ToString());
-                //cargos.Concepto = DtgDatosCargo.CurrentRow.Cells["Concepto"].Value.ToString();
                 cargos.Concepto = conceptoSeleccionado;
                 cargos.Monto = decimal.Parse(DtgDatosCargo.CurrentRow.Cells["COSTO"].Value.ToString());
 
@@ -118,7 +137,6 @@ namespace SGH_v0._1
                 fdc.ShowDialog();
 
                 ActualizarCargos();
-
             }
             else
             {
@@ -126,6 +144,8 @@ namespace SGH_v0._1
             }
         }
 
+
+        //Elimina el cargo seleccionado
         private void BtnEliminar_Click_1(object sender, EventArgs e)
         {
             if (DtgDatosCargo.CurrentRow != null)
@@ -134,7 +154,6 @@ namespace SGH_v0._1
                 cargos.Concepto = DtgDatosCargo.CurrentRow.Cells["CONCEPTO"].Value.ToString();
                 mc.Borrar(cargos);
                 ActualizarCargos();
-
             }
             else
             {
@@ -142,20 +161,22 @@ namespace SGH_v0._1
             }
         }
 
+
+        //Obtiene los datos del cargo seleccionado para editar o eliminar
         private void DtgDatosCargo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             cargos.Id_Cargo = int.Parse(DtgDatosCargo.Rows[fila].Cells["Id_Cargo"].Value.ToString());
-            //cargos.Fecha = DtgDatosCargo.Rows[fila].Cells["Fecha"].Value.ToString();
             cargos.Concepto = DtgDatosCargo.Rows[fila].Cells["CONCEPTO"].Value.ToString();
             cargos.Monto = decimal.Parse(DtgDatosCargo.Rows[fila].Cells["COSTO"].Value.ToString());
             cargos.Id_Reserva = seleccion;
 
         }
 
+
+        //Metodo para calcular el monto total de los cargos
         private void CalcularCargoTotal()
         {
             decimal total = 0m;
-
             foreach(DataGridViewRow renglon in DtgDatosCargo.Rows)
             {
                 if (renglon.Cells["COSTO"].Value != null)
@@ -167,6 +188,8 @@ namespace SGH_v0._1
             TxtMonto.Text = total.ToString(); 
         }
 
+
+        //Coloca el texto fantasma en la busqueda
         private void TxtHuesped_Enter(object sender, EventArgs e)
         {
             if(TxtHuesped.Text == "Buscar huesped...")
@@ -177,6 +200,8 @@ namespace SGH_v0._1
 
         }
 
+
+        //Coloca el texto fantasma en la busqueda
         private void TxtHuesped_Leave(object sender, EventArgs e)
         {
             if(string.IsNullOrWhiteSpace(TxtHuesped.Text))
@@ -191,6 +216,8 @@ namespace SGH_v0._1
             }
         }
 
+
+        //Filtra la busqueda en tiempo de ejecución
         private void TxtHuesped_TextChanged(object sender, EventArgs e)
         {
             if(TxtHuesped.Text != "Buscar huesped..." && DtgDatosHuesped.DataSource != null)
@@ -200,6 +227,8 @@ namespace SGH_v0._1
             }
         }
 
+
+        //Agrega un pago
         private void BtnPagar_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(TxtMonto.Text) && TxtMonto.Text != "0")
@@ -212,6 +241,7 @@ namespace SGH_v0._1
                 MessageBox.Show("No hay cargos que pagar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
 
         // Diseño para el DataGridView 
         private void DiseñoDTG (DataGridView dgv)

@@ -45,5 +45,17 @@ namespace Manejadores
             tabla.AutoResizeColumns();
             tabla.AutoResizeRows();
         }
+
+        public void ObtenerCargos(List<Cargos> lista, DataGridView dtgDatos) 
+        {
+            lista.Clear();
+            foreach (DataGridViewRow item in dtgDatos.Rows)
+            {
+                Cargos cargos = new Cargos(0, "", "", 0m, 0);
+                cargos.Concepto = item.Cells["CONCEPTO"].Value.ToString();
+                cargos.Monto = Convert.ToDecimal(item.Cells["COSTO"].Value);
+                lista.Add(cargos);
+            }
+        }
     }
 }
