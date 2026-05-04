@@ -39,8 +39,14 @@
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.pEncabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // pEncabezado
@@ -86,6 +92,7 @@
             // 
             // cmbTipoPago
             // 
+            this.cmbTipoPago.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmbTipoPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoPago.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTipoPago.FormattingEnabled = true;
@@ -93,7 +100,7 @@
             "Efectivo",
             "Tarjeta",
             "Transferencia"});
-            this.cmbTipoPago.Location = new System.Drawing.Point(190, 110);
+            this.cmbTipoPago.Location = new System.Drawing.Point(1, 1);
             this.cmbTipoPago.Name = "cmbTipoPago";
             this.cmbTipoPago.Size = new System.Drawing.Size(221, 33);
             this.cmbTipoPago.TabIndex = 3;
@@ -110,11 +117,12 @@
             // 
             // txtCantidad
             // 
+            this.txtCantidad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtCantidad.Enabled = false;
             this.txtCantidad.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(558, 110);
+            this.txtCantidad.Location = new System.Drawing.Point(1, 1);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(100, 33);
+            this.txtCantidad.Size = new System.Drawing.Size(99, 33);
             this.txtCantidad.TabIndex = 5;
             // 
             // label4
@@ -129,11 +137,12 @@
             // 
             // txtTotal
             // 
+            this.txtTotal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTotal.Enabled = false;
             this.txtTotal.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(766, 111);
+            this.txtTotal.Location = new System.Drawing.Point(1, 1);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(100, 33);
+            this.txtTotal.Size = new System.Drawing.Size(99, 33);
             this.txtTotal.TabIndex = 7;
             // 
             // btnGuardar
@@ -162,19 +171,49 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.panel1.Controls.Add(this.cmbTipoPago);
+            this.panel1.Location = new System.Drawing.Point(193, 111);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(1);
+            this.panel1.Size = new System.Drawing.Size(223, 35);
+            this.panel1.TabIndex = 10;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.panel2.Controls.Add(this.txtCantidad);
+            this.panel2.Location = new System.Drawing.Point(560, 111);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(1);
+            this.panel2.Size = new System.Drawing.Size(101, 35);
+            this.panel2.TabIndex = 11;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.panel3.Controls.Add(this.txtTotal);
+            this.panel3.Location = new System.Drawing.Point(767, 111);
+            this.panel3.Name = "panel3";
+            this.panel3.Padding = new System.Windows.Forms.Padding(1);
+            this.panel3.Size = new System.Drawing.Size(101, 35);
+            this.panel3.TabIndex = 12;
+            // 
             // FrmPagoCargos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(930, 260);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.cmbTipoPago);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pEncabezado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -185,6 +224,11 @@
             this.pEncabezado.ResumeLayout(false);
             this.pEncabezado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,5 +247,8 @@
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }

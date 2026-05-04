@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 using Manejadores;
@@ -20,7 +16,7 @@ namespace SGH_v0._1
         public static List<Cargos> listaCargos = new List<Cargos>(); //Lista para almacenar los cargos del huesped seleccionado y mostrar el monto total a pagar.
         int fila = 0, columna = 0;
         public static int seleccion = 0; //Saber a que reserva se le va a cobrar a partir de la id de la reserva.
-        public static decimal montoTotal = 0; //Saber el monto total y cantidad a pagar.
+        public static decimal montoTotal = 0m; //Saber el monto total y cantidad a pagar.
        
 
         public FrmCargos()
@@ -88,7 +84,7 @@ namespace SGH_v0._1
         private void ActualizarCargos()
         {
             string cargosConsulta = $"SELECT Id_Cargo, Concepto AS \"CONCEPTO\", Monto AS \"COSTO\" FROM Cargos " +
-                                    $"WHERE Id_Reserva = {seleccion}";
+                                    $"WHERE Id_Reserva = {seleccion} AND Estado_cargo='Pendiente'";
             mc.Mostrar(cargosConsulta, DtgDatosCargo, "Cargos");
             mc.ObtenerCargos(listaCargos, DtgDatosCargo);
             CalcularCargoTotal();
@@ -185,7 +181,7 @@ namespace SGH_v0._1
                 }
             }
             montoTotal = total;
-            TxtMonto.Text = total.ToString(); 
+            TxtMonto.Text = total.ToString("F2"); 
         }
 
 
@@ -231,10 +227,11 @@ namespace SGH_v0._1
         //Agrega un pago
         private void BtnPagar_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(TxtMonto.Text) && TxtMonto.Text != "0")
+            if (!string.IsNullOrEmpty(TxtMonto.Text) && TxtMonto.Text != "0.00")
             {
                 FrmPagoCargos fpc = new FrmPagoCargos();
                 fpc.ShowDialog();
+                ActualizarCargos();
             }
             else 
             {
@@ -246,7 +243,6 @@ namespace SGH_v0._1
         // Diseño para el DataGridView 
         private void DiseñoDTG (DataGridView dgv)
         {
-
             dgv.RowHeadersVisible = false;
 
             // Ocultar la flecha selectora y el renglón extra
