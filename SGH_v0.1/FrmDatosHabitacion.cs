@@ -45,31 +45,37 @@ namespace SGH_v0._1
             if (string.IsNullOrWhiteSpace(TxtNo.Text))
             {
                 MessageBox.Show("El número de habitación no puede quedar vacío.");
+                TxtNo.Focus();
                 return;
             }
             if (string.IsNullOrWhiteSpace(TxtTipo.Text))
             {
                 MessageBox.Show("El tipo de habitación no puede quedar vacío.");
+                TxtTipo.Focus();
                 return;
             }
             if (string.IsNullOrWhiteSpace(TxtCapacidad.Text))
             {
                 MessageBox.Show("La capacidad no puede quedar vacía.");
+                TxtCapacidad.Focus();
                 return;
             }
             if (string.IsNullOrWhiteSpace(TxtPiso.Text))
             {
                 MessageBox.Show("El piso no puede quedar vacío.");
+                TxtPiso.Focus();
                 return;
             }
             if (string.IsNullOrWhiteSpace(TxtCosto.Text))
             {
                 MessageBox.Show("El costo por noche no puede quedar vacío.");
+                TxtCosto.Focus();
                 return;
             }
             if (string.IsNullOrWhiteSpace(TxtDescripcion.Text))
             {
                 MessageBox.Show("La descripción de habitación no puede quedar vacía.");
+                TxtDescripcion.Focus();
                 return;
             }
 
@@ -78,18 +84,21 @@ namespace SGH_v0._1
             if (TxtNo.Text.Length > 5)
             {
                 MessageBox.Show("El número de habitación no puede exceder 5 caracteres.");
+                TxtNo.Focus();
                 return;
             }
 
             if (TxtTipo.Text.Length > 255)
             {
                 MessageBox.Show("El tipo de habitación no puede exceder 255 caracteres.");
+                TxtTipo.Focus();
                 return;
             }
 
             if (TxtDescripcion.Text.Length > 255)
             {
                 MessageBox.Show("La descripción no puede exceder 255 caracteres.");
+                TxtDescripcion.Focus();
                 return;
             }
 
@@ -99,6 +108,7 @@ namespace SGH_v0._1
             if (!int.TryParse(TxtCapacidad.Text, out capacidad) || capacidad <= 0)
             {
                 MessageBox.Show("La capacidad debe ser un número entero mayor que 0.");
+                TxtCapacidad.Focus();
                 return;
             }
 
@@ -106,6 +116,7 @@ namespace SGH_v0._1
             if (!int.TryParse(TxtPiso.Text, out piso) || piso <= 0)
             {
                 MessageBox.Show("El piso debe ser un número entero mayor que 0.");
+                TxtPiso.Focus();
                 return;
             }
 
@@ -113,13 +124,15 @@ namespace SGH_v0._1
             if (!decimal.TryParse(TxtCosto.Text, out costo) || costo <= 0)
             {
                 MessageBox.Show("El costo por noche debe ser un número válido mayor que 0.");
+                TxtCosto.Focus();
                 return;
             }
 
-            // DECIMAL(6,2) → máximo 9999.99
-            if (costo > 9999.99m)
+            // DECIMAL(8,2) → máximo 999999.99
+            if (costo > 999999.99m)
             {
-                MessageBox.Show("El costo excede el límite permitido. Máximo: 9999.99");
+                MessageBox.Show("El costo excede el límite permitido. Máximo: 999999.99");
+                TxtCosto.Focus();
                 return;
             }
 
@@ -130,6 +143,7 @@ namespace SGH_v0._1
                 if (mh.ExisteHabitacion(TxtNo.Text.Trim()))
                 {
                     MessageBox.Show("El número de habitación ya existe.");
+                    TxtNo.Focus();
                     return;
                 }
             }
@@ -140,6 +154,7 @@ namespace SGH_v0._1
                     if (mh.ExisteHabitacion(TxtNo.Text.Trim()))
                     {
                         MessageBox.Show("El número de habitación ya existe.");
+                        TxtNo.Focus();
                         return;
                     }
                 }
