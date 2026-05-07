@@ -85,7 +85,7 @@
             this.panelHabitacionesDisponibles.Controls.Add(this.pictureBox2);
             this.panelHabitacionesDisponibles.Controls.Add(this.label4);
             this.panelHabitacionesDisponibles.Location = new System.Drawing.Point(79, 155);
-            this.panelHabitacionesDisponibles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelHabitacionesDisponibles.Margin = new System.Windows.Forms.Padding(4);
             this.panelHabitacionesDisponibles.Name = "panelHabitacionesDisponibles";
             this.panelHabitacionesDisponibles.Size = new System.Drawing.Size(264, 75);
             this.panelHabitacionesDisponibles.TabIndex = 4;
@@ -107,7 +107,7 @@
             this.pictureBox2.BackgroundImage = global::SGH_v0._1.Properties.Resources.Disponibles;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox2.Location = new System.Drawing.Point(23, 16);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(47, 39);
             this.pictureBox2.TabIndex = 1;
@@ -131,7 +131,7 @@
             this.panelHabitacionesOcupadas.Controls.Add(this.label6);
             this.panelHabitacionesOcupadas.Controls.Add(this.pictureBox5);
             this.panelHabitacionesOcupadas.Location = new System.Drawing.Point(416, 155);
-            this.panelHabitacionesOcupadas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelHabitacionesOcupadas.Margin = new System.Windows.Forms.Padding(4);
             this.panelHabitacionesOcupadas.Name = "panelHabitacionesOcupadas";
             this.panelHabitacionesOcupadas.Size = new System.Drawing.Size(264, 75);
             this.panelHabitacionesOcupadas.TabIndex = 5;
@@ -164,7 +164,7 @@
             this.pictureBox5.BackgroundImage = global::SGH_v0._1.Properties.Resources.Ocupadas;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox5.Location = new System.Drawing.Point(21, 16);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(47, 39);
             this.pictureBox5.TabIndex = 5;
@@ -177,7 +177,7 @@
             this.panelHabitacionesLimpieza.Controls.Add(this.label7);
             this.panelHabitacionesLimpieza.Controls.Add(this.pictureBox4);
             this.panelHabitacionesLimpieza.Location = new System.Drawing.Point(759, 155);
-            this.panelHabitacionesLimpieza.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelHabitacionesLimpieza.Margin = new System.Windows.Forms.Padding(4);
             this.panelHabitacionesLimpieza.Name = "panelHabitacionesLimpieza";
             this.panelHabitacionesLimpieza.Size = new System.Drawing.Size(264, 75);
             this.panelHabitacionesLimpieza.TabIndex = 6;
@@ -210,7 +210,7 @@
             this.pictureBox4.BackgroundImage = global::SGH_v0._1.Properties.Resources.Housekeeping;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox4.Location = new System.Drawing.Point(27, 17);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(47, 39);
             this.pictureBox4.TabIndex = 4;
@@ -223,7 +223,7 @@
             this.panelHabitacionesMantenimiento.Controls.Add(this.label8);
             this.panelHabitacionesMantenimiento.Controls.Add(this.pictureBox3);
             this.panelHabitacionesMantenimiento.Location = new System.Drawing.Point(1089, 155);
-            this.panelHabitacionesMantenimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelHabitacionesMantenimiento.Margin = new System.Windows.Forms.Padding(4);
             this.panelHabitacionesMantenimiento.Name = "panelHabitacionesMantenimiento";
             this.panelHabitacionesMantenimiento.Size = new System.Drawing.Size(267, 75);
             this.panelHabitacionesMantenimiento.TabIndex = 7;
@@ -256,7 +256,7 @@
             this.pictureBox3.BackgroundImage = global::SGH_v0._1.Properties.Resources.Mantenimiento;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox3.Location = new System.Drawing.Point(20, 18);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(47, 39);
             this.pictureBox3.TabIndex = 3;
@@ -266,7 +266,7 @@
             // 
             this.pictureBox6.Image = global::SGH_v0._1.Properties.Resources.Imagen_hotel;
             this.pictureBox6.Location = new System.Drawing.Point(76, 255);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(720, 393);
             this.pictureBox6.TabIndex = 9;
@@ -278,7 +278,7 @@
             this.pictureBox1.BackgroundImage = global::SGH_v0._1.Properties.Resources.Home_Page_white;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Location = new System.Drawing.Point(1300, 39);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(53, 49);
             this.pictureBox1.TabIndex = 3;
@@ -296,7 +296,7 @@
             this.BtnNuevaReserva.Image = global::SGH_v0._1.Properties.Resources.cama;
             this.BtnNuevaReserva.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnNuevaReserva.Location = new System.Drawing.Point(81, 681);
-            this.BtnNuevaReserva.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnNuevaReserva.Margin = new System.Windows.Forms.Padding(4);
             this.BtnNuevaReserva.Name = "BtnNuevaReserva";
             this.BtnNuevaReserva.Size = new System.Drawing.Size(213, 48);
             this.BtnNuevaReserva.TabIndex = 10;
@@ -317,7 +317,7 @@
             this.BtnHouseKeeping.Image = global::SGH_v0._1.Properties.Resources.Housekeeping;
             this.BtnHouseKeeping.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnHouseKeeping.Location = new System.Drawing.Point(335, 681);
-            this.BtnHouseKeeping.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnHouseKeeping.Margin = new System.Windows.Forms.Padding(4);
             this.BtnHouseKeeping.Name = "BtnHouseKeeping";
             this.BtnHouseKeeping.Size = new System.Drawing.Size(232, 48);
             this.BtnHouseKeeping.TabIndex = 11;
@@ -338,7 +338,7 @@
             this.BtnReportes.Image = global::SGH_v0._1.Properties.Resources.Business_Report;
             this.BtnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnReportes.Location = new System.Drawing.Point(611, 681);
-            this.BtnReportes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnReportes.Margin = new System.Windows.Forms.Padding(4);
             this.BtnReportes.Name = "BtnReportes";
             this.BtnReportes.Size = new System.Drawing.Size(188, 48);
             this.BtnReportes.TabIndex = 12;
@@ -355,7 +355,7 @@
             this.DtgDatosActividad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtgDatosActividad.Enabled = false;
             this.DtgDatosActividad.Location = new System.Drawing.Point(836, 279);
-            this.DtgDatosActividad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DtgDatosActividad.Margin = new System.Windows.Forms.Padding(4);
             this.DtgDatosActividad.Name = "DtgDatosActividad";
             this.DtgDatosActividad.ReadOnly = true;
             this.DtgDatosActividad.RowHeadersWidth = 51;
@@ -392,8 +392,9 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDashboard";
             this.Load += new System.EventHandler(this.FrmDashboard_Load);
             this.panelHabitacionesDisponibles.ResumeLayout(false);

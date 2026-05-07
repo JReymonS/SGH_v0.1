@@ -100,5 +100,12 @@ namespace SGH_v0._1
         {
             Application.Restart();
         }
+
+        private void tsbHome_Click(object sender, EventArgs e)
+        {
+            FrmDashboard frmDashboard = new FrmDashboard();
+            frmDashboard.MdiParent = this;
+            frmDashboard.Show();        
+        }
     }
 }
