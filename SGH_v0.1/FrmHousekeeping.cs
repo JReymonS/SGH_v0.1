@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
 using Manejadores;
 
 namespace SGH_v0._1
@@ -234,6 +235,28 @@ namespace SGH_v0._1
             TxtBuscarHabitacion.ForeColor = Color.Gray;
             // Esto es vital por si se hizo un Check-in mientras se tenga la pantalla abierta
             ActualizarTabla();
+        }
+
+        private void FrmHousekeeping_Shown(object sender, EventArgs e)
+        {
+            var permiso = FrmHome._usuarioActivo.ListaPermisos.Find(x => x.Id_Modulo == 3);
+
+            if (permiso == null || !permiso.permiso_leer_abrir)
+            {
+                MessageBox.Show("No tienes permiso para acceder a Housekeeping.",
+                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.Close();
+                return;
+            }
+
+            if (!permiso.permiso_escritura)
+            {
+                BtnGuardar.Enabled = false;
+                BtnEnMantenimiento.Enabled = false;
+                BtnOcupada.Enabled = false;
+                BtnDisponible.Enabled = false;
+                BtnEnLimpieza.Enabled = false;
+            }
         }
     }
 }
