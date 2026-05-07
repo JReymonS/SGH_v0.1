@@ -41,6 +41,23 @@ namespace SGH_v0._1
             mr.MostrarReporteGeneral(DtgReporte,fechaInicio,fechaFin);
            
         }
-        
+
+        private void FrmMostrarReporte_Shown(object sender, EventArgs e)
+        {
+            var permiso = FrmHome._usuarioActivo.ListaPermisos.Find(x => x.Id_Modulo == 5);
+
+            if (permiso == null || !permiso.permiso_leer_abrir)
+            {
+                MessageBox.Show("No tienes permiso para acceder a Reportes.",
+                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.Close();
+                return;
+            }
+
+            if (!permiso.permiso_escritura)
+            {
+                btnExportar.Enabled = false; 
+            }
+        }
     }
 }

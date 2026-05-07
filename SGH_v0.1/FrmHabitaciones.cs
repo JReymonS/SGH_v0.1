@@ -41,6 +41,19 @@ namespace SGH_v0._1
             habitacion.Piso = int.Parse(DtgDatos.Rows[fila].Cells[4].Value.ToString());
             habitacion.Costo_Noche = double.Parse(DtgDatos.Rows[fila].Cells[8].Value.ToString());
 
+            var permiso = FrmHome._usuarioActivo.ListaPermisos.Find(x => x.Id_Modulo == 2);
+
+            // Columnas 5, 6, 7 son acciones de escritura
+            if (columna >= 5 && columna <= 7)
+            {
+                if (permiso == null || !permiso.permiso_escritura)
+                {
+                    MessageBox.Show("No tienes permiso de escritura en este módulo.",
+                        "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+
             string estado = DtgDatos.Rows[fila].Cells["ESTADO"].Value.ToString();
             switch (columna)
             {
@@ -82,8 +95,42 @@ namespace SGH_v0._1
                     }; break;
                 case 7:
                     {
-                        
-                    }; break;
+                        if (estado == "Ocupada")
+                        {
+                            DialogResult resp = MessageBox.Show(
+                                "¿Desea realizar el Check-Out de esta habitación?",
+                                "Confirmar",
+                                MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Question
+                            );
+
+                            if (resp == DialogResult.Yes)
+                            {
+                                string resultado = mh.Check_Out(habitacion);
+                                string titulo = resultado.StartsWith("OK") ? "Éxito" : "Error";
+                                string mensaje = resultado.Replace("ERROR: ", "").Replace("OK: ", "");
+
+                                MessageBox.Show(
+                                    mensaje,
+                                    titulo,
+                                    MessageBoxButtons.OK,
+                                    resultado.StartsWith("OK") ? MessageBoxIcon.Information : MessageBoxIcon.Warning
+                                );
+
+                                DtgDatos.Columns.Clear();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show(
+                                $"No se puede hacer Check-Out porque la habitación está en estado '{estado}'.",
+                                "Operación no permitida",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning
+                            );
+                        }
+                    }
+                    break;
             }
         }
 
@@ -104,7 +151,21 @@ namespace SGH_v0._1
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            string numero = DtgDatos.SelectedRows[0].Cells[0].Value.ToString();
+
+            string numero = DtgDatos.SelectedRows[0].Cells["NO"].Value.ToString();
+            string estado = DtgDatos.SelectedRows[0].Cells["ESTADO"].Value.ToString();
+
+            // 🔥 VALIDACIÓN
+            if (estado != "Disponible" && estado != "Mantenimiento")
+            {
+                MessageBox.Show(
+                    $"No se puede editar la habitación porque está en estado '{estado}'.",
+                    "Operación no permitida",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
 
             FrmHabitaciones.habitacionSeleccionada = mh.ObtenerHabitacion(numero);
 
@@ -141,6 +202,28 @@ namespace SGH_v0._1
             mh.Borrar(habitacion);
 
             DtgDatos.Columns.Clear();
+        }
+
+        private void FrmHabitaciones_Shown(object sender, EventArgs e)
+        {
+            var permiso = FrmHome._usuarioActivo.ListaPermisos.Find(x => x.Id_Modulo == 2);
+
+            if (permiso == null || !permiso.permiso_leer_abrir)
+            {
+                MessageBox.Show("No tienes permiso para acceder a Habitaciones y Reservas.",
+                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.Close();
+                return;
+            }
+
+            if (!permiso.permiso_escritura)
+            {
+                BtnAgregar.Enabled = false;
+                BtnEditar.Enabled = false;
+                BtnEliminar.Enabled = false;
+                // Los botones del DataGridView (RESERVAR, CHECK-IN, CHECK-OUT)
+                // se controlan en CellClick
+            }
         }
 
         public FrmHabitaciones()
