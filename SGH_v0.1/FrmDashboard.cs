@@ -26,6 +26,7 @@ namespace SGH_v0._1
             LblDisponibles.Text = total.disponible.ToString();
             LblOcupadas.Text = total.ocupada.ToString();
             LblLimpieza.Text = total.limpieza.ToString();
+            LblMantenimiento.Text = total.mantenimiento.ToString();
             DtgDatosActividad.DataSource = md.ActividadReciente();
 
             DiseñoDTG(DtgDatosActividad);
@@ -69,8 +70,8 @@ namespace SGH_v0._1
 
         private void BtnNuevaReserva_Click(object sender, EventArgs e)
         {
-            FrmReservas frmReservas = new FrmReservas();
-            frmReservas.ShowDialog();
+            FrmHabitaciones frmHabitaciones = new FrmHabitaciones();
+            frmHabitaciones.ShowDialog();
         }
 
         private void BtnHouseKeeping_Click(object sender, EventArgs e)
