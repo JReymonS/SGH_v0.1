@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.TxtHuesped = new System.Windows.Forms.TextBox();
             this.DtgDatosHuesped = new System.Windows.Forms.DataGridView();
             this.DtgDatosCargo = new System.Windows.Forms.DataGridView();
-            this.BtnBuscar = new System.Windows.Forms.Button();
-            this.BtnAgregarCargo = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.TxtMonto = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.BtnPagar = new System.Windows.Forms.Button();
-            this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.BtnEditar = new System.Windows.Forms.Button();
+            this.BtnPagar = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.BtnAgregarCargo = new System.Windows.Forms.Button();
+            this.BtnBuscar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DtgDatosHuesped)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtgDatosCargo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -93,6 +93,9 @@
             this.TxtHuesped.Name = "TxtHuesped";
             this.TxtHuesped.Size = new System.Drawing.Size(486, 24);
             this.TxtHuesped.TabIndex = 3;
+            this.TxtHuesped.TextChanged += new System.EventHandler(this.TxtHuesped_TextChanged);
+            this.TxtHuesped.Enter += new System.EventHandler(this.TxtHuesped_Enter);
+            this.TxtHuesped.Leave += new System.EventHandler(this.TxtHuesped_Leave);
             // 
             // DtgDatosHuesped
             // 
@@ -100,14 +103,15 @@
             this.DtgDatosHuesped.AllowUserToDeleteRows = false;
             this.DtgDatosHuesped.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.DtgDatosHuesped.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DtgDatosHuesped.DefaultCellStyle = dataGridViewCellStyle1;
+            this.DtgDatosHuesped.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DtgDatosHuesped.DefaultCellStyle = dataGridViewCellStyle5;
             this.DtgDatosHuesped.GridColor = System.Drawing.SystemColors.ControlText;
             this.DtgDatosHuesped.ImeMode = System.Windows.Forms.ImeMode.Katakana;
             this.DtgDatosHuesped.Location = new System.Drawing.Point(36, 155);
@@ -122,14 +126,15 @@
             this.DtgDatosCargo.AllowUserToAddRows = false;
             this.DtgDatosCargo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.DtgDatosCargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DtgDatosCargo.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DtgDatosCargo.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DtgDatosCargo.DefaultCellStyle = dataGridViewCellStyle6;
             this.DtgDatosCargo.GridColor = System.Drawing.SystemColors.ControlText;
             this.DtgDatosCargo.ImeMode = System.Windows.Forms.ImeMode.Katakana;
             this.DtgDatosCargo.Location = new System.Drawing.Point(36, 301);
@@ -208,23 +213,30 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Tip: Seleccione un registro que desea editar o eliminar.\r\n\r\n";
             // 
-            // BtnPagar
+            // BtnEliminar
             // 
-            this.BtnPagar.BackgroundImage = global::SGH_v0._1.Properties.Resources.Pay;
-            this.BtnPagar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnPagar.FlatAppearance.BorderSize = 0;
-            this.BtnPagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnPagar.Location = new System.Drawing.Point(599, 431);
-            this.BtnPagar.Name = "BtnPagar";
-            this.BtnPagar.Size = new System.Drawing.Size(43, 40);
-            this.BtnPagar.TabIndex = 13;
-            this.BtnPagar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.BackgroundImage = global::SGH_v0._1.Properties.Resources.Remove_Book;
+            this.BtnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnEliminar.FlatAppearance.BorderSize = 0;
+            this.BtnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.BtnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEliminar.Location = new System.Drawing.Point(708, 430);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(40, 40);
+            this.BtnEliminar.TabIndex = 15;
+            this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click_1);
             // 
             // BtnEditar
             // 
             this.BtnEditar.BackgroundImage = global::SGH_v0._1.Properties.Resources.Pencil;
             this.BtnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnEditar.FlatAppearance.BorderSize = 0;
+            this.BtnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.BtnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEditar.Location = new System.Drawing.Point(655, 429);
             this.BtnEditar.Name = "BtnEditar";
@@ -233,18 +245,21 @@
             this.BtnEditar.UseVisualStyleBackColor = true;
             this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click_1);
             // 
-            // BtnEliminar
+            // BtnPagar
             // 
-            this.BtnEliminar.BackgroundImage = global::SGH_v0._1.Properties.Resources.Remove_Book;
-            this.BtnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnEliminar.FlatAppearance.BorderSize = 0;
-            this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEliminar.Location = new System.Drawing.Point(708, 430);
-            this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(40, 40);
-            this.BtnEliminar.TabIndex = 15;
-            this.BtnEliminar.UseVisualStyleBackColor = true;
-            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click_1);
+            this.BtnPagar.BackgroundImage = global::SGH_v0._1.Properties.Resources.Pay;
+            this.BtnPagar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnPagar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnPagar.FlatAppearance.BorderSize = 0;
+            this.BtnPagar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.BtnPagar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.BtnPagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPagar.Location = new System.Drawing.Point(599, 431);
+            this.BtnPagar.Name = "BtnPagar";
+            this.BtnPagar.Size = new System.Drawing.Size(43, 40);
+            this.BtnPagar.TabIndex = 13;
+            this.BtnPagar.UseVisualStyleBackColor = true;
+            this.BtnPagar.Click += new System.EventHandler(this.BtnPagar_Click);
             // 
             // FrmCargos
             // 
@@ -272,10 +287,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCargos";
             this.Shown += new System.EventHandler(this.FrmCargos_Shown);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtgDatosHuesped)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtgDatosCargo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
