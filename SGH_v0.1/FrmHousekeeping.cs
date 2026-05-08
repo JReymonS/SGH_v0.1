@@ -70,7 +70,7 @@ namespace SGH_v0._1
             if (TxtBuscarHabitacion.Text != "Buscar habitación..." && DtgDatos.DataSource != null)
             {
                 DataTable dt = (DataTable)DtgDatos.DataSource;
-                dt.DefaultView.RowFilter = string.Format("[NO.] LIKE '%{0}%'", TxtBuscarHabitacion.Text);
+                dt.DefaultView.RowFilter = string.Format("[NO.] LIKE '%{0}%'", TxtBuscarHabitacion.Text.Split('\''));
             }
         }
 
@@ -115,17 +115,14 @@ namespace SGH_v0._1
         {
             if (DtgDatos.CurrentRow != null)
             {
-            
                 string noHab = DtgDatos.CurrentRow.Cells["NO."].Value.ToString();
-
                 mh.ActualizarEstado(noHab, "Limpieza");
-
                 ActualizarTabla();
-                MessageBox.Show($"Habitación {noHab} ahora está en Limpieza", "Éxito");
+                MessageBox.Show($"Habitación: {noHab}, ahora está en estado de: \"Limpieza\".", "¡ATENCIÓN!",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Por favor, selecciona una habitación de la lista.");
+                MessageBox.Show("Por favor, seleccione una habitación de la lista.","¡ATENCIÓN!",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
 
@@ -138,11 +135,11 @@ namespace SGH_v0._1
                 string noHab = DtgDatos.CurrentRow.Cells["NO."].Value.ToString();
                 mh.ActualizarEstado(noHab, "Mantenimiento");
                 ActualizarTabla();
-                MessageBox.Show($"Habitación {noHab} ahora está en Mantenimiento", "Éxito");
+                MessageBox.Show($"Habitación: {noHab}, ahora está en estado de: \"Mantenimiento\".", "¡ATENCIÓN!",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Por favor, selecciona una habitación de la lista.");
+                MessageBox.Show("Por favor, seleccione una habitación de la lista.","¡ATENCIÓN!",MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -155,7 +152,7 @@ namespace SGH_v0._1
             var hab = mh.ObtenerHabitacion(noHab);
             if (hab.Id_Reserva == 0)
             {
-                MessageBox.Show("No hay una reservación activa para esta habitación.", "Validación");
+                MessageBox.Show($"No hay una reserva para la habitación: {noHab}, solo se podrá poner en \"Ocupada\" una habitación con reserva.", "¡VALIDACIÓN!",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                 return;
             }
             mh.ActualizarEstado(noHab, "Ocupada");
@@ -170,12 +167,12 @@ namespace SGH_v0._1
 
             string estadoActual = DtgDatos.CurrentRow.Cells["ESTADO_HABITACION"].Value.ToString();
             string noHab = DtgDatos.CurrentRow.Cells["NO."].Value.ToString();
-            int estadoReserva = mh.ConsultarReserva($"SELECT COUNT(*) AS \"Existencia\" FROM Reservas r JOIN Habitaciones h ON r.Numero_Habitacion = h.Numero_Habitacion WHERE r.Numero_Habitacion = \"{noHab}\" AND Estado_Pago = \"Pagado\";");
+            int estadoReserva = mh.ConsultarReserva($"SELECT COUNT(*) AS \"Existencia\" FROM Reservas r JOIN Habitaciones h ON r.Numero_Habitacion = h.Numero_Habitacion WHERE r.Numero_Habitacion = \"{noHab}\" AND Estado_Pago = \"Pagado\"OR Estado_Pago=\"Pendiente\";");
 
             // REGLA: No puedes poner Disponible si está Ocupada (Falta Check-out)
             if (estadoReserva >0)
             {
-                MessageBox.Show("El huésped aún no hace Check-out. No se puede liberar.", "Aviso");
+                MessageBox.Show($"El huésped de la habitación: {noHab}, aún no hace CHECK-OUT. Vuelva a colocar la habitación en \"Ocupada\".", "¡AVISO!",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -184,7 +181,7 @@ namespace SGH_v0._1
             {
                 mh.ActualizarEstado(noHab, "Disponible");
                 ActualizarTabla();
-                MessageBox.Show($"Habitación {noHab} liberada. Ya es visible en Recepción.", "Éxito");
+                MessageBox.Show($"Habitación: {noHab}, ahora está en estado: \"Disponible\". Ahora es visible en habitaciones.", "¡ATENCIÓN!",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
 
@@ -224,9 +221,7 @@ namespace SGH_v0._1
         //Guardar cambios / sincronizar con la BD
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Sincronización con la base de datos completada exitosamente.",
-                    "Sistema de Housekeeping", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+            MessageBox.Show("Sincronización y actualización de datos completada exitosamente.","¡ATENCIÓN!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             TxtBuscarHabitacion.Text = "Buscar habitación...";
             TxtBuscarHabitacion.ForeColor = Color.Gray;
             ActualizarTabla();
@@ -240,8 +235,7 @@ namespace SGH_v0._1
 
             if (permiso == null || !permiso.permiso_leer_abrir)
             {
-                MessageBox.Show("No tienes permiso para acceder a Housekeeping.",
-                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No tienes permiso para acceder al módulo Housekeeping.","¡ACCESO DENEGADO!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 this.Close();
                 return;
             }
