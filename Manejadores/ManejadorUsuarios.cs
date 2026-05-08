@@ -19,7 +19,7 @@ namespace Manejadores
             if (!mensaje.Equals("Ok"))
             { 
                 valido=false;
-                MessageBox.Show(mensaje,"¡Atención!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(mensaje,"¡ERROR!",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 
@@ -36,7 +36,7 @@ namespace Manejadores
                 if (!mensaje.Equals("Ok"))
                 {
                     valido = false;
-                    MessageBox.Show(mensaje, "¡Atención!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(mensaje, "¡ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else 
@@ -46,7 +46,7 @@ namespace Manejadores
                 if (!mensaje.Equals("Ok"))
                 {
                     valido = false;
-                    MessageBox.Show(mensaje, "¡Atención!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(mensaje, "¡ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -55,7 +55,7 @@ namespace Manejadores
         //Borrar usuarios
         public void Borrar(Usuarios usuario) 
         {
-            var rs = MessageBox.Show($"¿Esta seguro de eliminar al usuario {usuario.Nombre} de la lista?", "¡Atención!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var rs = MessageBox.Show($"¿Esta seguro de eliminar al usuario {usuario.Nombre} de la lista?", "¡ATENCIÓN!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes) { b.Comando($"CALL p_DesactivarUsuario({usuario.Id_Usuario})"); }
         }
 
@@ -81,34 +81,34 @@ namespace Manejadores
             valido = true;
             if(string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtRol.Text)) 
             {
-                MessageBox.Show("Ingrese todos los campos porfavor.", "¡Datos incompletos!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ingrese todos los campos porfavor.", "¡DATOS INCOMPLETOS!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 valido = false;
                 return;
             }
             if (txtNombre.Text.Length > 255) 
             {
-                MessageBox.Show("Ha excedido el maximo de caracteres para el nombre.\r\nIngrese uno valido (max 255).", "¡Campo excedido!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ha excedido el maximo de caracteres para el nombre.\r\nIngrese uno valido (max 255).", "¡CAMPO EXCEDIDO!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtNombre.Clear();
                 valido = false;
                 return;
             }
             if (txtContrasena.Text.Length > 255)
             {
-                MessageBox.Show("Ha excedido el maximo de caracteres para la contraseña.\r\nIngrese una valida (max 255).", "¡Campo excedido!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ha excedido el maximo de caracteres para la contraseña.\r\nIngrese una valida (max 255).", "¡CAMPO EXCEDIDO!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtContrasena.Clear();
                 valido = false;
                 return;
             }
             if (txtRol.Text.Length > 255)
             {
-                MessageBox.Show("Ha excedido el maximo de caracteres para el rol.\r\nIngrese uno valido (max 255).", "¡Campo excedido!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ha excedido el maximo de caracteres para el rol.\r\nIngrese uno valido (max 255).", "¡CAMPO EXCEDIDO!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtRol.Clear();
                 valido = false;
                 return;
             }
             if(pContrasena && string.IsNullOrWhiteSpace(txtContrasena.Text)) 
             {
-                MessageBox.Show("Se requiere de una contraseña para el nuevo usuario.", "¡Datos incompletos!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Se requiere de una contraseña para el nuevo usuario.", "¡DATOS INCOMPLETOS!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 valido=false;
                 return;
             }

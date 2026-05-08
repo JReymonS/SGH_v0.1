@@ -139,6 +139,7 @@
             // 
             // cmbModulos
             // 
+            this.cmbModulos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbModulos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmbModulos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbModulos.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -167,6 +168,7 @@
             // chkLectura
             // 
             this.chkLectura.AutoSize = true;
+            this.chkLectura.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkLectura.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkLectura.Location = new System.Drawing.Point(536, 212);
             this.chkLectura.Name = "chkLectura";
@@ -178,6 +180,7 @@
             // chkEscritura
             // 
             this.chkEscritura.AutoSize = true;
+            this.chkEscritura.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkEscritura.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkEscritura.Location = new System.Drawing.Point(659, 212);
             this.chkEscritura.Name = "chkEscritura";
@@ -191,7 +194,10 @@
             this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
             this.btnAgregar.BackgroundImage = global::SGH_v0._1.Properties.Resources.Add_New;
             this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(223)))), ((int)(((byte)(252)))));
+            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Location = new System.Drawing.Point(750, 206);
             this.btnAgregar.Name = "btnAgregar";
@@ -204,7 +210,10 @@
             // 
             this.btnBorrar.BackgroundImage = global::SGH_v0._1.Properties.Resources.Remove_Book;
             this.btnBorrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnBorrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBorrar.FlatAppearance.BorderSize = 0;
+            this.btnBorrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(223)))), ((int)(((byte)(252)))));
+            this.btnBorrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.Location = new System.Drawing.Point(668, 300);
             this.btnBorrar.Name = "btnBorrar";
@@ -217,7 +226,10 @@
             // 
             this.btnCancelar.BackgroundImage = global::SGH_v0._1.Properties.Resources.Multiplication;
             this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(223)))), ((int)(((byte)(252)))));
+            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Location = new System.Drawing.Point(745, 300);
             this.btnCancelar.Name = "btnCancelar";

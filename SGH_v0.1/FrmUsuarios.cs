@@ -53,7 +53,7 @@ namespace SGH_v0._1
                 dtgDatos.Columns.Clear();
                 usuario.Id_Usuario = 0;
             }
-            else { MessageBox.Show("Seleccione primero un registro.", "¡Informacion!", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            else { MessageBox.Show("Seleccione primero un registro.", "¡INFORMACIÓN!", MessageBoxButtons.OK, MessageBoxIcon.Information); }
         }
 
 
@@ -69,7 +69,7 @@ namespace SGH_v0._1
                 dtgDatos.Columns.Clear();
                 usuario.Id_Usuario = 0;
             }
-            else { MessageBox.Show("Seleccione primero un registro.","¡Informacion!",MessageBoxButtons.OK,MessageBoxIcon.Information); }
+            else { MessageBox.Show("Seleccione primero un registro.", "¡INFORMACIÓN!", MessageBoxButtons.OK,MessageBoxIcon.Information); }
         }
 
 
@@ -82,7 +82,7 @@ namespace SGH_v0._1
                 dtgDatos.Columns.Clear();
                 usuario.Id_Usuario = 0;
             }
-            else { MessageBox.Show("Seleccione primero un registro.", "¡Informacion!", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            else { MessageBox.Show("Seleccione primero un registro.", "¡INFORMACIÓN!", MessageBoxButtons.OK, MessageBoxIcon.Information); }
         }
 
 

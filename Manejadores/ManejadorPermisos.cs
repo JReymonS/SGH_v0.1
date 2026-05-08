@@ -13,19 +13,19 @@ namespace Manejadores
         {
             var rs = b.Consulta($"CALL p_GuardarPermiso({permiso.Id_Usuario},{permiso.Id_Modulo},{permiso.permiso_leer_abrir},{permiso.permiso_escritura})", "msg");
             string mensaje = rs.Tables[0].Rows[0]["msg"].ToString();
-            if (!mensaje.Equals("Ok")) { MessageBox.Show(mensaje, "¡Atención!", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            if (!mensaje.Equals("Ok")) { MessageBox.Show(mensaje, "¡ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
 
         //Eliminar permisos
         public void EliminarPermisos(Permisos permisos, string modulo) 
         {
-            var rs = MessageBox.Show($"¿Esta seguro de eliminar el permiso para: {modulo}?","¡Atención!",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var rs = MessageBox.Show($"¿Esta seguro de eliminar el permiso para: {modulo}?","¡ATENCIÓN!",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes)
             {
                 var rs1 = b.Consulta($"CALL p_EliminarPermiso({permisos.Id_Permiso},{permisos.Id_Usuario},{permisos.Id_Modulo})", "msg");
                 string mensaje = rs1.Tables[0].Rows[0]["msg"].ToString();
-                if (!mensaje.Equals("Ok")){MessageBox.Show(mensaje, "¡Atención!", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                if (!mensaje.Equals("Ok")){MessageBox.Show(mensaje, "¡ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
         }
 
@@ -53,7 +53,7 @@ namespace Manejadores
             if(!leer.Checked && !escribir.Checked) 
             {
                 rs = false;
-                MessageBox.Show("Debe seleccionar al menos un permiso para poder agregarlo.", "¡Atención!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar al menos un permiso para poder agregarlo.", "¡ATENCIÓN!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else { rs = true; }
             return rs;
