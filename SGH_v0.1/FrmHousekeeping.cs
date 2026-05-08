@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Entidades;
 using Manejadores;
 
 namespace SGH_v0._1
@@ -20,19 +14,21 @@ namespace SGH_v0._1
             InitializeComponent();
             TxtBuscarHabitacion.Text = "Buscar habitación...";
             TxtBuscarHabitacion.ForeColor = Color.Gray;
-            this.ActiveControl = BtnSalir;
-
         }
+
+
+        //Actualizar tabla de habitaciones
         void ActualizarTabla()
         {
             mh.MostrarHousekeeping("SELECT Numero_Habitacion AS 'NO.', Tipo_Habitacion AS 'TIPO', Estado AS 'ESTADO_HABITACION', Capacidad AS 'CAPACIDAD', Piso AS 'PISO' FROM Habitaciones", DtgDatos, "Habitaciones");
-
             ActualizarContadoresVisuales();
             int mostrados = DtgDatos.Rows.Count;
             int totales = mh.ContarTotalHabitaciones();
             Lblinformacion.Text = $"Mostrando {mostrados} de {totales} habitaciones";
         }
 
+
+        //Actualizar los controles visuales
         void ActualizarContadoresVisuales()
         {
             int disp = 0, ocup = 0, limp = 0, mant = 0;
@@ -66,6 +62,8 @@ namespace SGH_v0._1
             Lblinformacion.Text = $"Mostrando {mostrados} de {totales} habitaciones";
         }
 
+
+        //Evento para texto fantasma
         private void TxtBuscarHabitacion_TextChanged(object sender, EventArgs e)
         {
            
@@ -76,6 +74,8 @@ namespace SGH_v0._1
             }
         }
 
+
+        //Evento 2 para texto fantasma
         private void TxtBuscarHabitacion_Enter(object sender, EventArgs e)
         {
             if (TxtBuscarHabitacion.Text == "Buscar habitación...")
@@ -85,6 +85,8 @@ namespace SGH_v0._1
             }
         }
 
+
+        //Evento 3 para texto fantasma
         private void TxtBuscarHabitacion_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(TxtBuscarHabitacion.Text))
@@ -100,27 +102,15 @@ namespace SGH_v0._1
             }
         }
 
-        private void BtnSalir_Click(object sender, EventArgs e)
-        {
-            DialogResult resultado = MessageBox.Show("¿Deseas regresar al menú principal?",
-        "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if (resultado == DialogResult.Yes)
-            {
-                this.Close();
-            }
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        //Actualizar la tabla al cargar el formulario
         private void FrmHousekeeping_Load(object sender, EventArgs e)
         {
             ActualizarTabla();
         }
 
+
+        //Cambiar estado a limpieza
         private void BtnEnLimpieza_Click(object sender, EventArgs e)
         {
             if (DtgDatos.CurrentRow != null)
@@ -139,15 +129,14 @@ namespace SGH_v0._1
             }
         }
 
+
+        //Cambiar estado a mantenimiento
         private void BtnEnMantenimiento_Click(object sender, EventArgs e)
         {
             if (DtgDatos.CurrentRow != null)
-            {
-               
+            {  
                 string noHab = DtgDatos.CurrentRow.Cells["NO."].Value.ToString();
-
                 mh.ActualizarEstado(noHab, "Mantenimiento");
-
                 ActualizarTabla();
                 MessageBox.Show($"Habitación {noHab} ahora está en Mantenimiento", "Éxito");
             }
@@ -157,31 +146,34 @@ namespace SGH_v0._1
             }
         }
 
+
+        //Cambiar estado a ocupada
         private void BtnOcupada_Click(object sender, EventArgs e)
         {
             if (DtgDatos.CurrentRow == null) return;
             string noHab = DtgDatos.CurrentRow.Cells["NO."].Value.ToString();
             var hab = mh.ObtenerHabitacion(noHab);
-
             if (hab.Id_Reserva == 0)
             {
                 MessageBox.Show("No hay una reservación activa para esta habitación.", "Validación");
                 return;
             }
-
             mh.ActualizarEstado(noHab, "Ocupada");
             ActualizarTabla();
         }
 
+
+        //Cambiar estado a disponible
         private void BtnDisponible_Click(object sender, EventArgs e)
         {
             if (DtgDatos.CurrentRow == null) return;
 
             string estadoActual = DtgDatos.CurrentRow.Cells["ESTADO_HABITACION"].Value.ToString();
             string noHab = DtgDatos.CurrentRow.Cells["NO."].Value.ToString();
+            int estadoReserva = mh.ConsultarReserva($"SELECT COUNT(*) AS \"Existencia\" FROM Reservas r JOIN Habitaciones h ON r.Numero_Habitacion = h.Numero_Habitacion WHERE r.Numero_Habitacion = \"{noHab}\" AND Estado_Pago = \"Pagado\";");
 
             // REGLA: No puedes poner Disponible si está Ocupada (Falta Check-out)
-            if (estadoActual == "Ocupada")
+            if (estadoReserva >0)
             {
                 MessageBox.Show("El huésped aún no hace Check-out. No se puede liberar.", "Aviso");
                 return;
@@ -196,6 +188,8 @@ namespace SGH_v0._1
             }
         }
 
+
+        //Formatear el data grid de housekeeping
         private void DtgDatos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (this.DtgDatos.Columns[e.ColumnIndex].Name == "ESTADO_HABITACION")
@@ -226,6 +220,8 @@ namespace SGH_v0._1
             }
         }
 
+
+        //Guardar cambios / sincronizar con la BD
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Sincronización con la base de datos completada exitosamente.",
@@ -233,10 +229,11 @@ namespace SGH_v0._1
 
             TxtBuscarHabitacion.Text = "Buscar habitación...";
             TxtBuscarHabitacion.ForeColor = Color.Gray;
-            // Esto es vital por si se hizo un Check-in mientras se tenga la pantalla abierta
             ActualizarTabla();
         }
 
+
+        //Evento para cargar permisos
         private void FrmHousekeeping_Shown(object sender, EventArgs e)
         {
             var permiso = FrmHome._usuarioActivo.ListaPermisos.Find(x => x.Id_Modulo == 3);

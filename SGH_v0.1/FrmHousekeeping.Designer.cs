@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -46,7 +46,6 @@
             this.TxtBuscarHabitacion = new System.Windows.Forms.TextBox();
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.BtnGuardar = new System.Windows.Forms.Button();
-            this.BtnSalir = new System.Windows.Forms.Button();
             this.TxtHabitacionesDisponibles = new System.Windows.Forms.TextBox();
             this.LblhabitacionesDisp = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -93,7 +92,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(903, 53);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
@@ -148,11 +146,11 @@
             // 
             // noHabitacion
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.noHabitacion.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black;
+            this.noHabitacion.DefaultCellStyle = dataGridViewCellStyle21;
             this.noHabitacion.HeaderText = "NO.";
             this.noHabitacion.MinimumWidth = 6;
             this.noHabitacion.Name = "noHabitacion";
@@ -161,11 +159,11 @@
             // 
             // Tipo
             // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.Tipo.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.Black;
+            this.Tipo.DefaultCellStyle = dataGridViewCellStyle22;
             this.Tipo.HeaderText = "TIPO";
             this.Tipo.MinimumWidth = 6;
             this.Tipo.Name = "Tipo";
@@ -174,12 +172,12 @@
             // 
             // estadoHabitacion
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.estadoHabitacion.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.Black;
+            this.estadoHabitacion.DefaultCellStyle = dataGridViewCellStyle23;
             this.estadoHabitacion.HeaderText = "ESTADO_HABITACION";
             this.estadoHabitacion.MinimumWidth = 6;
             this.estadoHabitacion.Name = "estadoHabitacion";
@@ -188,11 +186,11 @@
             // 
             // Capacidad
             // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.Capacidad.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Black;
+            this.Capacidad.DefaultCellStyle = dataGridViewCellStyle24;
             this.Capacidad.HeaderText = "CAPACIDAD";
             this.Capacidad.MinimumWidth = 6;
             this.Capacidad.Name = "Capacidad";
@@ -201,11 +199,11 @@
             // 
             // Piso
             // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.Piso.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.Black;
+            this.Piso.DefaultCellStyle = dataGridViewCellStyle25;
             this.Piso.HeaderText = "PISO";
             this.Piso.MinimumWidth = 6;
             this.Piso.Name = "Piso";
@@ -253,25 +251,13 @@
             // 
             this.BtnGuardar.BackgroundImage = global::SGH_v0._1.Properties.Resources.Save;
             this.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnGuardar.Location = new System.Drawing.Point(813, 499);
+            this.BtnGuardar.Location = new System.Drawing.Point(853, 499);
             this.BtnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(30, 32);
             this.BtnGuardar.TabIndex = 5;
             this.BtnGuardar.UseVisualStyleBackColor = true;
             this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
-            // 
-            // BtnSalir
-            // 
-            this.BtnSalir.BackgroundImage = global::SGH_v0._1.Properties.Resources.Multiplication;
-            this.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnSalir.Location = new System.Drawing.Point(862, 499);
-            this.BtnSalir.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(30, 32);
-            this.BtnSalir.TabIndex = 6;
-            this.BtnSalir.UseVisualStyleBackColor = true;
-            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // TxtHabitacionesDisponibles
             // 
@@ -584,7 +570,6 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.LblhabitacionesDisp);
             this.Controls.Add(this.TxtHabitacionesDisponibles);
-            this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.BtnGuardar);
             this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.TxtBuscarHabitacion);
@@ -626,7 +611,6 @@
         private System.Windows.Forms.TextBox TxtBuscarHabitacion;
         private System.Windows.Forms.Button BtnBuscar;
         private System.Windows.Forms.Button BtnGuardar;
-        private System.Windows.Forms.Button BtnSalir;
         private System.Windows.Forms.TextBox TxtHabitacionesDisponibles;
         private System.Windows.Forms.Label LblhabitacionesDisp;
         private System.Windows.Forms.PictureBox pictureBox2;

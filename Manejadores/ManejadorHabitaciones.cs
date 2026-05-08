@@ -51,6 +51,13 @@ namespace Manejadores
         }
 
         // Housekeeping (Sin botones extra)
+        public int ConsultarReserva(string consulta) 
+        {
+           var rs = b.Consulta(consulta, "Existencia").Tables[0].Rows[0][0];
+           int no = int.Parse(rs.ToString());
+           return no;
+        }
+        
         public void MostrarHousekeeping(string consulta, DataGridView tabla, string datos)
         {
             tabla.Columns.Clear();
@@ -68,6 +75,7 @@ namespace Manejadores
             btn.DefaultCellStyle.ForeColor = Color.White;
             return btn;
         }
+        //
         public Habitaciones ObtenerHabitacion(string numero)
         {
             DataSet ds = b.Consulta(
