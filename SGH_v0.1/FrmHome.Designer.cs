@@ -43,7 +43,7 @@
             // tsMenu
             // 
             this.tsMenu.AutoSize = false;
-            this.tsMenu.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.tsMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
             this.tsMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.tsMenu.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.tsMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -57,7 +57,7 @@
             this.tsbLogout});
             this.tsMenu.Location = new System.Drawing.Point(0, 0);
             this.tsMenu.Name = "tsMenu";
-            this.tsMenu.Size = new System.Drawing.Size(133, 929);
+            this.tsMenu.Size = new System.Drawing.Size(100, 755);
             this.tsMenu.TabIndex = 0;
             this.tsMenu.Text = "MENU";
             // 
@@ -71,9 +71,11 @@
             this.tsbHome.Margin = new System.Windows.Forms.Padding(0, 90, 0, 20);
             this.tsbHome.Name = "tsbHome";
             this.tsbHome.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
-            this.tsbHome.Size = new System.Drawing.Size(85, 50);
+            this.tsbHome.Size = new System.Drawing.Size(100, 60);
             this.tsbHome.Text = "HOME";
             this.tsbHome.Click += new System.EventHandler(this.tsbHome_Click);
+            this.tsbHome.MouseEnter += new System.EventHandler(this.efectoHover_MouseEnter);
+            this.tsbHome.MouseLeave += new System.EventHandler(this.efectoHover_MouseLeave);
             // 
             // tsbHabitacionReserva
             // 
@@ -85,9 +87,11 @@
             this.tsbHabitacionReserva.Margin = new System.Windows.Forms.Padding(0, 15, 0, 20);
             this.tsbHabitacionReserva.Name = "tsbHabitacionReserva";
             this.tsbHabitacionReserva.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
-            this.tsbHabitacionReserva.Size = new System.Drawing.Size(85, 50);
+            this.tsbHabitacionReserva.Size = new System.Drawing.Size(100, 60);
             this.tsbHabitacionReserva.Text = "HABITACIONES - RESERVAS";
             this.tsbHabitacionReserva.Click += new System.EventHandler(this.tsbHabitacionReserva_Click);
+            this.tsbHabitacionReserva.MouseEnter += new System.EventHandler(this.efectoHover_MouseEnter);
+            this.tsbHabitacionReserva.MouseLeave += new System.EventHandler(this.efectoHover_MouseLeave);
             // 
             // tsbHousekeeping
             // 
@@ -99,9 +103,11 @@
             this.tsbHousekeeping.Margin = new System.Windows.Forms.Padding(0, 15, 0, 20);
             this.tsbHousekeeping.Name = "tsbHousekeeping";
             this.tsbHousekeeping.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
-            this.tsbHousekeeping.Size = new System.Drawing.Size(85, 50);
+            this.tsbHousekeeping.Size = new System.Drawing.Size(100, 60);
             this.tsbHousekeeping.Text = "HOUSEKEEPING";
             this.tsbHousekeeping.Click += new System.EventHandler(this.tsbHousekeeping_Click);
+            this.tsbHousekeeping.MouseEnter += new System.EventHandler(this.efectoHover_MouseEnter);
+            this.tsbHousekeeping.MouseLeave += new System.EventHandler(this.efectoHover_MouseLeave);
             // 
             // tsbCargos
             // 
@@ -113,9 +119,11 @@
             this.tsbCargos.Margin = new System.Windows.Forms.Padding(0, 15, 0, 20);
             this.tsbCargos.Name = "tsbCargos";
             this.tsbCargos.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
-            this.tsbCargos.Size = new System.Drawing.Size(85, 50);
+            this.tsbCargos.Size = new System.Drawing.Size(100, 60);
             this.tsbCargos.Text = "CARGOS - HABITACIÓN";
             this.tsbCargos.Click += new System.EventHandler(this.tsbCargos_Click);
+            this.tsbCargos.MouseEnter += new System.EventHandler(this.efectoHover_MouseEnter);
+            this.tsbCargos.MouseLeave += new System.EventHandler(this.efectoHover_MouseLeave);
             // 
             // tsbReportes
             // 
@@ -127,9 +135,11 @@
             this.tsbReportes.Margin = new System.Windows.Forms.Padding(0, 15, 0, 20);
             this.tsbReportes.Name = "tsbReportes";
             this.tsbReportes.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
-            this.tsbReportes.Size = new System.Drawing.Size(85, 50);
+            this.tsbReportes.Size = new System.Drawing.Size(100, 60);
             this.tsbReportes.Text = "REPORTES";
             this.tsbReportes.Click += new System.EventHandler(this.tsbReportes_Click);
+            this.tsbReportes.MouseEnter += new System.EventHandler(this.efectoHover_MouseEnter);
+            this.tsbReportes.MouseLeave += new System.EventHandler(this.efectoHover_MouseLeave);
             // 
             // tsbUsuarios
             // 
@@ -141,9 +151,11 @@
             this.tsbUsuarios.Margin = new System.Windows.Forms.Padding(0, 15, 0, 20);
             this.tsbUsuarios.Name = "tsbUsuarios";
             this.tsbUsuarios.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
-            this.tsbUsuarios.Size = new System.Drawing.Size(85, 50);
+            this.tsbUsuarios.Size = new System.Drawing.Size(100, 60);
             this.tsbUsuarios.Text = "USUARIOS";
             this.tsbUsuarios.Click += new System.EventHandler(this.tsbUsuarios_Click);
+            this.tsbUsuarios.MouseEnter += new System.EventHandler(this.efectoHover_MouseEnter);
+            this.tsbUsuarios.MouseLeave += new System.EventHandler(this.efectoHover_MouseLeave);
             // 
             // tsbLogout
             // 
@@ -155,30 +167,30 @@
             this.tsbLogout.Margin = new System.Windows.Forms.Padding(0, 15, 0, 20);
             this.tsbLogout.Name = "tsbLogout";
             this.tsbLogout.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
-            this.tsbLogout.Size = new System.Drawing.Size(85, 50);
+            this.tsbLogout.Size = new System.Drawing.Size(100, 60);
             this.tsbLogout.Text = "CERRAR SESIÓN";
             this.tsbLogout.Click += new System.EventHandler(this.tsbLogout_Click);
+            this.tsbLogout.MouseEnter += new System.EventHandler(this.efectoHover_MouseEnter);
+            this.tsbLogout.MouseLeave += new System.EventHandler(this.efectoHover_MouseLeave);
             // 
             // lblUsuarioActivo
             // 
             this.lblUsuarioActivo.AutoSize = true;
-            this.lblUsuarioActivo.Location = new System.Drawing.Point(259, 64);
-            this.lblUsuarioActivo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsuarioActivo.Location = new System.Drawing.Point(194, 52);
             this.lblUsuarioActivo.Name = "lblUsuarioActivo";
-            this.lblUsuarioActivo.Size = new System.Drawing.Size(66, 16);
+            this.lblUsuarioActivo.Size = new System.Drawing.Size(54, 13);
             this.lblUsuarioActivo.TabIndex = 1;
             this.lblUsuarioActivo.Text = "NOMBRE";
             // 
             // FrmHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 929);
+            this.ClientSize = new System.Drawing.Size(1167, 755);
             this.Controls.Add(this.lblUsuarioActivo);
             this.Controls.Add(this.tsMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOME";
