@@ -98,8 +98,10 @@
             this.dtgDatos.AllowUserToDeleteRows = false;
             this.dtgDatos.AllowUserToResizeColumns = false;
             this.dtgDatos.AllowUserToResizeRows = false;
+            this.dtgDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgDatos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.dtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgDatos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtgDatos.Location = new System.Drawing.Point(32, 140);
             this.dtgDatos.Name = "dtgDatos";
             this.dtgDatos.ReadOnly = true;

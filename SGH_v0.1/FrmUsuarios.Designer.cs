@@ -92,12 +92,12 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBuscar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.Location = new System.Drawing.Point(1, 1);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(554, 26);
+            this.txtBuscar.Size = new System.Drawing.Size(554, 33);
             this.txtBuscar.TabIndex = 2;
             // 
             // dtgDatos
@@ -106,8 +106,10 @@
             this.dtgDatos.AllowUserToDeleteRows = false;
             this.dtgDatos.AllowUserToResizeColumns = false;
             this.dtgDatos.AllowUserToResizeRows = false;
+            this.dtgDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgDatos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.dtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgDatos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtgDatos.Location = new System.Drawing.Point(24, 164);
             this.dtgDatos.Name = "dtgDatos";
             this.dtgDatos.ReadOnly = true;
@@ -221,10 +223,10 @@
             // 
             this.pDiseño.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
             this.pDiseño.Controls.Add(this.txtBuscar);
-            this.pDiseño.Location = new System.Drawing.Point(115, 108);
+            this.pDiseño.Location = new System.Drawing.Point(115, 105);
             this.pDiseño.Name = "pDiseño";
             this.pDiseño.Padding = new System.Windows.Forms.Padding(1);
-            this.pDiseño.Size = new System.Drawing.Size(556, 28);
+            this.pDiseño.Size = new System.Drawing.Size(556, 35);
             this.pDiseño.TabIndex = 14;
             // 
             // FrmUsuarios

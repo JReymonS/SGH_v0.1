@@ -77,6 +77,7 @@
             // 
             // cmbReporte
             // 
+            this.cmbReporte.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbReporte.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmbReporte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbReporte.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -105,6 +106,7 @@
             // 
             // dtpFechaReporteIni
             // 
+            this.dtpFechaReporteIni.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpFechaReporteIni.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtpFechaReporteIni.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaReporteIni.Location = new System.Drawing.Point(1, 1);
@@ -116,6 +118,7 @@
             // 
             // cmbEspecifico
             // 
+            this.cmbEspecifico.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbEspecifico.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmbEspecifico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEspecifico.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -141,6 +144,7 @@
             // 
             // dtpFechaReporteFini
             // 
+            this.dtpFechaReporteFini.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpFechaReporteFini.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtpFechaReporteFini.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaReporteFini.Location = new System.Drawing.Point(1, 1);

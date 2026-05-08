@@ -213,17 +213,6 @@ namespace SGH_v0._1
         }
 
 
-        //Filtra la busqueda en tiempo de ejecución
-        private void TxtHuesped_TextChanged(object sender, EventArgs e)
-        {
-            if(TxtHuesped.Text != "Buscar huesped..." && DtgDatosHuesped.DataSource != null)
-            {
-                DataTable dt = (DataTable)DtgDatosHuesped.DataSource;
-                dt.DefaultView.RowFilter = $"NOMBRE LIKE '%{TxtHuesped.Text}%'"; // Filtrar por nombre
-            }
-        }
-
-
         //Agrega un pago
         private void BtnPagar_Click(object sender, EventArgs e)
         {

@@ -84,7 +84,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(29, 99);
+            this.label2.Location = new System.Drawing.Point(30, 102);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 25);
             this.label2.TabIndex = 1;
@@ -92,29 +92,29 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(1, 1);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(258, 26);
+            this.txtNombre.Size = new System.Drawing.Size(258, 33);
             this.txtNombre.TabIndex = 1;
             // 
             // txtContrasena
             // 
-            this.txtContrasena.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtContrasena.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtContrasena.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtContrasena.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContrasena.Location = new System.Drawing.Point(1, 1);
             this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(250, 26);
+            this.txtContrasena.Size = new System.Drawing.Size(250, 33);
             this.txtContrasena.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(431, 100);
+            this.label3.Location = new System.Drawing.Point(429, 105);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(134, 25);
             this.label3.TabIndex = 3;
@@ -124,7 +124,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(30, 168);
+            this.label4.Location = new System.Drawing.Point(30, 170);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(161, 25);
             this.label4.TabIndex = 6;
@@ -164,12 +164,12 @@
             // 
             // txtRol
             // 
-            this.txtRol.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRol.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRol.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtRol.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRol.Location = new System.Drawing.Point(1, 1);
             this.txtRol.Name = "txtRol";
-            this.txtRol.Size = new System.Drawing.Size(189, 26);
+            this.txtRol.Size = new System.Drawing.Size(189, 33);
             this.txtRol.TabIndex = 3;
             // 
             // panel2
@@ -179,17 +179,17 @@
             this.panel2.Location = new System.Drawing.Point(126, 98);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(1);
-            this.panel2.Size = new System.Drawing.Size(260, 28);
+            this.panel2.Size = new System.Drawing.Size(260, 35);
             this.panel2.TabIndex = 11;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
             this.panel3.Controls.Add(this.txtRol);
-            this.panel3.Location = new System.Drawing.Point(195, 168);
+            this.panel3.Location = new System.Drawing.Point(195, 166);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(1);
-            this.panel3.Size = new System.Drawing.Size(191, 28);
+            this.panel3.Size = new System.Drawing.Size(191, 35);
             this.panel3.TabIndex = 12;
             // 
             // panel4
@@ -199,7 +199,7 @@
             this.panel4.Location = new System.Drawing.Point(567, 100);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(1);
-            this.panel4.Size = new System.Drawing.Size(252, 28);
+            this.panel4.Size = new System.Drawing.Size(252, 35);
             this.panel4.TabIndex = 13;
             // 
             // FrmDatosUsuario
