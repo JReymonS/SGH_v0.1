@@ -28,6 +28,15 @@ namespace SGH_v0._1
         }
 
 
+        //Buscar
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            string texto = TxtBuscarHabitacion.Text;
+            if(string.IsNullOrWhiteSpace(texto)||texto=="Buscar habitación...") { ActualizarTabla(); ActualizarContadoresVisuales(); return; }
+            mh.MostrarHousekeeping($"SELECT Numero_Habitacion AS 'NO.', Tipo_Habitacion AS 'TIPO', Estado AS 'ESTADO_HABITACION', Capacidad AS 'CAPACIDAD', Piso AS 'PISO' FROM Habitaciones WHERE Numero_Habitacion like '%{TxtBuscarHabitacion.Text.Trim('\'')}%'", DtgDatos, "Habitaciones");
+        }
+
+
         //Actualizar los controles visuales
         void ActualizarContadoresVisuales()
         {
@@ -63,19 +72,7 @@ namespace SGH_v0._1
         }
 
 
-        //Evento para texto fantasma
-        private void TxtBuscarHabitacion_TextChanged(object sender, EventArgs e)
-        {
-           
-            if (TxtBuscarHabitacion.Text != "Buscar habitación..." && DtgDatos.DataSource != null)
-            {
-                DataTable dt = (DataTable)DtgDatos.DataSource;
-                dt.DefaultView.RowFilter = string.Format("[NO.] LIKE '%{0}%'", TxtBuscarHabitacion.Text.Split('\''));
-            }
-        }
-
-
-        //Evento 2 para texto fantasma
+        //Evento 1 para texto fantasma
         private void TxtBuscarHabitacion_Enter(object sender, EventArgs e)
         {
             if (TxtBuscarHabitacion.Text == "Buscar habitación...")
@@ -86,7 +83,7 @@ namespace SGH_v0._1
         }
 
 
-        //Evento 3 para texto fantasma
+        //Evento 2 para texto fantasma
         private void TxtBuscarHabitacion_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(TxtBuscarHabitacion.Text))

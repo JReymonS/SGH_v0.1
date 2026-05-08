@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -125,6 +125,7 @@
             this.DtgDatos.AllowUserToDeleteRows = false;
             this.DtgDatos.AllowUserToResizeColumns = false;
             this.DtgDatos.AllowUserToResizeRows = false;
+            this.DtgDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DtgDatos.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.DtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtgDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -133,6 +134,7 @@
             this.estadoHabitacion,
             this.Capacidad,
             this.Piso});
+            this.DtgDatos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DtgDatos.Location = new System.Drawing.Point(34, 206);
             this.DtgDatos.Margin = new System.Windows.Forms.Padding(2);
             this.DtgDatos.MultiSelect = false;
@@ -149,69 +151,64 @@
             // 
             // noHabitacion
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.noHabitacion.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            this.noHabitacion.DefaultCellStyle = dataGridViewCellStyle11;
             this.noHabitacion.HeaderText = "NO.";
             this.noHabitacion.MinimumWidth = 6;
             this.noHabitacion.Name = "noHabitacion";
             this.noHabitacion.ReadOnly = true;
-            this.noHabitacion.Width = 140;
             // 
             // Tipo
             // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.Tipo.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            this.Tipo.DefaultCellStyle = dataGridViewCellStyle12;
             this.Tipo.HeaderText = "TIPO";
             this.Tipo.MinimumWidth = 6;
             this.Tipo.Name = "Tipo";
             this.Tipo.ReadOnly = true;
-            this.Tipo.Width = 180;
             // 
             // estadoHabitacion
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.estadoHabitacion.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
+            this.estadoHabitacion.DefaultCellStyle = dataGridViewCellStyle13;
             this.estadoHabitacion.HeaderText = "ESTADO_HABITACION";
             this.estadoHabitacion.MinimumWidth = 6;
             this.estadoHabitacion.Name = "estadoHabitacion";
             this.estadoHabitacion.ReadOnly = true;
-            this.estadoHabitacion.Width = 200;
             // 
             // Capacidad
             // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.Capacidad.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
+            this.Capacidad.DefaultCellStyle = dataGridViewCellStyle14;
             this.Capacidad.HeaderText = "CAPACIDAD";
             this.Capacidad.MinimumWidth = 6;
             this.Capacidad.Name = "Capacidad";
             this.Capacidad.ReadOnly = true;
-            this.Capacidad.Width = 140;
             // 
             // Piso
             // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.Piso.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            this.Piso.DefaultCellStyle = dataGridViewCellStyle15;
             this.Piso.HeaderText = "PISO";
             this.Piso.MinimumWidth = 6;
             this.Piso.Name = "Piso";
             this.Piso.ReadOnly = true;
-            this.Piso.Width = 140;
             // 
             // label2
             // 
@@ -226,7 +223,7 @@
             // 
             // TxtBuscarHabitacion
             // 
-            this.TxtBuscarHabitacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBuscarHabitacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtBuscarHabitacion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TxtBuscarHabitacion.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtBuscarHabitacion.ForeColor = System.Drawing.SystemColors.ScrollBar;
@@ -237,7 +234,6 @@
             this.TxtBuscarHabitacion.Size = new System.Drawing.Size(650, 29);
             this.TxtBuscarHabitacion.TabIndex = 3;
             this.TxtBuscarHabitacion.Text = "Buscar habitacion...";
-            this.TxtBuscarHabitacion.TextChanged += new System.EventHandler(this.TxtBuscarHabitacion_TextChanged);
             this.TxtBuscarHabitacion.Enter += new System.EventHandler(this.TxtBuscarHabitacion_Enter);
             this.TxtBuscarHabitacion.Leave += new System.EventHandler(this.TxtBuscarHabitacion_Leave);
             // 
@@ -255,6 +251,7 @@
             this.BtnBuscar.Size = new System.Drawing.Size(35, 35);
             this.BtnBuscar.TabIndex = 4;
             this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // BtnGuardar
             // 
