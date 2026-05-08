@@ -31,7 +31,7 @@ namespace SGH_v0._1
         {
             if (cmbReporte.SelectedItem == null)
             {
-                MessageBox.Show("Favor de seleccionar algun tipo de reporte");
+                MessageBox.Show("Por favor seleccione algún tipo de reporte","¡ATENCIÓN!",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 return;
             }
                 
@@ -44,7 +44,7 @@ namespace SGH_v0._1
                 case "Especifico":
                     if (cmbEspecifico.SelectedItem == null)
                     {
-                        MessageBox.Show("Favor de seleccionar algun huésped");
+                        MessageBox.Show("Por favor seleccione algún huésped","¡ATENCIÓN!",MessageBoxButtons.OK,MessageBoxIcon.Information);
                         return;
                     }
                     string rfc = cmbEspecifico.SelectedValue.ToString();
@@ -60,17 +60,23 @@ namespace SGH_v0._1
             {
                 case "General":
                     lblFechaInicial.Visible = true;
+                    dPanelFInicial.Visible = true;
                     dtpFechaReporteIni.Visible = true;
                     lblFechaFinal.Visible = true;
+                    dPanelFFinal.Visible = true;
                     dtpFechaReporteFini.Visible = true;
                     lblNombre.Visible = false;
+                    dPanelNombre.Visible = false;
                     cmbEspecifico.Visible = false;
                     break;
                 case "Especifico":
                     lblNombre.Visible = true;
                     cmbEspecifico.Visible = true;
+                    dPanelNombre.Visible = true;
                     lblFechaInicial.Visible = false;
+                    dPanelFInicial.Visible = false;
                     dtpFechaReporteIni.Visible = false;
+                    dPanelFFinal.Visible=false;
                     lblFechaFinal.Visible = false;
                     dtpFechaReporteFini.Visible = false;
                     break;

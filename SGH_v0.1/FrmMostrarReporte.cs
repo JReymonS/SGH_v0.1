@@ -48,8 +48,8 @@ namespace SGH_v0._1
 
             if (permiso == null || !permiso.permiso_leer_abrir)
             {
-                MessageBox.Show("No tienes permiso para acceder a Reportes.",
-                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No tienes permiso para acceder al módulo Reportes.",
+                    "¡ACCESO DENEGADO!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 this.Close();
                 return;
             }
