@@ -71,6 +71,15 @@ namespace SGH_v0._1
                 return;
             }
 
+            if (monto > datos.Restante)
+            {
+                MessageBox.Show(
+                    $"El monto ingresado (${monto:F2}) supera el total restante (${datos.Restante:F2}).\n" +
+                    "Ingrese el monto exacto para completar el Check-In.",
+                    "Monto excedido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             string resultado = mr.RegistrarCheckIn(datos.Id_Reserva, monto);
 
             if (resultado == "OK")
