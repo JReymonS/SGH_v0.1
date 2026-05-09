@@ -1,13 +1,9 @@
 ﻿using AccesoDatos;
-using Entidades;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClosedXML.Excel;
+using System.Drawing;
 
 namespace Manejadores
 {
@@ -35,14 +31,76 @@ namespace Manejadores
         }
         public void MostrarReporteEspecifico(DataGridView dgv, string rfc)
         {
+            dgv.BorderStyle = BorderStyle.None;
+            dgv.BackgroundColor = Color.White;
+            dgv.GridColor = Color.FromArgb(220, 220, 220);
+            dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgv.RowHeadersVisible = false;
+            dgv.AllowUserToAddRows = false;
+            dgv.AllowUserToResizeRows = false;
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv.MultiSelect = false;
+            dgv.ScrollBars = ScrollBars.Horizontal;
+            dgv.EnableHeadersVisualStyles = false;
+
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.White;
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(80, 80, 80);
+            dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.ColumnHeadersDefaultCellStyle.Padding = new Padding(0, 8, 0, 8);
+            dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgv.ColumnHeadersHeight = 40;
+            dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+
+            dgv.DefaultCellStyle.BackColor = Color.White;
+            dgv.DefaultCellStyle.ForeColor = Color.FromArgb(50, 50, 50);
+            dgv.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.DefaultCellStyle.Padding = new Padding(0, 6, 0, 6);
+            dgv.RowTemplate.Height = 45;
+
             string query = $"SELECT * FROM v_ReporteEspecifico WHERE RFC = '{rfc}';";
             MostrarContactos(dgv, query, "v_ReporteEspecifico");
+
+            dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(173, 214, 255);
+            dgv.DefaultCellStyle.SelectionForeColor = Color.FromArgb(20, 20, 20);
         }
+
+
         public void MostrarReporteGeneral(DataGridView dgv, DateTime fechaInicio, DateTime fechaFin)
         {
+            dgv.BorderStyle = BorderStyle.None;
+            dgv.BackgroundColor = Color.White;
+            dgv.GridColor = Color.FromArgb(220, 220, 220);
+            dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgv.RowHeadersVisible = false;
+            dgv.AllowUserToAddRows = false;
+            dgv.AllowUserToResizeRows = false;
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv.MultiSelect = false;
+            dgv.ScrollBars = ScrollBars.Horizontal;
+            dgv.EnableHeadersVisualStyles = false;
+
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.White;
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(80, 80, 80);
+            dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.ColumnHeadersDefaultCellStyle.Padding = new Padding(0, 8, 0, 8);
+            dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgv.ColumnHeadersHeight = 40;
+            dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+
+            dgv.DefaultCellStyle.BackColor = Color.White;
+            dgv.DefaultCellStyle.ForeColor = Color.FromArgb(50, 50, 50);
+            dgv.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.DefaultCellStyle.Padding = new Padding(0, 6, 0, 6);
+            dgv.RowTemplate.Height = 45;
+
             string query = $@"SELECT * FROM v_ReporteGeneral WHERE Fecha_Entrada BETWEEN '{fechaInicio:yyyy,MM,dd}' AND '{fechaFin:yyyy,MM,dd}';";
             MostrarContactos(dgv, query, "v_ReporteGeneral");
+
+            dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(173, 214, 255);
+            dgv.DefaultCellStyle.SelectionForeColor = Color.FromArgb(20, 20, 20);
         }
+
+
         public void ExportarExcel(DataGridView tabla, string nombreArchivo)
         {
             // Dejar que el usuario elija dónde guardar
@@ -79,7 +137,7 @@ namespace Manejadores
                     wb.SaveAs(sfd.FileName);
                 }
 
-                MessageBox.Show("Reporte exportado correctamente.", "Éxito",
+                MessageBox.Show("Reporte exportado correctamente.", "¡ÉXITO!",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
