@@ -28,7 +28,8 @@ namespace SGH_v0._1
         //Cargar permisos de acceso.
         private void FrmHome_Load(object sender, EventArgs e)
         {
-            tsMenu.Renderer = new ToolStripProfessionalRenderer(new ColoresLimpios());
+            //tsMenu.Renderer = new ToolStripProfessionalRenderer(new ColoresLimpios());
+            tsMenu.Renderer = new PintorSinBordes();
             lblUsuarioActivo.Text = $" {_usuarioActivo.Nombre} ";
             tsbHabitacionReserva.Enabled = false;
             tsbHousekeeping.Enabled = false;
@@ -46,6 +47,15 @@ namespace SGH_v0._1
                     case 3: tsbHousekeeping.Enabled = permiso.permiso_leer_abrir; break;
                     case 4: tsbCargos.Enabled = permiso.permiso_leer_abrir; break;
                     case 5: tsbReportes.Enabled = permiso.permiso_leer_abrir; break;
+                }
+            }
+
+            foreach (Control control in this.Controls)
+            {
+                if (control is MdiClient)
+                {
+                    control.BackColor = Color.FromArgb(189, 225, 232);
+                    break; // Solo hay un MdiClient, así que se puede salir del bucle después de encontrarlo
                 }
             }
 
@@ -174,6 +184,20 @@ namespace SGH_v0._1
             // Vuelve invisible el fondo cuando un botón está "Checked"
             public override Color ButtonCheckedHighlight => Color.Transparent;
             public override Color ButtonCheckedHighlightBorder => Color.Transparent;
+
+            // Vuelve invisible la línea divisoria del menú
+            public override Color ToolStripBorder => Color.Transparent;
+        }
+
+        public class PintorSinBordes : ToolStripProfessionalRenderer
+        {
+            public PintorSinBordes() : base(new ColoresLimpios()) { }
+
+            // Aquí interceptamos el dibujo del borde
+            protected override void OnRenderToolStripBorder(ToolStripRenderEventArgs e)
+            {
+            
+            }
         }
 
         private void BtnCompress_Click(object sender, EventArgs e)

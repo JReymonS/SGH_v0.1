@@ -186,7 +186,7 @@
             this.lblUsuarioActivo.AutoSize = true;
             this.lblUsuarioActivo.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuarioActivo.ForeColor = System.Drawing.Color.White;
-            this.lblUsuarioActivo.Location = new System.Drawing.Point(1060, 40);
+            this.lblUsuarioActivo.Location = new System.Drawing.Point(1060, 36);
             this.lblUsuarioActivo.Name = "lblUsuarioActivo";
             this.lblUsuarioActivo.Size = new System.Drawing.Size(66, 20);
             this.lblUsuarioActivo.TabIndex = 1;
@@ -224,7 +224,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = global::SGH_v0._1.Properties.Resources.LOGOTIPO_FONDO1;
-            this.pictureBox2.Location = new System.Drawing.Point(20, 1);
+            this.pictureBox2.Location = new System.Drawing.Point(24, 1);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(111, 83);
             this.pictureBox2.TabIndex = 5;
