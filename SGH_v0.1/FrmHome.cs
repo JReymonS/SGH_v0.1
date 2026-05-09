@@ -24,7 +24,6 @@ namespace SGH_v0._1
             _usuarioActivo = user;
         }
 
-
         //Cargar permisos de acceso.
         private void FrmHome_Load(object sender, EventArgs e)
         {
@@ -66,6 +65,7 @@ namespace SGH_v0._1
         private void tsbHabitacionReserva_Click(object sender, EventArgs e)
         {
             Boton(sender);
+            closeForms();
             FrmHabitaciones frmHabitaciones = new FrmHabitaciones();
             frmHabitaciones.MdiParent = this;
             frmHabitaciones.Show();
@@ -77,6 +77,7 @@ namespace SGH_v0._1
         private void tsbHousekeeping_Click(object sender, EventArgs e)
         {
             Boton(sender);
+            closeForms();
             FrmHousekeeping frmHousekeeping = new FrmHousekeeping();
             frmHousekeeping.MdiParent = this;
             frmHousekeeping.Show();
@@ -87,6 +88,7 @@ namespace SGH_v0._1
         private void tsbCargos_Click(object sender, EventArgs e)
         {
             Boton(sender);
+            closeForms();
             FrmCargos frmCargos = new FrmCargos();
             frmCargos.MdiParent = this;
             frmCargos.Show();
@@ -98,6 +100,7 @@ namespace SGH_v0._1
         private void tsbReportes_Click(object sender, EventArgs e)
         {
             Boton(sender);
+            closeForms();
             FrmReportes frmReportes = new FrmReportes();
             frmReportes.MdiParent = this;
             frmReportes.Show();
@@ -108,11 +111,20 @@ namespace SGH_v0._1
         private void tsbUsuarios_Click(object sender, EventArgs e)
         {
             Boton(sender);
+            closeForms();
             FrmUsuarios frmUsuarios = new FrmUsuarios();
             frmUsuarios.MdiParent = this;
             frmUsuarios.Show();
         }
 
+        // Administrar dashboard
+        private void tsbHome_Click(object sender, EventArgs e)
+        {
+            Boton(sender);
+            FrmDashboard frmDashboard = new FrmDashboard();
+            frmDashboard.MdiParent = this;
+            frmDashboard.Show();
+        }
 
         //Cerrar sesion
         private void tsbLogout_Click(object sender, EventArgs e)
@@ -120,12 +132,17 @@ namespace SGH_v0._1
             Application.Restart();
         }
 
-        private void tsbHome_Click(object sender, EventArgs e)
+        private void BtnCompress_Click(object sender, EventArgs e)
         {
-            Boton(sender);
-            FrmDashboard frmDashboard = new FrmDashboard();
-            frmDashboard.MdiParent = this;
-            frmDashboard.Show();
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void closeForms()
+        {
+            foreach (Form frm in this.MdiChildren)
+            {
+                frm.Close();
+            }
         }
 
         // Diseño
@@ -200,9 +217,6 @@ namespace SGH_v0._1
             }
         }
 
-        private void BtnCompress_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
+
     }
 }
