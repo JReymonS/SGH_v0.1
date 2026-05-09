@@ -171,7 +171,9 @@ namespace SGH_v0._1
         {
             ToolStripButton btn = sender as ToolStripButton;
 
-            if(btn != null && btn != botonActivo)
+            tsMenu.Cursor = Cursors.Hand;
+
+            if (btn != null && btn != botonActivo)
             {
                 btn.BackColor = Color.FromArgb(0, 119, 182);
             }
@@ -180,6 +182,8 @@ namespace SGH_v0._1
         private void efectoHover_MouseLeave(object sender, EventArgs e)
         {
             ToolStripButton btn = sender as ToolStripButton;
+
+            tsMenu.Cursor = Cursors.Default;
 
             if (btn != null && btn != botonActivo)
             {
