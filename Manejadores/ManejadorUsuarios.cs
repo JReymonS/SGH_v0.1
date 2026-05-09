@@ -1,5 +1,6 @@
 ﻿using AccesoDatos;
 using Entidades;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Manejadores
@@ -63,6 +64,33 @@ namespace Manejadores
         //Mostrar usuarios
         public void Mostrar(string consulta, DataGridView tabla, string datos) 
         {
+            tabla.BorderStyle = BorderStyle.None;
+            tabla.BackgroundColor = Color.White;
+            tabla.GridColor = Color.FromArgb(220, 220, 220);
+            tabla.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            tabla.RowHeadersVisible = false;
+            tabla.AllowUserToAddRows = false;
+            tabla.AllowUserToResizeRows = false;
+            tabla.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            tabla.MultiSelect = false;
+            tabla.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            tabla.ScrollBars = ScrollBars.Vertical;
+            tabla.EnableHeadersVisualStyles = false;
+
+            tabla.ColumnHeadersDefaultCellStyle.BackColor = Color.White;
+            tabla.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(80, 80, 80);
+            tabla.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            tabla.ColumnHeadersDefaultCellStyle.Padding = new Padding(0, 8, 0, 8);
+            tabla.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            tabla.ColumnHeadersHeight = 40;
+            tabla.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+
+            tabla.DefaultCellStyle.BackColor = Color.White;
+            tabla.DefaultCellStyle.ForeColor = Color.FromArgb(50, 50, 50);
+            tabla.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            tabla.DefaultCellStyle.Padding = new Padding(0, 6, 0, 6);
+            tabla.RowTemplate.Height = 45;
+
             tabla.Columns.Clear();
             tabla.DataSource = b.Consulta(consulta, datos).Tables[datos];
             tabla.Columns["Id_Usuario"].Visible=false;
@@ -72,6 +100,9 @@ namespace Manejadores
             tabla.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             tabla.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             tabla.AutoResizeRows();
+
+            tabla.DefaultCellStyle.SelectionBackColor = Color.FromArgb(173, 214, 255);
+            tabla.DefaultCellStyle.SelectionForeColor = Color.FromArgb(20, 20, 20);
         }
 
 
