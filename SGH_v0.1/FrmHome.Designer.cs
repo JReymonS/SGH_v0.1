@@ -212,7 +212,8 @@
             this.BtnCompress.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BtnCompress.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCompress.FlatAppearance.BorderSize = 0;
-            this.BtnCompress.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightBlue;
+            this.BtnCompress.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.BtnCompress.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(88)))), ((int)(((byte)(134)))));
             this.BtnCompress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCompress.Location = new System.Drawing.Point(1290, 25);
             this.BtnCompress.Name = "BtnCompress";
