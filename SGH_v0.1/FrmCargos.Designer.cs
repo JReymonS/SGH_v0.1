@@ -95,7 +95,7 @@
             this.DtgDatosHuesped.AllowUserToAddRows = false;
             this.DtgDatosHuesped.AllowUserToDeleteRows = false;
             this.DtgDatosHuesped.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DtgDatosHuesped.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
+            this.DtgDatosHuesped.BackgroundColor = System.Drawing.Color.White;
             this.DtgDatosHuesped.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtgDatosHuesped.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -110,6 +110,7 @@
             this.DtgDatosHuesped.ImeMode = System.Windows.Forms.ImeMode.Katakana;
             this.DtgDatosHuesped.Location = new System.Drawing.Point(36, 155);
             this.DtgDatosHuesped.Name = "DtgDatosHuesped";
+            this.DtgDatosHuesped.ReadOnly = true;
             this.DtgDatosHuesped.RowHeadersWidth = 51;
             this.DtgDatosHuesped.Size = new System.Drawing.Size(659, 124);
             this.DtgDatosHuesped.TabIndex = 5;
@@ -119,7 +120,7 @@
             // 
             this.DtgDatosCargo.AllowUserToAddRows = false;
             this.DtgDatosCargo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DtgDatosCargo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
+            this.DtgDatosCargo.BackgroundColor = System.Drawing.Color.White;
             this.DtgDatosCargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtgDatosCargo.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -134,6 +135,7 @@
             this.DtgDatosCargo.ImeMode = System.Windows.Forms.ImeMode.Katakana;
             this.DtgDatosCargo.Location = new System.Drawing.Point(36, 301);
             this.DtgDatosCargo.Name = "DtgDatosCargo";
+            this.DtgDatosCargo.ReadOnly = true;
             this.DtgDatosCargo.RowHeadersWidth = 51;
             this.DtgDatosCargo.Size = new System.Drawing.Size(458, 113);
             this.DtgDatosCargo.TabIndex = 6;

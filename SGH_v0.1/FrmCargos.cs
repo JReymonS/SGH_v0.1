@@ -29,21 +29,15 @@ namespace SGH_v0._1
 
             this.ActiveControl = BtnBuscar;
 
-            DiseñoDTG(DtgDatosHuesped);
-            DiseñoDTG(DtgDatosCargo);
+           // DiseñoDTG(DtgDatosHuesped);
+           // DiseñoDTG(DtgDatosCargo);
         }
 
 
         //Buscar huesped
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
-            string busqueda = TxtHuesped.Text;
-
-            if(busqueda == TxtHuesped.Text)
-            {
-                busqueda = "";
-            }
-
+            string busqueda = TxtHuesped.Text.Equals("Buscar huesped...") ? "" : TxtHuesped.Text.Trim('\'');
             string consulta = $"SELECT Id_Reserva, NOMBRE, APELLIDOS, TELEFONO, EMAIL, RFC " +
                               $"FROM v_CargoHuesped " +
                               $"WHERE NOMBRE LIKE '%{busqueda}%' AND PAGO = 'Pagado'";
@@ -74,7 +68,7 @@ namespace SGH_v0._1
 
                 if(DtgDatosCargo.Rows.Count == 0)
                 {
-                    MessageBox.Show($"No hay cargos registrados para el huésped {nombre}.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"No hay cargos registrados para el huésped {nombre}.", "¡ATENCIÓN!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             } 
         }
@@ -120,7 +114,7 @@ namespace SGH_v0._1
                 if (conceptoSeleccionado.Contains("Desayuno"))
                 {
                     MessageBox.Show("El paquete de Desayuno no se puede modificar. Si desea corregirlo, " +
-                                    "elimine el cargo y vuelva a agregarlo.", "Acción denegada",
+                                    "elimine el cargo y vuelva a agregarlo.", "¡ACCIÓN DENEGADA!",
                                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
@@ -136,7 +130,7 @@ namespace SGH_v0._1
             }
             else
             {
-                MessageBox.Show("Seleccione un cargo para editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Seleccione un cargo para editar.", "¡AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -153,7 +147,7 @@ namespace SGH_v0._1
             }
             else
             {
-                MessageBox.Show("Seleccione un cargo para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Seleccione un cargo para eliminar.", "¡AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -224,7 +218,7 @@ namespace SGH_v0._1
             }
             else 
             {
-                MessageBox.Show("No hay cargos que pagar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No hay cargos que pagar.", "¡AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -235,7 +229,7 @@ namespace SGH_v0._1
             if (permiso == null || !permiso.permiso_leer_abrir)
             {
                 MessageBox.Show("No tienes permiso para acceder a Cargos.",
-                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    "¡ACCESO DENEGADO!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 this.Close();
                 return;
             }
