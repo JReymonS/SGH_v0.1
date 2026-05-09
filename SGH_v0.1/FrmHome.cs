@@ -176,5 +176,9 @@ namespace SGH_v0._1
             public override Color ButtonCheckedHighlightBorder => Color.Transparent;
         }
 
+        private void BtnCompress_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

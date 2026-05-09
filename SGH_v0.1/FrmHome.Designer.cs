@@ -37,7 +37,14 @@
             this.tsbUsuarios = new System.Windows.Forms.ToolStripButton();
             this.tsbLogout = new System.Windows.Forms.ToolStripButton();
             this.lblUsuarioActivo = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnCompress = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tsMenu.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tsMenu
@@ -55,6 +62,7 @@
             this.tsbReportes,
             this.tsbUsuarios,
             this.tsbLogout});
+            this.tsMenu.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table;
             this.tsMenu.Location = new System.Drawing.Point(0, 0);
             this.tsMenu.Name = "tsMenu";
             this.tsMenu.Size = new System.Drawing.Size(100, 755);
@@ -176,18 +184,68 @@
             // lblUsuarioActivo
             // 
             this.lblUsuarioActivo.AutoSize = true;
-            this.lblUsuarioActivo.Location = new System.Drawing.Point(194, 52);
+            this.lblUsuarioActivo.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarioActivo.ForeColor = System.Drawing.Color.White;
+            this.lblUsuarioActivo.Location = new System.Drawing.Point(1060, 40);
             this.lblUsuarioActivo.Name = "lblUsuarioActivo";
-            this.lblUsuarioActivo.Size = new System.Drawing.Size(54, 13);
+            this.lblUsuarioActivo.Size = new System.Drawing.Size(66, 20);
             this.lblUsuarioActivo.TabIndex = 1;
-            this.lblUsuarioActivo.Text = "NOMBRE";
+            this.lblUsuarioActivo.Text = "Nombre";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.panel1.Controls.Add(this.BtnCompress);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.lblUsuarioActivo);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(100, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1067, 90);
+            this.panel1.TabIndex = 3;
+            // 
+            // BtnCompress
+            // 
+            this.BtnCompress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.BtnCompress.BackgroundImage = global::SGH_v0._1.Properties.Resources.Compress_white;
+            this.BtnCompress.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnCompress.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCompress.FlatAppearance.BorderSize = 0;
+            this.BtnCompress.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightBlue;
+            this.BtnCompress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCompress.Location = new System.Drawing.Point(1290, 25);
+            this.BtnCompress.Name = "BtnCompress";
+            this.BtnCompress.Size = new System.Drawing.Size(40, 40);
+            this.BtnCompress.TabIndex = 6;
+            this.BtnCompress.UseVisualStyleBackColor = false;
+            this.BtnCompress.Click += new System.EventHandler(this.BtnCompress_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::SGH_v0._1.Properties.Resources.LOGOTIPO_FONDO1;
+            this.pictureBox2.Location = new System.Drawing.Point(20, 1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(111, 83);
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::SGH_v0._1.Properties.Resources.Profile_white;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(1210, 25);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1167, 755);
-            this.Controls.Add(this.lblUsuarioActivo);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tsMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
@@ -198,8 +256,11 @@
             this.Load += new System.EventHandler(this.FrmHome_Load);
             this.tsMenu.ResumeLayout(false);
             this.tsMenu.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -214,6 +275,10 @@
         private System.Windows.Forms.ToolStripButton tsbUsuarios;
         private System.Windows.Forms.ToolStripButton tsbLogout;
         private System.Windows.Forms.Label lblUsuarioActivo;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button BtnCompress;
     }
 }
 
