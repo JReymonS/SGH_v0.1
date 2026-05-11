@@ -49,7 +49,7 @@ namespace SGH_v0._1
                 usuario_permiso.Id_Permiso = 0;
 
             }
-            else { MessageBox.Show("Seleccione primero un registro.", "¡Informacion!", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            else { MessageBox.Show("Seleccione primero un registro.", "¡INFORMACIÓN!", MessageBoxButtons.OK, MessageBoxIcon.Information); }
         }
 
 

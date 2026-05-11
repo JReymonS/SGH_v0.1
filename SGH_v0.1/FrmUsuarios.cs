@@ -1,6 +1,7 @@
 ﻿using Entidades;
 using Manejadores;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace SGH_v0._1
@@ -13,6 +14,8 @@ namespace SGH_v0._1
         public FrmUsuarios()
         {
             InitializeComponent();
+            txtBuscar.Text = "Buscar usuario...";
+            txtBuscar.ForeColor = Color.Gray;
             mu=new ManejadorUsuarios();
         }
 
@@ -20,7 +23,8 @@ namespace SGH_v0._1
         //Buscar usuario
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            mu.Mostrar($"SELECT * FROM v_Usuarios WHERE NOMBRE like '%{txtBuscar.Text.Trim('\'')}%'", dtgDatos, "v_Usuarios");
+            string texto = txtBuscar.Text.Equals("Buscar usuario...") ? "" : txtBuscar.Text.Trim('\'');
+            mu.Mostrar($"SELECT * FROM v_Usuarios WHERE NOMBRE like '%{texto}%'", dtgDatos, "v_Usuarios");
         }
 
 
@@ -53,7 +57,7 @@ namespace SGH_v0._1
                 dtgDatos.Columns.Clear();
                 usuario.Id_Usuario = 0;
             }
-            else { MessageBox.Show("Seleccione primero un registro.", "¡Informacion!", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            else { MessageBox.Show("Seleccione primero un registro.", "¡INFORMACIÓN!", MessageBoxButtons.OK, MessageBoxIcon.Information); }
         }
 
 
@@ -69,7 +73,7 @@ namespace SGH_v0._1
                 dtgDatos.Columns.Clear();
                 usuario.Id_Usuario = 0;
             }
-            else { MessageBox.Show("Seleccione primero un registro.","¡Informacion!",MessageBoxButtons.OK,MessageBoxIcon.Information); }
+            else { MessageBox.Show("Seleccione primero un registro.", "¡INFORMACIÓN!", MessageBoxButtons.OK,MessageBoxIcon.Information); }
         }
 
 
@@ -82,7 +86,7 @@ namespace SGH_v0._1
                 dtgDatos.Columns.Clear();
                 usuario.Id_Usuario = 0;
             }
-            else { MessageBox.Show("Seleccione primero un registro.", "¡Informacion!", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            else { MessageBox.Show("Seleccione primero un registro.", "¡INFORMACIÓN!", MessageBoxButtons.OK, MessageBoxIcon.Information); }
         }
 
 
@@ -106,6 +110,27 @@ namespace SGH_v0._1
             btnAgregar.Enabled = rs.permiso_escritura;
             btnEditar.Enabled = rs.permiso_escritura;
             btnBorrar.Enabled = rs.permiso_escritura;
+        }
+
+
+        //Evento 1 para texto fantasma
+        private void txtBuscar_Enter(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text == "Buscar usuario...") 
+            {
+                txtBuscar.Text = "";
+                txtBuscar.ForeColor = Color.Black;
+            }
+        }
+
+        //Evento 2 para texto fantasma
+        private void txtBuscar_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtBuscar.Text)) 
+            {
+                txtBuscar.Text = "Buscar usuario...";
+                txtBuscar.ForeColor = Color.Gray;
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using AccesoDatos;
 using Entidades;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Manejadores
@@ -19,7 +20,7 @@ namespace Manejadores
             if (!mensaje.Equals("Ok"))
             { 
                 valido=false;
-                MessageBox.Show(mensaje,"¡Atención!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(mensaje,"¡ERROR!",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 
@@ -36,7 +37,7 @@ namespace Manejadores
                 if (!mensaje.Equals("Ok"))
                 {
                     valido = false;
-                    MessageBox.Show(mensaje, "¡Atención!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(mensaje, "¡ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else 
@@ -46,7 +47,7 @@ namespace Manejadores
                 if (!mensaje.Equals("Ok"))
                 {
                     valido = false;
-                    MessageBox.Show(mensaje, "¡Atención!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(mensaje, "¡ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -55,7 +56,7 @@ namespace Manejadores
         //Borrar usuarios
         public void Borrar(Usuarios usuario) 
         {
-            var rs = MessageBox.Show($"¿Esta seguro de eliminar al usuario {usuario.Nombre} de la lista?", "¡Atención!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var rs = MessageBox.Show($"¿Esta seguro de eliminar al usuario {usuario.Nombre} de la lista?", "¡ATENCIÓN!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes) { b.Comando($"CALL p_DesactivarUsuario({usuario.Id_Usuario})"); }
         }
 
@@ -63,6 +64,33 @@ namespace Manejadores
         //Mostrar usuarios
         public void Mostrar(string consulta, DataGridView tabla, string datos) 
         {
+            tabla.BorderStyle = BorderStyle.None;
+            tabla.BackgroundColor = Color.White;
+            tabla.GridColor = Color.FromArgb(220, 220, 220);
+            tabla.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            tabla.RowHeadersVisible = false;
+            tabla.AllowUserToAddRows = false;
+            tabla.AllowUserToResizeRows = false;
+            tabla.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            tabla.MultiSelect = false;
+            tabla.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            tabla.ScrollBars = ScrollBars.Vertical;
+            tabla.EnableHeadersVisualStyles = false;
+
+            tabla.ColumnHeadersDefaultCellStyle.BackColor = Color.White;
+            tabla.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(80, 80, 80);
+            tabla.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            tabla.ColumnHeadersDefaultCellStyle.Padding = new Padding(0, 8, 0, 8);
+            tabla.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            tabla.ColumnHeadersHeight = 40;
+            tabla.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+
+            tabla.DefaultCellStyle.BackColor = Color.White;
+            tabla.DefaultCellStyle.ForeColor = Color.FromArgb(50, 50, 50);
+            tabla.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            tabla.DefaultCellStyle.Padding = new Padding(0, 6, 0, 6);
+            tabla.RowTemplate.Height = 45;
+
             tabla.Columns.Clear();
             tabla.DataSource = b.Consulta(consulta, datos).Tables[datos];
             tabla.Columns["Id_Usuario"].Visible=false;
@@ -72,6 +100,9 @@ namespace Manejadores
             tabla.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             tabla.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             tabla.AutoResizeRows();
+
+            tabla.DefaultCellStyle.SelectionBackColor = Color.FromArgb(173, 214, 255);
+            tabla.DefaultCellStyle.SelectionForeColor = Color.FromArgb(20, 20, 20);
         }
 
 
@@ -81,34 +112,34 @@ namespace Manejadores
             valido = true;
             if(string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtRol.Text)) 
             {
-                MessageBox.Show("Ingrese todos los campos porfavor.", "¡Datos incompletos!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ingrese todos los campos porfavor.", "¡DATOS INCOMPLETOS!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 valido = false;
                 return;
             }
             if (txtNombre.Text.Length > 255) 
             {
-                MessageBox.Show("Ha excedido el maximo de caracteres para el nombre.\r\nIngrese uno valido (max 255).", "¡Campo excedido!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ha excedido el maximo de caracteres para el nombre.\r\nIngrese uno valido (max 255).", "¡CAMPO EXCEDIDO!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtNombre.Clear();
                 valido = false;
                 return;
             }
             if (txtContrasena.Text.Length > 255)
             {
-                MessageBox.Show("Ha excedido el maximo de caracteres para la contraseña.\r\nIngrese una valida (max 255).", "¡Campo excedido!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ha excedido el maximo de caracteres para la contraseña.\r\nIngrese una valida (max 255).", "¡CAMPO EXCEDIDO!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtContrasena.Clear();
                 valido = false;
                 return;
             }
             if (txtRol.Text.Length > 255)
             {
-                MessageBox.Show("Ha excedido el maximo de caracteres para el rol.\r\nIngrese uno valido (max 255).", "¡Campo excedido!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ha excedido el maximo de caracteres para el rol.\r\nIngrese uno valido (max 255).", "¡CAMPO EXCEDIDO!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtRol.Clear();
                 valido = false;
                 return;
             }
             if(pContrasena && string.IsNullOrWhiteSpace(txtContrasena.Text)) 
             {
-                MessageBox.Show("Se requiere de una contraseña para el nuevo usuario.", "¡Datos incompletos!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Se requiere de una contraseña para el nuevo usuario.", "¡DATOS INCOMPLETOS!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 valido=false;
                 return;
             }
