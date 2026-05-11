@@ -44,37 +44,43 @@ namespace SGH_v0._1
 
             if (string.IsNullOrWhiteSpace(TxtNo.Text))
             {
-                MessageBox.Show("El número de habitación no puede quedar vacío.");
+                MessageBox.Show("El número de habitación no puede quedar vacío.", "¡ATENCIÓN!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 TxtNo.Focus();
                 return;
             }
             if (string.IsNullOrWhiteSpace(TxtTipo.Text))
             {
-                MessageBox.Show("El tipo de habitación no puede quedar vacío.");
+                MessageBox.Show("El tipo de habitación no puede quedar vacío.", "¡ATENCIÓN!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 TxtTipo.Focus();
                 return;
             }
             if (string.IsNullOrWhiteSpace(TxtCapacidad.Text))
             {
-                MessageBox.Show("La capacidad no puede quedar vacía.");
+                MessageBox.Show("La capacidad no puede quedar vacía.", "¡ATENCIÓN!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 TxtCapacidad.Focus();
                 return;
             }
             if (string.IsNullOrWhiteSpace(TxtPiso.Text))
             {
-                MessageBox.Show("El piso no puede quedar vacío.");
+                MessageBox.Show("El piso no puede quedar vacío.", "¡ATENCIÓN!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 TxtPiso.Focus();
                 return;
             }
             if (string.IsNullOrWhiteSpace(TxtCosto.Text))
             {
-                MessageBox.Show("El costo por noche no puede quedar vacío.");
+                MessageBox.Show("El costo por noche no puede quedar vacío.", "¡ATENCIÓN!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 TxtCosto.Focus();
                 return;
             }
             if (string.IsNullOrWhiteSpace(TxtDescripcion.Text))
             {
-                MessageBox.Show("La descripción de habitación no puede quedar vacía.");
+                MessageBox.Show("La descripción de habitación no puede quedar vacía.", "¡ATENCIÓN!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 TxtDescripcion.Focus();
                 return;
             }
@@ -83,21 +89,24 @@ namespace SGH_v0._1
 
             if (TxtNo.Text.Length > 5)
             {
-                MessageBox.Show("El número de habitación no puede exceder 5 caracteres.");
+                MessageBox.Show("El número de habitación no puede exceder 5 caracteres.", "¡ATENCIÓN!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 TxtNo.Focus();
                 return;
             }
 
             if (TxtTipo.Text.Length > 255)
             {
-                MessageBox.Show("El tipo de habitación no puede exceder 255 caracteres.");
+                MessageBox.Show("El tipo de habitación no puede exceder 255 caracteres.", "¡ATENCIÓN!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 TxtTipo.Focus();
                 return;
             }
 
             if (TxtDescripcion.Text.Length > 255)
             {
-                MessageBox.Show("La descripción no puede exceder 255 caracteres.");
+                MessageBox.Show("La descripción no puede exceder 255 caracteres.", "¡ATENCIÓN!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 TxtDescripcion.Focus();
                 return;
             }
@@ -107,7 +116,8 @@ namespace SGH_v0._1
             int capacidad;
             if (!int.TryParse(TxtCapacidad.Text, out capacidad) || capacidad <= 0)
             {
-                MessageBox.Show("La capacidad debe ser un número entero mayor que 0.");
+                MessageBox.Show("La capacidad debe ser un número entero mayor que 0.", "¡ATENCIÓN!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 TxtCapacidad.Focus();
                 return;
             }
@@ -115,7 +125,8 @@ namespace SGH_v0._1
             int piso;
             if (!int.TryParse(TxtPiso.Text, out piso) || piso <= 0)
             {
-                MessageBox.Show("El piso debe ser un número entero mayor que 0.");
+                MessageBox.Show("El piso debe ser un número entero mayor que 0.", "¡ATENCIÓN!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 TxtPiso.Focus();
                 return;
             }
@@ -123,7 +134,8 @@ namespace SGH_v0._1
             decimal costo;
             if (!decimal.TryParse(TxtCosto.Text, out costo) || costo <= 0)
             {
-                MessageBox.Show("El costo por noche debe ser un número válido mayor que 0.");
+                MessageBox.Show("El costo por noche debe ser un número válido mayor que 0.", "¡ATENCIÓN!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 TxtCosto.Focus();
                 return;
             }
@@ -131,7 +143,8 @@ namespace SGH_v0._1
             // DECIMAL(8,2) → máximo 999999.99
             if (costo > 999999.99m)
             {
-                MessageBox.Show("El costo excede el límite permitido. Máximo: 999999.99");
+                MessageBox.Show("El costo excede el límite permitido. Máximo: 999999.99", "¡ATENCIÓN!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 TxtCosto.Focus();
                 return;
             }
@@ -142,7 +155,8 @@ namespace SGH_v0._1
             {
                 if (mh.ExisteHabitacion(TxtNo.Text.Trim()))
                 {
-                    MessageBox.Show("El número de habitación ya existe.");
+                    MessageBox.Show("El número de habitación ya existe.", "¡ATENCIÓN!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     TxtNo.Focus();
                     return;
                 }
@@ -153,7 +167,8 @@ namespace SGH_v0._1
                 {
                     if (mh.ExisteHabitacion(TxtNo.Text.Trim()))
                     {
-                        MessageBox.Show("El número de habitación ya existe.");
+                        MessageBox.Show("El número de habitación ya existe.", "¡ATENCIÓN!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         TxtNo.Focus();
                         return;
                     }

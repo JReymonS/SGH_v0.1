@@ -67,15 +67,47 @@
             this.btnCancelarReserva = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel15.SuspendLayout();
+            this.panel16.SuspendLayout();
+            this.panel17.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F);
+            this.label1.Font = new System.Drawing.Font("Montserrat SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 7);
+            this.label1.Location = new System.Drawing.Point(0, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(857, 65);
@@ -272,10 +304,13 @@
             // 
             // txtNo
             // 
+            this.txtNo.BackColor = System.Drawing.Color.White;
+            this.txtNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNo.Enabled = false;
             this.txtNo.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.txtNo.Location = new System.Drawing.Point(72, 111);
-            this.txtNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNo.Location = new System.Drawing.Point(1, 1);
+            this.txtNo.Margin = new System.Windows.Forms.Padding(2);
             this.txtNo.Name = "txtNo";
             this.txtNo.ReadOnly = true;
             this.txtNo.Size = new System.Drawing.Size(93, 31);
@@ -283,10 +318,13 @@
             // 
             // txtTipo
             // 
+            this.txtTipo.BackColor = System.Drawing.Color.White;
+            this.txtTipo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTipo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTipo.Enabled = false;
             this.txtTipo.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.txtTipo.Location = new System.Drawing.Point(339, 111);
-            this.txtTipo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTipo.Location = new System.Drawing.Point(1, 1);
+            this.txtTipo.Margin = new System.Windows.Forms.Padding(2);
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.ReadOnly = true;
             this.txtTipo.Size = new System.Drawing.Size(213, 31);
@@ -294,10 +332,13 @@
             // 
             // txtCapacidad
             // 
+            this.txtCapacidad.BackColor = System.Drawing.Color.White;
+            this.txtCapacidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCapacidad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtCapacidad.Enabled = false;
             this.txtCapacidad.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.txtCapacidad.Location = new System.Drawing.Point(742, 111);
-            this.txtCapacidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCapacidad.Location = new System.Drawing.Point(1, 1);
+            this.txtCapacidad.Margin = new System.Windows.Forms.Padding(2);
             this.txtCapacidad.Name = "txtCapacidad";
             this.txtCapacidad.ReadOnly = true;
             this.txtCapacidad.Size = new System.Drawing.Size(115, 31);
@@ -305,10 +346,13 @@
             // 
             // txtPiso
             // 
+            this.txtPiso.BackColor = System.Drawing.Color.White;
+            this.txtPiso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPiso.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtPiso.Enabled = false;
             this.txtPiso.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.txtPiso.Location = new System.Drawing.Point(84, 192);
-            this.txtPiso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPiso.Location = new System.Drawing.Point(1, 1);
+            this.txtPiso.Margin = new System.Windows.Forms.Padding(2);
             this.txtPiso.Name = "txtPiso";
             this.txtPiso.ReadOnly = true;
             this.txtPiso.Size = new System.Drawing.Size(91, 31);
@@ -316,10 +360,13 @@
             // 
             // txtCosto
             // 
+            this.txtCosto.BackColor = System.Drawing.Color.White;
+            this.txtCosto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCosto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtCosto.Enabled = false;
             this.txtCosto.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.txtCosto.Location = new System.Drawing.Point(352, 192);
-            this.txtCosto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCosto.Location = new System.Drawing.Point(1, 1);
+            this.txtCosto.Margin = new System.Windows.Forms.Padding(2);
             this.txtCosto.Name = "txtCosto";
             this.txtCosto.ReadOnly = true;
             this.txtCosto.Size = new System.Drawing.Size(116, 31);
@@ -327,10 +374,13 @@
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.BackColor = System.Drawing.Color.White;
+            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDescripcion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtDescripcion.Enabled = false;
             this.txtDescripcion.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.txtDescripcion.Location = new System.Drawing.Point(626, 192);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescripcion.Location = new System.Drawing.Point(1, 1);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.ReadOnly = true;
             this.txtDescripcion.Size = new System.Drawing.Size(231, 31);
@@ -338,54 +388,71 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.BackColor = System.Drawing.Color.White;
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNombre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.txtNombre.Location = new System.Drawing.Point(121, 320);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Location = new System.Drawing.Point(1, 1);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(140, 31);
             this.txtNombre.TabIndex = 27;
             // 
             // txtApellidos
             // 
+            this.txtApellidos.BackColor = System.Drawing.Color.White;
+            this.txtApellidos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtApellidos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtApellidos.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.txtApellidos.Location = new System.Drawing.Point(419, 320);
-            this.txtApellidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellidos.Location = new System.Drawing.Point(1, 1);
+            this.txtApellidos.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(203, 31);
             this.txtApellidos.TabIndex = 28;
             // 
             // txtRFC
             // 
+            this.txtRFC.BackColor = System.Drawing.Color.White;
+            this.txtRFC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtRFC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtRFC.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.txtRFC.Location = new System.Drawing.Point(720, 320);
-            this.txtRFC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRFC.Location = new System.Drawing.Point(1, 1);
+            this.txtRFC.Margin = new System.Windows.Forms.Padding(2);
             this.txtRFC.Name = "txtRFC";
             this.txtRFC.Size = new System.Drawing.Size(137, 31);
             this.txtRFC.TabIndex = 29;
             // 
             // txtTelefono
             // 
+            this.txtTelefono.BackColor = System.Drawing.Color.White;
+            this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTelefono.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.txtTelefono.Location = new System.Drawing.Point(72, 386);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefono.Location = new System.Drawing.Point(1, 1);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(102, 31);
             this.txtTelefono.TabIndex = 30;
             // 
             // txtEmail
             // 
+            this.txtEmail.BackColor = System.Drawing.Color.White;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.txtEmail.Location = new System.Drawing.Point(269, 386);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Location = new System.Drawing.Point(1, 1);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(188, 31);
             this.txtEmail.TabIndex = 31;
             // 
             // dtpFechaInicial
             // 
+            this.dtpFechaInicial.CalendarMonthBackground = System.Drawing.Color.White;
+            this.dtpFechaInicial.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtpFechaInicial.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.dtpFechaInicial.Location = new System.Drawing.Point(604, 386);
-            this.dtpFechaInicial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFechaInicial.Location = new System.Drawing.Point(1, 1);
+            this.dtpFechaInicial.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFechaInicial.Name = "dtpFechaInicial";
             this.dtpFechaInicial.Size = new System.Drawing.Size(253, 31);
             this.dtpFechaInicial.TabIndex = 32;
@@ -393,9 +460,11 @@
             // 
             // dtpFechaFinal
             // 
+            this.dtpFechaFinal.CalendarMonthBackground = System.Drawing.Color.White;
+            this.dtpFechaFinal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtpFechaFinal.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.dtpFechaFinal.Location = new System.Drawing.Point(133, 445);
-            this.dtpFechaFinal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFechaFinal.Location = new System.Drawing.Point(1, 1);
+            this.dtpFechaFinal.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFechaFinal.Name = "dtpFechaFinal";
             this.dtpFechaFinal.Size = new System.Drawing.Size(253, 31);
             this.dtpFechaFinal.TabIndex = 33;
@@ -403,10 +472,13 @@
             // 
             // txtCostoCal
             // 
+            this.txtCostoCal.BackColor = System.Drawing.Color.White;
+            this.txtCostoCal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCostoCal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtCostoCal.Enabled = false;
             this.txtCostoCal.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.txtCostoCal.Location = new System.Drawing.Point(626, 445);
-            this.txtCostoCal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCostoCal.Location = new System.Drawing.Point(1, 1);
+            this.txtCostoCal.Margin = new System.Windows.Forms.Padding(2);
             this.txtCostoCal.Name = "txtCostoCal";
             this.txtCostoCal.ReadOnly = true;
             this.txtCostoCal.Size = new System.Drawing.Size(76, 31);
@@ -414,10 +486,13 @@
             // 
             // txtDias
             // 
+            this.txtDias.BackColor = System.Drawing.Color.White;
+            this.txtDias.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDias.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtDias.Enabled = false;
             this.txtDias.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.txtDias.Location = new System.Drawing.Point(798, 445);
-            this.txtDias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDias.Location = new System.Drawing.Point(1, 1);
+            this.txtDias.Margin = new System.Windows.Forms.Padding(2);
             this.txtDias.Name = "txtDias";
             this.txtDias.ReadOnly = true;
             this.txtDias.Size = new System.Drawing.Size(59, 31);
@@ -425,9 +500,12 @@
             // 
             // txtAnticipo
             // 
+            this.txtAnticipo.BackColor = System.Drawing.Color.White;
+            this.txtAnticipo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAnticipo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtAnticipo.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.txtAnticipo.Location = new System.Drawing.Point(127, 502);
-            this.txtAnticipo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAnticipo.Location = new System.Drawing.Point(1, 1);
+            this.txtAnticipo.Margin = new System.Windows.Forms.Padding(2);
             this.txtAnticipo.Name = "txtAnticipo";
             this.txtAnticipo.Size = new System.Drawing.Size(105, 31);
             this.txtAnticipo.TabIndex = 36;
@@ -436,10 +514,13 @@
             // 
             this.btnGuardar.BackgroundImage = global::SGH_v0._1.Properties.Resources.Save;
             this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(223)))), ((int)(((byte)(252)))));
+            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Location = new System.Drawing.Point(742, 517);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(30, 32);
             this.btnGuardar.TabIndex = 37;
@@ -450,10 +531,13 @@
             // 
             this.btnCerrar.BackgroundImage = global::SGH_v0._1.Properties.Resources.Multiplication;
             this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(223)))), ((int)(((byte)(252)))));
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Location = new System.Drawing.Point(827, 517);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(30, 32);
             this.btnCerrar.TabIndex = 38;
@@ -464,10 +548,13 @@
             // 
             this.btnCancelarReserva.BackgroundImage = global::SGH_v0._1.Properties.Resources.Cancel_Order;
             this.btnCancelarReserva.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCancelarReserva.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelarReserva.FlatAppearance.BorderSize = 0;
+            this.btnCancelarReserva.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(223)))), ((int)(((byte)(252)))));
+            this.btnCancelarReserva.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.btnCancelarReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelarReserva.Location = new System.Drawing.Point(583, 517);
-            this.btnCancelarReserva.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelarReserva.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelarReserva.Name = "btnCancelarReserva";
             this.btnCancelarReserva.Size = new System.Drawing.Size(30, 32);
             this.btnCancelarReserva.TabIndex = 39;
@@ -479,10 +566,10 @@
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
             this.pictureBox1.BackgroundImage = global::SGH_v0._1.Properties.Resources.booking64px;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(798, 14);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(802, 22);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(47, 50);
             this.pictureBox1.TabIndex = 40;
             this.pictureBox1.TabStop = false;
             // 
@@ -495,33 +582,193 @@
             this.panel1.Size = new System.Drawing.Size(670, 1);
             this.panel1.TabIndex = 41;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
+            this.panel2.Controls.Add(this.txtNo);
+            this.panel2.Location = new System.Drawing.Point(72, 110);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(1);
+            this.panel2.Size = new System.Drawing.Size(95, 33);
+            this.panel2.TabIndex = 42;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
+            this.panel3.Controls.Add(this.txtTipo);
+            this.panel3.Location = new System.Drawing.Point(337, 110);
+            this.panel3.Name = "panel3";
+            this.panel3.Padding = new System.Windows.Forms.Padding(1);
+            this.panel3.Size = new System.Drawing.Size(215, 33);
+            this.panel3.TabIndex = 43;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
+            this.panel4.Controls.Add(this.txtCapacidad);
+            this.panel4.Location = new System.Drawing.Point(740, 110);
+            this.panel4.Name = "panel4";
+            this.panel4.Padding = new System.Windows.Forms.Padding(1);
+            this.panel4.Size = new System.Drawing.Size(117, 33);
+            this.panel4.TabIndex = 43;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
+            this.panel5.Controls.Add(this.txtPiso);
+            this.panel5.Location = new System.Drawing.Point(85, 189);
+            this.panel5.Name = "panel5";
+            this.panel5.Padding = new System.Windows.Forms.Padding(1);
+            this.panel5.Size = new System.Drawing.Size(93, 33);
+            this.panel5.TabIndex = 43;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
+            this.panel6.Controls.Add(this.txtCosto);
+            this.panel6.Location = new System.Drawing.Point(353, 189);
+            this.panel6.Name = "panel6";
+            this.panel6.Padding = new System.Windows.Forms.Padding(1);
+            this.panel6.Size = new System.Drawing.Size(118, 33);
+            this.panel6.TabIndex = 43;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
+            this.panel7.Controls.Add(this.txtDescripcion);
+            this.panel7.Location = new System.Drawing.Point(624, 189);
+            this.panel7.Name = "panel7";
+            this.panel7.Padding = new System.Windows.Forms.Padding(1);
+            this.panel7.Size = new System.Drawing.Size(233, 33);
+            this.panel7.TabIndex = 43;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
+            this.panel8.Controls.Add(this.txtNombre);
+            this.panel8.Location = new System.Drawing.Point(122, 312);
+            this.panel8.Name = "panel8";
+            this.panel8.Padding = new System.Windows.Forms.Padding(1);
+            this.panel8.Size = new System.Drawing.Size(142, 33);
+            this.panel8.TabIndex = 43;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
+            this.panel9.Controls.Add(this.txtApellidos);
+            this.panel9.Location = new System.Drawing.Point(417, 312);
+            this.panel9.Name = "panel9";
+            this.panel9.Padding = new System.Windows.Forms.Padding(1);
+            this.panel9.Size = new System.Drawing.Size(205, 33);
+            this.panel9.TabIndex = 43;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
+            this.panel10.Controls.Add(this.txtRFC);
+            this.panel10.Location = new System.Drawing.Point(718, 312);
+            this.panel10.Name = "panel10";
+            this.panel10.Padding = new System.Windows.Forms.Padding(1);
+            this.panel10.Size = new System.Drawing.Size(139, 33);
+            this.panel10.TabIndex = 43;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
+            this.panel11.Controls.Add(this.dtpFechaFinal);
+            this.panel11.Location = new System.Drawing.Point(134, 443);
+            this.panel11.Name = "panel11";
+            this.panel11.Padding = new System.Windows.Forms.Padding(1);
+            this.panel11.Size = new System.Drawing.Size(255, 33);
+            this.panel11.TabIndex = 43;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
+            this.panel12.Controls.Add(this.txtCostoCal);
+            this.panel12.Location = new System.Drawing.Point(627, 443);
+            this.panel12.Name = "panel12";
+            this.panel12.Padding = new System.Windows.Forms.Padding(1);
+            this.panel12.Size = new System.Drawing.Size(78, 33);
+            this.panel12.TabIndex = 43;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
+            this.panel13.Controls.Add(this.txtDias);
+            this.panel13.Location = new System.Drawing.Point(798, 441);
+            this.panel13.Name = "panel13";
+            this.panel13.Padding = new System.Windows.Forms.Padding(1);
+            this.panel13.Size = new System.Drawing.Size(61, 33);
+            this.panel13.TabIndex = 43;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
+            this.panel14.Controls.Add(this.txtAnticipo);
+            this.panel14.Location = new System.Drawing.Point(122, 500);
+            this.panel14.Name = "panel14";
+            this.panel14.Padding = new System.Windows.Forms.Padding(1);
+            this.panel14.Size = new System.Drawing.Size(107, 33);
+            this.panel14.TabIndex = 43;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
+            this.panel15.Controls.Add(this.txtTelefono);
+            this.panel15.Location = new System.Drawing.Point(70, 384);
+            this.panel15.Name = "panel15";
+            this.panel15.Padding = new System.Windows.Forms.Padding(1);
+            this.panel15.Size = new System.Drawing.Size(104, 33);
+            this.panel15.TabIndex = 44;
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
+            this.panel16.Controls.Add(this.txtEmail);
+            this.panel16.Location = new System.Drawing.Point(270, 384);
+            this.panel16.Name = "panel16";
+            this.panel16.Padding = new System.Windows.Forms.Padding(1);
+            this.panel16.Size = new System.Drawing.Size(190, 33);
+            this.panel16.TabIndex = 44;
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
+            this.panel17.Controls.Add(this.dtpFechaInicial);
+            this.panel17.Location = new System.Drawing.Point(602, 384);
+            this.panel17.Name = "panel17";
+            this.panel17.Padding = new System.Windows.Forms.Padding(1);
+            this.panel17.Size = new System.Drawing.Size(255, 33);
+            this.panel17.TabIndex = 44;
+            // 
             // FrmReservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(891, 570);
+            this.Controls.Add(this.panel17);
+            this.Controls.Add(this.panel16);
+            this.Controls.Add(this.panel15);
+            this.Controls.Add(this.panel14);
+            this.Controls.Add(this.panel13);
+            this.Controls.Add(this.panel12);
+            this.Controls.Add(this.panel11);
+            this.Controls.Add(this.panel10);
+            this.Controls.Add(this.panel9);
+            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCancelarReserva);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.txtAnticipo);
-            this.Controls.Add(this.txtDias);
-            this.Controls.Add(this.txtCostoCal);
-            this.Controls.Add(this.dtpFechaFinal);
-            this.Controls.Add(this.dtpFechaInicial);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtTelefono);
-            this.Controls.Add(this.txtRFC);
-            this.Controls.Add(this.txtApellidos);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.txtDescripcion);
-            this.Controls.Add(this.txtCosto);
-            this.Controls.Add(this.txtPiso);
-            this.Controls.Add(this.txtCapacidad);
-            this.Controls.Add(this.txtTipo);
-            this.Controls.Add(this.txtNo);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
@@ -541,11 +788,41 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmReservas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FrmReservas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
+            this.panel17.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -592,5 +869,21 @@
         private System.Windows.Forms.Button btnCancelarReserva;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panel17;
     }
 }
