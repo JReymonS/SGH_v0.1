@@ -78,6 +78,8 @@
             this.TxtBuscar.Name = "TxtBuscar";
             this.TxtBuscar.Size = new System.Drawing.Size(594, 32);
             this.TxtBuscar.TabIndex = 5;
+            this.TxtBuscar.Enter += new System.EventHandler(this.TxtBuscar_Enter);
+            this.TxtBuscar.Leave += new System.EventHandler(this.TxtBuscar_Leave);
             // 
             // BtnBuscar
             // 
@@ -147,12 +149,16 @@
             // DtgDatos
             // 
             this.DtgDatos.AllowUserToAddRows = false;
+            this.DtgDatos.AllowUserToDeleteRows = false;
+            this.DtgDatos.AllowUserToResizeColumns = false;
             this.DtgDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DtgDatos.BackgroundColor = System.Drawing.Color.White;
             this.DtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DtgDatos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DtgDatos.Location = new System.Drawing.Point(24, 149);
             this.DtgDatos.Margin = new System.Windows.Forms.Padding(2);
             this.DtgDatos.Name = "DtgDatos";
+            this.DtgDatos.ReadOnly = true;
             this.DtgDatos.RowHeadersWidth = 51;
             this.DtgDatos.RowTemplate.Height = 24;
             this.DtgDatos.Size = new System.Drawing.Size(746, 274);

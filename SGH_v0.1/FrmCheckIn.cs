@@ -28,7 +28,7 @@ namespace SGH_v0._1
 
             if(datos == null)
             {
-                MessageBox.Show("No hay reserva pendiente para esta habitacion.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No hay reserva pendiente para esta habitacion.", "¡AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
                 return;
             }
@@ -67,7 +67,7 @@ namespace SGH_v0._1
                 MessageBox.Show(
                     $"El monto ingresado (${monto:F2}) no cubre el total restante (${datos.Restante:F2}).\n" +
                     "Debe pagar el total para completar el Check-In.",
-                    "Monto insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    "¡MONTO INSUFICIENTE!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -76,7 +76,7 @@ namespace SGH_v0._1
                 MessageBox.Show(
                     $"El monto ingresado (${monto:F2}) supera el total restante (${datos.Restante:F2}).\n" +
                     "Ingrese el monto exacto para completar el Check-In.",
-                    "Monto excedido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    "¡MONTO EXCEDIDO!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -84,13 +84,13 @@ namespace SGH_v0._1
 
             if (resultado == "OK")
             {
-                MessageBox.Show("Pago registrado. Check-In completado.", "Éxito",
+                MessageBox.Show("Pago registrado. Check-In completado.", "¡ATENCIÓN!",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             else
             {
-                MessageBox.Show(resultado, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(resultado, "¡ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

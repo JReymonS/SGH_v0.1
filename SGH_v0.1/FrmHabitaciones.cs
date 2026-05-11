@@ -22,7 +22,8 @@ namespace SGH_v0._1
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
-            mh.Mostrar($"SELECT * FROM v_Habitaciones WHERE NO LIKE '%{TxtBuscar.Text.Trim('\'')}%';", DtgDatos, "Habitaciones");
+            string texto = TxtBuscar.Text.Equals("Buscar habitación...") ? "" : TxtBuscar.Text.Trim('\'');
+            mh.Mostrar($"SELECT * FROM v_Habitaciones WHERE NO LIKE '%{texto}%';", DtgDatos, "Habitaciones");
         }
 
         private void DtgDatos_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -49,7 +50,7 @@ namespace SGH_v0._1
                 if (permiso == null || !permiso.permiso_escritura)
                 {
                     MessageBox.Show("No tienes permiso de escritura en este módulo.",
-                        "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        "¡ACCESO DENEGADO!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
             }
@@ -75,7 +76,7 @@ namespace SGH_v0._1
                             {
                                 MessageBox.Show(
                                     $"La habitación está en estado '{estado}' y no puede reservarse.",
-                                    "No disponible", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    "¡NO DISPONIBLE!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             }
                         }
                     }; break;
@@ -90,7 +91,7 @@ namespace SGH_v0._1
                         {
                             MessageBox.Show(
                                 "Solo se puede hacer Check-In a habitaciones con reserva activa como Ocupada.",
-                                "No disponible", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                "¡NO DISPONIBLE!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }; break;
                 case 7:
@@ -99,7 +100,7 @@ namespace SGH_v0._1
                         {
                             DialogResult resp = MessageBox.Show(
                                 "¿Desea realizar el Check-Out de esta habitación?",
-                                "Confirmar",
+                                "CONFIRMAR",
                                 MessageBoxButtons.YesNo,
                                 MessageBoxIcon.Question
                             );
@@ -124,7 +125,7 @@ namespace SGH_v0._1
                         {
                             MessageBox.Show(
                                 $"No se puede hacer Check-Out porque la habitación está en estado '{estado}'.",
-                                "Operación no permitida",
+                                "¡OPERACIÓN NO PERMITIDA!",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning
                             );
@@ -147,7 +148,7 @@ namespace SGH_v0._1
         {
             if (DtgDatos.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Seleccione una habitación primero.", "Aviso",
+                MessageBox.Show("Seleccione una habitación primero.", "¡AVISO!",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -160,7 +161,7 @@ namespace SGH_v0._1
             {
                 MessageBox.Show(
                     $"No se puede editar la habitación porque está en estado '{estado}'.",
-                    "Operación no permitida",
+                    "¡OPERACIÓN NO PERMITIDA!",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning
                 );
@@ -177,7 +178,7 @@ namespace SGH_v0._1
         {
             if (DtgDatos.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Seleccione una habitación primero.", "Aviso",
+                MessageBox.Show("Seleccione una habitación primero.", "¡AVISO!",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -190,7 +191,7 @@ namespace SGH_v0._1
             {
                 MessageBox.Show(
                     $"No se puede eliminar la habitación porque está en estado '{estado}'.",
-                    "Operación no permitida",
+                    "¡OPERACIÓN NO PERMITIDA!",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning
                 );
@@ -211,7 +212,7 @@ namespace SGH_v0._1
             if (permiso == null || !permiso.permiso_leer_abrir)
             {
                 MessageBox.Show("No tienes permiso para acceder a Habitaciones y Reservas.",
-                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    "¡ACCESO DENEGADO!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 this.Close();
                 return;
             }
@@ -226,10 +227,32 @@ namespace SGH_v0._1
             }
         }
 
+        //Evanto 1 para texto fantasma
+        private void TxtBuscar_Enter(object sender, EventArgs e)
+        {
+            if (TxtBuscar.Text == "Buscar habitación...") 
+            {
+                TxtBuscar.Text = "";
+                TxtBuscar.ForeColor = Color.Black;
+            }
+        }
+
+        //Evento 2 para texto fantasma
+        private void TxtBuscar_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(TxtBuscar.Text)) 
+            {
+                TxtBuscar.Text = "Buscar habitación...";
+                TxtBuscar.ForeColor = Color.Gray;
+            }
+        }
+
         public FrmHabitaciones()
         {
             InitializeComponent();
             mh = new ManejadorHabitaciones();
+            TxtBuscar.Text = "Buscar habitación...";
+            TxtBuscar.ForeColor = Color.Gray;
         }
     }
 }

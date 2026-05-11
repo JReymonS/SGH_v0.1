@@ -206,7 +206,7 @@ namespace Manejadores
                 return ds.Tables["resultado"].Rows[0]["Resultado"].ToString();
             }
 
-            return "ERROR: No se obtuvo respuesta del procedimiento";
+            return "ERROR: No se obtuvo respuesta del procedimiento.";
         }
     }
 }

@@ -78,7 +78,7 @@ namespace SGH_v0._1
             if (txtRFC.Text.Length > 18)
             {
                 MessageBox.Show("El RFC no puede sobrepasar los 18 caracteres.",
-                    "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    "¡VALIDACIÓN!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             mr.GuardarHuesped(
@@ -119,7 +119,7 @@ namespace SGH_v0._1
         {
             var conf = MessageBox.Show(
             $"¿Desea cancelar la reserva de {reservaActual.Nombre} {reservaActual.Apellidos}?",
-            "Confirmar cancelación",
+            "¡ATENCIÓN!",
             MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (conf != DialogResult.Yes) return;
@@ -128,13 +128,13 @@ namespace SGH_v0._1
 
             if (resultado == "OK")
             {
-                MessageBox.Show("Reserva cancelada correctamente.", "Listo",
+                MessageBox.Show("Reserva cancelada correctamente.", "¡ATENCIÓN!",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             else
             {
-                MessageBox.Show(resultado, "No se pudo cancelar",
+                MessageBox.Show(resultado+".", "¡ATENCIÓN!",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
@@ -144,14 +144,14 @@ namespace SGH_v0._1
                 txtNombre.Text.Trim().Length == 0 ||
                 txtApellidos.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Complete los datos del huésped.", "Validación",
+                MessageBox.Show("Complete los datos del huésped.", "¡VALIDACIÓN!",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (dtpFechaFinal.Value.Date <= dtpFechaInicial.Value.Date)
             {
                 MessageBox.Show("La fecha de salida debe ser posterior a la de entrada.",
-                    "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    "¡VALIDACIÓN!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             return true;

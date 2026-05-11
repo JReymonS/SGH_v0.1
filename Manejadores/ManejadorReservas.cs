@@ -29,7 +29,7 @@ namespace Manejadores
             if (ds.Tables["resultado"] != null && ds.Tables["resultado"].Rows.Count > 0)
                 return ds.Tables["resultado"].Rows[0]["Resultado"].ToString();
 
-            return "ERROR: Sin respuesta del servidor";
+            return "ERROR: Sin respuesta del servidor.";
         }
         public void GuardarHuesped(string rfc, string nombre, string apellidos,
                                    string correo, string telefono)

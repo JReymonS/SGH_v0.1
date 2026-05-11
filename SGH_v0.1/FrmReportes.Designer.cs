@@ -37,7 +37,6 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.dtpFechaReporteFini = new System.Windows.Forms.DateTimePicker();
             this.lblFechaFinal = new System.Windows.Forms.Label();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dPanel = new System.Windows.Forms.Panel();
@@ -166,23 +165,6 @@
             this.lblFechaFinal.Text = "FECHA FINAL:";
             this.lblFechaFinal.Visible = false;
             // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackgroundImage = global::SGH_v0._1.Properties.Resources.Multiplication;
-            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(223)))), ((int)(((byte)(252)))));
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Location = new System.Drawing.Point(754, 332);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(0);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(35, 35);
-            this.btnCerrar.TabIndex = 7;
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
             // btnBuscar
             // 
             this.btnBuscar.BackgroundImage = global::SGH_v0._1.Properties.Resources.Google_Web_Search;
@@ -193,7 +175,7 @@
             this.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(223)))), ((int)(((byte)(252)))));
             this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Location = new System.Drawing.Point(649, 332);
+            this.btnBuscar.Location = new System.Drawing.Point(745, 334);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(0);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(35, 35);
@@ -268,7 +250,6 @@
             this.Controls.Add(this.dPanel);
             this.Controls.Add(this.lblFechaFinal);
             this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.lblFechaInicial);
             this.Controls.Add(this.label2);
@@ -298,7 +279,6 @@
         private System.Windows.Forms.Label lblFechaInicial;
         private System.Windows.Forms.DateTimePicker dtpFechaReporteIni;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.ComboBox cmbEspecifico;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.DateTimePicker dtpFechaReporteFini;

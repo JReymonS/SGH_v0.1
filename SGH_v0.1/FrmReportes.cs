@@ -22,11 +22,6 @@ namespace SGH_v0._1
             mr.LlenarComboEspecifico(cmbEspecifico);
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             if (cmbReporte.SelectedItem == null)
