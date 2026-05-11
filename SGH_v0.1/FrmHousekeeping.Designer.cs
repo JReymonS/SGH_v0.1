@@ -46,7 +46,6 @@
             this.TxtBuscarHabitacion = new System.Windows.Forms.TextBox();
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.BtnGuardar = new System.Windows.Forms.Button();
-            this.BtnSalir = new System.Windows.Forms.Button();
             this.TxtHabitacionesDisponibles = new System.Windows.Forms.TextBox();
             this.LblhabitacionesDisp = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -69,6 +68,7 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.Lblinformacion = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtgDatos)).BeginInit();
@@ -81,39 +81,40 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(0, 17);
+            this.panel1.Location = new System.Drawing.Point(0, 19);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(903, 53);
+            this.panel1.Size = new System.Drawing.Size(903, 65);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Montserrat SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(21, 9);
+            this.label1.Location = new System.Drawing.Point(25, 13);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 29);
+            this.label1.Size = new System.Drawing.Size(247, 42);
             this.label1.TabIndex = 1;
             this.label1.Text = "HOUSEKEEPING";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::SGH_v0._1.Properties.Resources.Room_white;
-            this.pictureBox1.Location = new System.Drawing.Point(853, 9);
+            this.pictureBox1.BackgroundImage = global::SGH_v0._1.Properties.Resources.Room_white;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(831, 8);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(47, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -124,7 +125,8 @@
             this.DtgDatos.AllowUserToDeleteRows = false;
             this.DtgDatos.AllowUserToResizeColumns = false;
             this.DtgDatos.AllowUserToResizeRows = false;
-            this.DtgDatos.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.DtgDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DtgDatos.BackgroundColor = System.Drawing.Color.White;
             this.DtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtgDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.noHabitacion,
@@ -132,7 +134,8 @@
             this.estadoHabitacion,
             this.Capacidad,
             this.Piso});
-            this.DtgDatos.Location = new System.Drawing.Point(36, 171);
+            this.DtgDatos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DtgDatos.Location = new System.Drawing.Point(34, 206);
             this.DtgDatos.Margin = new System.Windows.Forms.Padding(2);
             this.DtgDatos.MultiSelect = false;
             this.DtgDatos.Name = "DtgDatos";
@@ -142,7 +145,7 @@
             this.DtgDatos.RowHeadersWidth = 51;
             this.DtgDatos.RowTemplate.Height = 24;
             this.DtgDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DtgDatos.Size = new System.Drawing.Size(690, 315);
+            this.DtgDatos.Size = new System.Drawing.Size(692, 315);
             this.DtgDatos.TabIndex = 1;
             this.DtgDatos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DtgDatos_CellFormatting);
             // 
@@ -157,7 +160,6 @@
             this.noHabitacion.MinimumWidth = 6;
             this.noHabitacion.Name = "noHabitacion";
             this.noHabitacion.ReadOnly = true;
-            this.noHabitacion.Width = 140;
             // 
             // Tipo
             // 
@@ -170,7 +172,6 @@
             this.Tipo.MinimumWidth = 6;
             this.Tipo.Name = "Tipo";
             this.Tipo.ReadOnly = true;
-            this.Tipo.Width = 180;
             // 
             // estadoHabitacion
             // 
@@ -184,7 +185,6 @@
             this.estadoHabitacion.MinimumWidth = 6;
             this.estadoHabitacion.Name = "estadoHabitacion";
             this.estadoHabitacion.ReadOnly = true;
-            this.estadoHabitacion.Width = 200;
             // 
             // Capacidad
             // 
@@ -197,7 +197,6 @@
             this.Capacidad.MinimumWidth = 6;
             this.Capacidad.Name = "Capacidad";
             this.Capacidad.ReadOnly = true;
-            this.Capacidad.Width = 140;
             // 
             // Piso
             // 
@@ -210,75 +209,73 @@
             this.Piso.MinimumWidth = 6;
             this.Piso.Name = "Piso";
             this.Piso.ReadOnly = true;
-            this.Piso.Width = 140;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(38, 136);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(29, 164);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 19);
+            this.label2.Size = new System.Drawing.Size(44, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "NO.";
             // 
             // TxtBuscarHabitacion
             // 
-            this.TxtBuscarHabitacion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtBuscarHabitacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtBuscarHabitacion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TxtBuscarHabitacion.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtBuscarHabitacion.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.TxtBuscarHabitacion.Location = new System.Drawing.Point(75, 130);
+            this.TxtBuscarHabitacion.Location = new System.Drawing.Point(1, 1);
             this.TxtBuscarHabitacion.Margin = new System.Windows.Forms.Padding(2);
             this.TxtBuscarHabitacion.Multiline = true;
             this.TxtBuscarHabitacion.Name = "TxtBuscarHabitacion";
-            this.TxtBuscarHabitacion.Size = new System.Drawing.Size(604, 29);
+            this.TxtBuscarHabitacion.Size = new System.Drawing.Size(650, 29);
             this.TxtBuscarHabitacion.TabIndex = 3;
             this.TxtBuscarHabitacion.Text = "Buscar habitacion...";
-            this.TxtBuscarHabitacion.TextChanged += new System.EventHandler(this.TxtBuscarHabitacion_TextChanged);
             this.TxtBuscarHabitacion.Enter += new System.EventHandler(this.TxtBuscarHabitacion_Enter);
             this.TxtBuscarHabitacion.Leave += new System.EventHandler(this.TxtBuscarHabitacion_Leave);
             // 
             // BtnBuscar
             // 
             this.BtnBuscar.BackgroundImage = global::SGH_v0._1.Properties.Resources.Google_Web_Search;
-            this.BtnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnBuscar.Location = new System.Drawing.Point(699, 126);
+            this.BtnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnBuscar.FlatAppearance.BorderSize = 0;
+            this.BtnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(223)))), ((int)(((byte)(252)))));
+            this.BtnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscar.Location = new System.Drawing.Point(743, 160);
             this.BtnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(30, 32);
+            this.BtnBuscar.Size = new System.Drawing.Size(35, 35);
             this.BtnBuscar.TabIndex = 4;
             this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // BtnGuardar
             // 
             this.BtnGuardar.BackgroundImage = global::SGH_v0._1.Properties.Resources.Save;
-            this.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnGuardar.Location = new System.Drawing.Point(813, 499);
+            this.BtnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnGuardar.FlatAppearance.BorderSize = 0;
+            this.BtnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(223)))), ((int)(((byte)(252)))));
+            this.BtnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
+            this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGuardar.Location = new System.Drawing.Point(868, 519);
             this.BtnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(30, 32);
+            this.BtnGuardar.Size = new System.Drawing.Size(35, 35);
             this.BtnGuardar.TabIndex = 5;
             this.BtnGuardar.UseVisualStyleBackColor = true;
             this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
-            // BtnSalir
-            // 
-            this.BtnSalir.BackgroundImage = global::SGH_v0._1.Properties.Resources.Multiplication;
-            this.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnSalir.Location = new System.Drawing.Point(862, 499);
-            this.BtnSalir.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(30, 32);
-            this.BtnSalir.TabIndex = 6;
-            this.BtnSalir.UseVisualStyleBackColor = true;
-            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
-            // 
             // TxtHabitacionesDisponibles
             // 
-            this.TxtHabitacionesDisponibles.BackColor = System.Drawing.Color.PowderBlue;
+            this.TxtHabitacionesDisponibles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(225)))), ((int)(((byte)(232)))));
+            this.TxtHabitacionesDisponibles.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtHabitacionesDisponibles.Enabled = false;
-            this.TxtHabitacionesDisponibles.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtHabitacionesDisponibles.Location = new System.Drawing.Point(50, 82);
+            this.TxtHabitacionesDisponibles.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtHabitacionesDisponibles.Location = new System.Drawing.Point(20, 105);
             this.TxtHabitacionesDisponibles.Margin = new System.Windows.Forms.Padding(2);
             this.TxtHabitacionesDisponibles.Multiline = true;
             this.TxtHabitacionesDisponibles.Name = "TxtHabitacionesDisponibles";
@@ -291,12 +288,13 @@
             // LblhabitacionesDisp
             // 
             this.LblhabitacionesDisp.AutoSize = true;
-            this.LblhabitacionesDisp.BackColor = System.Drawing.Color.PowderBlue;
-            this.LblhabitacionesDisp.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblhabitacionesDisp.Location = new System.Drawing.Point(200, 98);
+            this.LblhabitacionesDisp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(225)))), ((int)(((byte)(232)))));
+            this.LblhabitacionesDisp.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblhabitacionesDisp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(145)))), ((int)(((byte)(0)))));
+            this.LblhabitacionesDisp.Location = new System.Drawing.Point(168, 118);
             this.LblhabitacionesDisp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblhabitacionesDisp.Name = "LblhabitacionesDisp";
-            this.LblhabitacionesDisp.Size = new System.Drawing.Size(19, 15);
+            this.LblhabitacionesDisp.Size = new System.Drawing.Size(27, 20);
             this.LblhabitacionesDisp.TabIndex = 8;
             this.LblhabitacionesDisp.Text = "20";
             // 
@@ -305,7 +303,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.PowderBlue;
             this.pictureBox2.BackgroundImage = global::SGH_v0._1.Properties.Resources.Disponibles;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(54, 86);
+            this.pictureBox2.Location = new System.Drawing.Point(24, 109);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(26, 28);
@@ -317,7 +315,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.PowderBlue;
             this.pictureBox3.BackgroundImage = global::SGH_v0._1.Properties.Resources.Ocupadas;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(269, 86);
+            this.pictureBox3.Location = new System.Drawing.Point(230, 109);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(26, 28);
@@ -327,22 +325,24 @@
             // LblhabitacionesOcup
             // 
             this.LblhabitacionesOcup.AutoSize = true;
-            this.LblhabitacionesOcup.BackColor = System.Drawing.Color.PowderBlue;
-            this.LblhabitacionesOcup.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblhabitacionesOcup.Location = new System.Drawing.Point(415, 100);
+            this.LblhabitacionesOcup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(225)))), ((int)(((byte)(232)))));
+            this.LblhabitacionesOcup.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblhabitacionesOcup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(17)))), ((int)(((byte)(37)))));
+            this.LblhabitacionesOcup.Location = new System.Drawing.Point(373, 119);
             this.LblhabitacionesOcup.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblhabitacionesOcup.Name = "LblhabitacionesOcup";
-            this.LblhabitacionesOcup.Size = new System.Drawing.Size(19, 15);
+            this.LblhabitacionesOcup.Size = new System.Drawing.Size(27, 20);
             this.LblhabitacionesOcup.TabIndex = 11;
             this.LblhabitacionesOcup.Text = "20";
             // 
             // TxtHabitacionesOcupadas
             // 
             this.TxtHabitacionesOcupadas.AcceptsReturn = true;
-            this.TxtHabitacionesOcupadas.BackColor = System.Drawing.Color.PowderBlue;
+            this.TxtHabitacionesOcupadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(225)))), ((int)(((byte)(232)))));
+            this.TxtHabitacionesOcupadas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtHabitacionesOcupadas.Enabled = false;
-            this.TxtHabitacionesOcupadas.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtHabitacionesOcupadas.Location = new System.Drawing.Point(265, 82);
+            this.TxtHabitacionesOcupadas.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtHabitacionesOcupadas.Location = new System.Drawing.Point(226, 105);
             this.TxtHabitacionesOcupadas.Margin = new System.Windows.Forms.Padding(2);
             this.TxtHabitacionesOcupadas.Multiline = true;
             this.TxtHabitacionesOcupadas.Name = "TxtHabitacionesOcupadas";
@@ -357,7 +357,7 @@
             this.pictureBox4.BackColor = System.Drawing.Color.PowderBlue;
             this.pictureBox4.BackgroundImage = global::SGH_v0._1.Properties.Resources.Housekeeping;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(485, 86);
+            this.pictureBox4.Location = new System.Drawing.Point(436, 109);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(26, 28);
@@ -367,21 +367,23 @@
             // LblhabitacionesLimp
             // 
             this.LblhabitacionesLimp.AutoSize = true;
-            this.LblhabitacionesLimp.BackColor = System.Drawing.Color.PowderBlue;
-            this.LblhabitacionesLimp.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblhabitacionesLimp.Location = new System.Drawing.Point(629, 100);
+            this.LblhabitacionesLimp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(225)))), ((int)(((byte)(232)))));
+            this.LblhabitacionesLimp.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblhabitacionesLimp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(17)))), ((int)(((byte)(37)))));
+            this.LblhabitacionesLimp.Location = new System.Drawing.Point(580, 119);
             this.LblhabitacionesLimp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblhabitacionesLimp.Name = "LblhabitacionesLimp";
-            this.LblhabitacionesLimp.Size = new System.Drawing.Size(19, 15);
+            this.LblhabitacionesLimp.Size = new System.Drawing.Size(27, 20);
             this.LblhabitacionesLimp.TabIndex = 14;
             this.LblhabitacionesLimp.Text = "20";
             // 
             // TxtHabitacionesLimpieza
             // 
-            this.TxtHabitacionesLimpieza.BackColor = System.Drawing.Color.PowderBlue;
+            this.TxtHabitacionesLimpieza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(225)))), ((int)(((byte)(232)))));
+            this.TxtHabitacionesLimpieza.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtHabitacionesLimpieza.Enabled = false;
-            this.TxtHabitacionesLimpieza.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtHabitacionesLimpieza.Location = new System.Drawing.Point(481, 82);
+            this.TxtHabitacionesLimpieza.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtHabitacionesLimpieza.Location = new System.Drawing.Point(432, 105);
             this.TxtHabitacionesLimpieza.Margin = new System.Windows.Forms.Padding(2);
             this.TxtHabitacionesLimpieza.Multiline = true;
             this.TxtHabitacionesLimpieza.Name = "TxtHabitacionesLimpieza";
@@ -396,7 +398,7 @@
             this.pictureBox5.BackColor = System.Drawing.Color.PowderBlue;
             this.pictureBox5.BackgroundImage = global::SGH_v0._1.Properties.Resources.Mantenimiento;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(700, 86);
+            this.pictureBox5.Location = new System.Drawing.Point(641, 109);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(26, 28);
@@ -406,21 +408,23 @@
             // LblhabitacionesMante
             // 
             this.LblhabitacionesMante.AutoSize = true;
-            this.LblhabitacionesMante.BackColor = System.Drawing.Color.PowderBlue;
-            this.LblhabitacionesMante.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblhabitacionesMante.Location = new System.Drawing.Point(847, 98);
+            this.LblhabitacionesMante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(225)))), ((int)(((byte)(232)))));
+            this.LblhabitacionesMante.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblhabitacionesMante.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(17)))), ((int)(((byte)(37)))));
+            this.LblhabitacionesMante.Location = new System.Drawing.Point(789, 118);
             this.LblhabitacionesMante.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblhabitacionesMante.Name = "LblhabitacionesMante";
-            this.LblhabitacionesMante.Size = new System.Drawing.Size(19, 15);
+            this.LblhabitacionesMante.Size = new System.Drawing.Size(27, 20);
             this.LblhabitacionesMante.TabIndex = 17;
             this.LblhabitacionesMante.Text = "20";
             // 
             // TxtHabitacionesMantenimiento
             // 
-            this.TxtHabitacionesMantenimiento.BackColor = System.Drawing.Color.PowderBlue;
+            this.TxtHabitacionesMantenimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(225)))), ((int)(((byte)(232)))));
+            this.TxtHabitacionesMantenimiento.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtHabitacionesMantenimiento.Enabled = false;
-            this.TxtHabitacionesMantenimiento.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtHabitacionesMantenimiento.Location = new System.Drawing.Point(696, 82);
+            this.TxtHabitacionesMantenimiento.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtHabitacionesMantenimiento.Location = new System.Drawing.Point(641, 105);
             this.TxtHabitacionesMantenimiento.Margin = new System.Windows.Forms.Padding(2);
             this.TxtHabitacionesMantenimiento.Multiline = true;
             this.TxtHabitacionesMantenimiento.Name = "TxtHabitacionesMantenimiento";
@@ -433,9 +437,12 @@
             // BtnDisponible
             // 
             this.BtnDisponible.BackColor = System.Drawing.Color.ForestGreen;
+            this.BtnDisponible.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnDisponible.FlatAppearance.BorderSize = 0;
+            this.BtnDisponible.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnDisponible.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDisponible.ForeColor = System.Drawing.Color.White;
-            this.BtnDisponible.Location = new System.Drawing.Point(739, 201);
+            this.BtnDisponible.Location = new System.Drawing.Point(739, 242);
             this.BtnDisponible.Margin = new System.Windows.Forms.Padding(2);
             this.BtnDisponible.Name = "BtnDisponible";
             this.BtnDisponible.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -448,9 +455,12 @@
             // BtnOcupada
             // 
             this.BtnOcupada.BackColor = System.Drawing.Color.Firebrick;
+            this.BtnOcupada.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnOcupada.FlatAppearance.BorderSize = 0;
+            this.BtnOcupada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnOcupada.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnOcupada.ForeColor = System.Drawing.Color.White;
-            this.BtnOcupada.Location = new System.Drawing.Point(739, 253);
+            this.BtnOcupada.Location = new System.Drawing.Point(739, 294);
             this.BtnOcupada.Margin = new System.Windows.Forms.Padding(2);
             this.BtnOcupada.Name = "BtnOcupada";
             this.BtnOcupada.Size = new System.Drawing.Size(165, 28);
@@ -462,9 +472,12 @@
             // BtnEnLimpieza
             // 
             this.BtnEnLimpieza.BackColor = System.Drawing.Color.DarkOrange;
+            this.BtnEnLimpieza.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnEnLimpieza.FlatAppearance.BorderSize = 0;
+            this.BtnEnLimpieza.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEnLimpieza.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEnLimpieza.ForeColor = System.Drawing.Color.White;
-            this.BtnEnLimpieza.Location = new System.Drawing.Point(739, 305);
+            this.BtnEnLimpieza.Location = new System.Drawing.Point(739, 346);
             this.BtnEnLimpieza.Margin = new System.Windows.Forms.Padding(2);
             this.BtnEnLimpieza.Name = "BtnEnLimpieza";
             this.BtnEnLimpieza.Size = new System.Drawing.Size(165, 28);
@@ -476,9 +489,12 @@
             // BtnEnMantenimiento
             // 
             this.BtnEnMantenimiento.BackColor = System.Drawing.Color.DarkOrange;
+            this.BtnEnMantenimiento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnEnMantenimiento.FlatAppearance.BorderSize = 0;
+            this.BtnEnMantenimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEnMantenimiento.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEnMantenimiento.ForeColor = System.Drawing.Color.White;
-            this.BtnEnMantenimiento.Location = new System.Drawing.Point(739, 354);
+            this.BtnEnMantenimiento.Location = new System.Drawing.Point(739, 395);
             this.BtnEnMantenimiento.Margin = new System.Windows.Forms.Padding(2);
             this.BtnEnMantenimiento.Name = "BtnEnMantenimiento";
             this.BtnEnMantenimiento.Size = new System.Drawing.Size(165, 28);
@@ -492,7 +508,7 @@
             this.pictureBox6.BackColor = System.Drawing.Color.DarkOrange;
             this.pictureBox6.BackgroundImage = global::SGH_v0._1.Properties.Resources.Mantenimiento_white;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox6.Location = new System.Drawing.Point(743, 359);
+            this.pictureBox6.Location = new System.Drawing.Point(743, 400);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(17, 19);
@@ -504,7 +520,7 @@
             this.pictureBox7.BackColor = System.Drawing.Color.DarkOrange;
             this.pictureBox7.BackgroundImage = global::SGH_v0._1.Properties.Resources.Housekeeping_white;
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox7.Location = new System.Drawing.Point(744, 310);
+            this.pictureBox7.Location = new System.Drawing.Point(744, 351);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(17, 19);
@@ -516,7 +532,7 @@
             this.pictureBox8.BackColor = System.Drawing.Color.Firebrick;
             this.pictureBox8.BackgroundImage = global::SGH_v0._1.Properties.Resources.Ocupadas_white;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox8.Location = new System.Drawing.Point(743, 258);
+            this.pictureBox8.Location = new System.Drawing.Point(743, 299);
             this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(17, 19);
@@ -528,7 +544,7 @@
             this.pictureBox9.BackColor = System.Drawing.Color.ForestGreen;
             this.pictureBox9.BackgroundImage = global::SGH_v0._1.Properties.Resources.Disponibles_white;
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox9.Location = new System.Drawing.Point(744, 206);
+            this.pictureBox9.Location = new System.Drawing.Point(744, 247);
             this.pictureBox9.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(17, 19);
@@ -539,7 +555,7 @@
             // 
             this.pictureBox10.BackgroundImage = global::SGH_v0._1.Properties.Resources.Info;
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox10.Location = new System.Drawing.Point(34, 504);
+            this.pictureBox10.Location = new System.Drawing.Point(34, 535);
             this.pictureBox10.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(20, 23);
@@ -550,18 +566,29 @@
             // 
             this.Lblinformacion.AutoSize = true;
             this.Lblinformacion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lblinformacion.Location = new System.Drawing.Point(58, 508);
+            this.Lblinformacion.Location = new System.Drawing.Point(58, 539);
             this.Lblinformacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lblinformacion.Name = "Lblinformacion";
             this.Lblinformacion.Size = new System.Drawing.Size(175, 15);
             this.Lblinformacion.TabIndex = 28;
             this.Lblinformacion.Text = "Mostrando 8 de 20 habitaciones";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
+            this.panel2.Controls.Add(this.TxtBuscarHabitacion);
+            this.panel2.Location = new System.Drawing.Point(74, 161);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(1);
+            this.panel2.Size = new System.Drawing.Size(652, 31);
+            this.panel2.TabIndex = 29;
+            // 
             // FrmHousekeeping
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 542);
+            this.ClientSize = new System.Drawing.Size(940, 575);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.Lblinformacion);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox9);
@@ -584,10 +611,8 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.LblhabitacionesDisp);
             this.Controls.Add(this.TxtHabitacionesDisponibles);
-            this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.BtnGuardar);
             this.Controls.Add(this.BtnBuscar);
-            this.Controls.Add(this.TxtBuscarHabitacion);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.DtgDatos);
             this.Controls.Add(this.panel1);
@@ -611,6 +636,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -626,7 +653,6 @@
         private System.Windows.Forms.TextBox TxtBuscarHabitacion;
         private System.Windows.Forms.Button BtnBuscar;
         private System.Windows.Forms.Button BtnGuardar;
-        private System.Windows.Forms.Button BtnSalir;
         private System.Windows.Forms.TextBox TxtHabitacionesDisponibles;
         private System.Windows.Forms.Label LblhabitacionesDisp;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -654,5 +680,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoHabitacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Capacidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Piso;
+        private System.Windows.Forms.Panel panel2;
     }
 }
