@@ -65,7 +65,7 @@
             this.tsMenu.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table;
             this.tsMenu.Location = new System.Drawing.Point(0, 0);
             this.tsMenu.Name = "tsMenu";
-            this.tsMenu.Size = new System.Drawing.Size(100, 755);
+            this.tsMenu.Size = new System.Drawing.Size(100, 1000);
             this.tsMenu.TabIndex = 0;
             this.tsMenu.Text = "MENU";
             // 
@@ -188,7 +188,7 @@
             this.lblUsuarioActivo.AutoSize = true;
             this.lblUsuarioActivo.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuarioActivo.ForeColor = System.Drawing.Color.White;
-            this.lblUsuarioActivo.Location = new System.Drawing.Point(1060, 36);
+            this.lblUsuarioActivo.Location = new System.Drawing.Point(1203, 36);
             this.lblUsuarioActivo.Name = "lblUsuarioActivo";
             this.lblUsuarioActivo.Size = new System.Drawing.Size(66, 20);
             this.lblUsuarioActivo.TabIndex = 1;
@@ -205,7 +205,7 @@
             this.panel1.Controls.Add(this.lblUsuarioActivo);
             this.panel1.Location = new System.Drawing.Point(100, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1067, 90);
+            this.panel1.Size = new System.Drawing.Size(1600, 90);
             this.panel1.TabIndex = 3;
             // 
             // BtnCompress
@@ -218,7 +218,7 @@
             this.BtnCompress.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
             this.BtnCompress.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(88)))), ((int)(((byte)(134)))));
             this.BtnCompress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCompress.Location = new System.Drawing.Point(1290, 25);
+            this.BtnCompress.Location = new System.Drawing.Point(1515, 25);
             this.BtnCompress.Name = "BtnCompress";
             this.BtnCompress.Size = new System.Drawing.Size(40, 40);
             this.BtnCompress.TabIndex = 6;
@@ -238,7 +238,7 @@
             // 
             this.pictureBox1.BackgroundImage = global::SGH_v0._1.Properties.Resources.Profile_white;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(1210, 25);
+            this.pictureBox1.Location = new System.Drawing.Point(1435, 25);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(40, 40);
             this.pictureBox1.TabIndex = 4;
@@ -248,7 +248,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1167, 755);
+            this.ClientSize = new System.Drawing.Size(1700, 1000);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tsMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -256,7 +256,6 @@
             this.Name = "FrmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOME";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmHome_Load);
             this.tsMenu.ResumeLayout(false);
             this.tsMenu.PerformLayout();
