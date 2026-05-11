@@ -44,7 +44,8 @@ namespace SGH_v0._1
                 case "Especifico":
                     if (cmbEspecifico.SelectedItem == null)
                     {
-                        MessageBox.Show("Favor de seleccionar algun huésped");
+                        MessageBox.Show("Favor de seleccionar algun huésped", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning););
                         return;
                     }
                     string rfc = cmbEspecifico.SelectedValue.ToString();

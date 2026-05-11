@@ -39,9 +39,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.DtgDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -67,9 +69,12 @@
             // 
             // TxtBuscar
             // 
+            this.TxtBuscar.BackColor = System.Drawing.Color.White;
+            this.TxtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtBuscar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TxtBuscar.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtBuscar.Location = new System.Drawing.Point(64, 109);
-            this.TxtBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtBuscar.Location = new System.Drawing.Point(1, 1);
+            this.TxtBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.TxtBuscar.Name = "TxtBuscar";
             this.TxtBuscar.Size = new System.Drawing.Size(594, 32);
             this.TxtBuscar.TabIndex = 5;
@@ -77,11 +82,14 @@
             // BtnBuscar
             // 
             this.BtnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnBuscar.FlatAppearance.BorderSize = 0;
+            this.BtnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(223)))), ((int)(((byte)(252)))));
+            this.BtnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBuscar.Image = global::SGH_v0._1.Properties.Resources.Google_Web_Search;
             this.BtnBuscar.Location = new System.Drawing.Point(676, 103);
-            this.BtnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnBuscar.Name = "BtnBuscar";
             this.BtnBuscar.Size = new System.Drawing.Size(40, 40);
             this.BtnBuscar.TabIndex = 29;
@@ -90,11 +98,14 @@
             // 
             // BtnAgregar
             // 
+            this.BtnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnAgregar.FlatAppearance.BorderSize = 0;
+            this.BtnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(223)))), ((int)(((byte)(252)))));
+            this.BtnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAgregar.Image = global::SGH_v0._1.Properties.Resources.Add_New;
             this.BtnAgregar.Location = new System.Drawing.Point(730, 103);
-            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(40, 40);
             this.BtnAgregar.TabIndex = 15;
@@ -103,11 +114,14 @@
             // 
             // BtnEditar
             // 
+            this.BtnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnEditar.FlatAppearance.BorderSize = 0;
+            this.BtnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(223)))), ((int)(((byte)(252)))));
+            this.BtnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEditar.Image = global::SGH_v0._1.Properties.Resources.Pencil;
             this.BtnEditar.Location = new System.Drawing.Point(676, 429);
-            this.BtnEditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(40, 40);
             this.BtnEditar.TabIndex = 16;
@@ -116,11 +130,14 @@
             // 
             // BtnEliminar
             // 
+            this.BtnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnEliminar.FlatAppearance.BorderSize = 0;
+            this.BtnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(223)))), ((int)(((byte)(252)))));
+            this.BtnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEliminar.Image = global::SGH_v0._1.Properties.Resources.Remove_Book;
             this.BtnEliminar.Location = new System.Drawing.Point(730, 429);
-            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(40, 40);
             this.BtnEliminar.TabIndex = 17;
@@ -130,9 +147,11 @@
             // DtgDatos
             // 
             this.DtgDatos.AllowUserToAddRows = false;
+            this.DtgDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DtgDatos.BackgroundColor = System.Drawing.Color.White;
             this.DtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtgDatos.Location = new System.Drawing.Point(24, 149);
-            this.DtgDatos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DtgDatos.Margin = new System.Windows.Forms.Padding(2);
             this.DtgDatos.Name = "DtgDatos";
             this.DtgDatos.RowHeadersWidth = 51;
             this.DtgDatos.RowTemplate.Height = 24;
@@ -145,7 +164,7 @@
             // 
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F);
+            this.label4.Font = new System.Drawing.Font("Montserrat SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(0, 14);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -158,11 +177,12 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
-            this.pictureBox1.Image = global::SGH_v0._1.Properties.Resources.Room_white;
+            this.pictureBox1.BackgroundImage = global::SGH_v0._1.Properties.Resources.Room_white;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Location = new System.Drawing.Point(743, 22);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(47, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
@@ -172,11 +192,21 @@
             this.pictureBox10.BackgroundImage = global::SGH_v0._1.Properties.Resources.Info;
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox10.Location = new System.Drawing.Point(24, 446);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(20, 23);
             this.pictureBox10.TabIndex = 30;
             this.pictureBox10.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
+            this.panel1.Controls.Add(this.TxtBuscar);
+            this.panel1.Location = new System.Drawing.Point(69, 103);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(1);
+            this.panel1.Size = new System.Drawing.Size(596, 34);
+            this.panel1.TabIndex = 31;
             // 
             // FrmHabitaciones
             // 
@@ -184,6 +214,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(831, 490);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
@@ -192,11 +223,10 @@
             this.Controls.Add(this.BtnEditar);
             this.Controls.Add(this.BtnAgregar);
             this.Controls.Add(this.BtnBuscar);
-            this.Controls.Add(this.TxtBuscar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmHabitaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmHabitaciones";
@@ -204,6 +234,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.DtgDatos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,5 +253,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.Panel panel1;
     }
 }

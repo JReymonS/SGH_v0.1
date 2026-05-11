@@ -75,7 +75,12 @@ namespace SGH_v0._1
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (!Validar()) return;
-
+            if (txtRFC.Text.Length > 18)
+            {
+                MessageBox.Show("El RFC no puede sobrepasar los 18 caracteres.",
+                    "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             mr.GuardarHuesped(
                 txtRFC.Text.Trim(),
                 txtNombre.Text.Trim(),
@@ -96,7 +101,7 @@ namespace SGH_v0._1
                 anticipo,
                 txtRFC.Text.Trim(),
                 idUsuario);
-
+            
             if (resultado == "OK")
             {
                 MessageBox.Show("Reserva creada correctamente.", "Éxito",
