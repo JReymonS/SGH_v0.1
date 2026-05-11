@@ -183,6 +183,7 @@
             // 
             // lblUsuarioActivo
             // 
+            this.lblUsuarioActivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUsuarioActivo.AutoSize = true;
             this.lblUsuarioActivo.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuarioActivo.ForeColor = System.Drawing.Color.White;
@@ -194,12 +195,12 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
             this.panel1.Controls.Add(this.BtnCompress);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lblUsuarioActivo);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(100, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1067, 90);
@@ -207,6 +208,7 @@
             // 
             // BtnCompress
             // 
+            this.BtnCompress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnCompress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
             this.BtnCompress.BackgroundImage = global::SGH_v0._1.Properties.Resources.Compress_white;
             this.BtnCompress.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
