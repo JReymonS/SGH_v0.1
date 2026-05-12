@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDatosHabitacion));
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -131,7 +132,7 @@
             this.TxtNo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TxtNo.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNo.Location = new System.Drawing.Point(1, 1);
-            this.TxtNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtNo.Margin = new System.Windows.Forms.Padding(2);
             this.TxtNo.Name = "TxtNo";
             this.TxtNo.Size = new System.Drawing.Size(104, 32);
             this.TxtNo.TabIndex = 7;
@@ -142,7 +143,7 @@
             this.TxtTipo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TxtTipo.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTipo.Location = new System.Drawing.Point(1, 1);
-            this.TxtTipo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtTipo.Margin = new System.Windows.Forms.Padding(2);
             this.TxtTipo.Name = "TxtTipo";
             this.TxtTipo.Size = new System.Drawing.Size(175, 32);
             this.TxtTipo.TabIndex = 8;
@@ -153,7 +154,7 @@
             this.TxtCapacidad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TxtCapacidad.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCapacidad.Location = new System.Drawing.Point(1, 1);
-            this.TxtCapacidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtCapacidad.Margin = new System.Windows.Forms.Padding(2);
             this.TxtCapacidad.Name = "TxtCapacidad";
             this.TxtCapacidad.Size = new System.Drawing.Size(96, 32);
             this.TxtCapacidad.TabIndex = 9;
@@ -164,7 +165,7 @@
             this.TxtPiso.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TxtPiso.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPiso.Location = new System.Drawing.Point(1, 1);
-            this.TxtPiso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtPiso.Margin = new System.Windows.Forms.Padding(2);
             this.TxtPiso.Name = "TxtPiso";
             this.TxtPiso.Size = new System.Drawing.Size(102, 32);
             this.TxtPiso.TabIndex = 10;
@@ -175,7 +176,7 @@
             this.TxtCosto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TxtCosto.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCosto.Location = new System.Drawing.Point(1, 1);
-            this.TxtCosto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtCosto.Margin = new System.Windows.Forms.Padding(2);
             this.TxtCosto.Name = "TxtCosto";
             this.TxtCosto.Size = new System.Drawing.Size(106, 32);
             this.TxtCosto.TabIndex = 11;
@@ -186,7 +187,7 @@
             this.TxtDescripcion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TxtDescripcion.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDescripcion.Location = new System.Drawing.Point(1, 1);
-            this.TxtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.TxtDescripcion.Name = "TxtDescripcion";
             this.TxtDescripcion.Size = new System.Drawing.Size(212, 32);
             this.TxtDescripcion.TabIndex = 12;
@@ -201,7 +202,7 @@
             this.BtnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCerrar.Location = new System.Drawing.Point(701, 304);
-            this.BtnCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(40, 40);
             this.BtnCerrar.TabIndex = 14;
@@ -218,7 +219,7 @@
             this.BtnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGuardar.Location = new System.Drawing.Point(646, 304);
-            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(40, 40);
             this.BtnGuardar.TabIndex = 13;
@@ -231,7 +232,7 @@
             this.pictureBox1.BackgroundImage = global::SGH_v0._1.Properties.Resources.Room_white;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Location = new System.Drawing.Point(754, 21);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(47, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -335,7 +336,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmDatosHabitacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDatosHabitacion";
