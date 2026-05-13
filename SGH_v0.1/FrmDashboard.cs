@@ -71,19 +71,19 @@ namespace SGH_v0._1
         private void BtnNuevaReserva_Click(object sender, EventArgs e)
         {
             FrmHabitaciones frmHabitaciones = new FrmHabitaciones();
-            frmHabitaciones.ShowDialog();
+            frmHabitaciones.Show();
         }
 
         private void BtnHouseKeeping_Click(object sender, EventArgs e)
         {
             FrmHousekeeping frmHousek = new FrmHousekeeping();
-            frmHousek.ShowDialog();
+            frmHousek.Show();
         }
 
         private void BtnReportes_Click(object sender, EventArgs e)
         {
             FrmReportes frmReportes = new FrmReportes();
-            frmReportes.ShowDialog();
+            frmReportes.Show();
         }
 
         private void DiseñoDTG(DataGridView dgv)
