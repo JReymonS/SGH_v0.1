@@ -1,12 +1,6 @@
 ﻿using Entidades;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SGH_v0._1
@@ -20,14 +14,12 @@ namespace SGH_v0._1
         {
 
             InitializeComponent();
-            //tsMenu.RenderMode = ToolStripRenderMode.System;
             _usuarioActivo = user;
         }
 
         //Cargar permisos de acceso.
         private void FrmHome_Load(object sender, EventArgs e)
         {
-            //tsMenu.Renderer = new ToolStripProfessionalRenderer(new ColoresLimpios());
             tsMenu.Renderer = new PintorSinBordes();
             lblUsuarioActivo.Text = $" {_usuarioActivo.Nombre} ";
             tsbHabitacionReserva.Enabled = false;
@@ -58,6 +50,10 @@ namespace SGH_v0._1
                 }
             }
 
+            Boton(tsbHome);
+            FrmDashboard frmDashboard = new FrmDashboard();
+            frmDashboard.MdiParent = this;
+            frmDashboard.Show();
         }
 
 
@@ -220,7 +216,5 @@ namespace SGH_v0._1
             
             }
         }
-
-
     }
 }

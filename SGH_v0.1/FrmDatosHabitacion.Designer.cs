@@ -108,7 +108,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(196, 228);
+            this.label6.Location = new System.Drawing.Point(193, 228);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(144, 25);
@@ -297,7 +297,7 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
             this.panel5.Controls.Add(this.TxtCosto);
-            this.panel5.Location = new System.Drawing.Point(333, 226);
+            this.panel5.Location = new System.Drawing.Point(334, 226);
             this.panel5.Name = "panel5";
             this.panel5.Padding = new System.Windows.Forms.Padding(1);
             this.panel5.Size = new System.Drawing.Size(108, 34);
