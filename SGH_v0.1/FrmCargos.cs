@@ -21,6 +21,7 @@ namespace SGH_v0._1
 
         public FrmCargos()
         {
+            seleccion = 0;//Correccion
             InitializeComponent();
             mc = new ManejadorCargos();
 
@@ -34,6 +35,10 @@ namespace SGH_v0._1
         //Buscar huesped
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
+            seleccion = 0;//Correccion
+            DtgDatosCargo.DataSource = null;
+            TxtMonto.Text = "0.00";
+
             string busqueda = TxtHuesped.Text.Equals("Buscar huesped...") ? "" : TxtHuesped.Text.Trim('\'');
             string consulta = $"SELECT Id_Reserva, NOMBRE, APELLIDOS, TELEFONO, EMAIL, RFC " +
                               $"FROM v_CargoHuesped " +
@@ -93,6 +98,13 @@ namespace SGH_v0._1
         //Agrega nuevo cargo
         private void BtnAgregarCargo_Click_1(object sender, EventArgs e)
         {
+            if (seleccion == 0) 
+            {
+                MessageBox.Show("Debe seleccionar un huésped antes de agregar un cargo.", "¡AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            
+            
             cargos.Id_Cargo = 0; cargos.Concepto = ""; cargos.Monto = 0m;
 
             FrmDatosCargos fdc = new FrmDatosCargos();
@@ -152,11 +164,13 @@ namespace SGH_v0._1
         //Obtiene los datos del cargo seleccionado para editar o eliminar
         private void DtgDatosCargo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            cargos.Id_Cargo = int.Parse(DtgDatosCargo.Rows[fila].Cells["Id_Cargo"].Value.ToString());
-            cargos.Concepto = DtgDatosCargo.Rows[fila].Cells["CONCEPTO"].Value.ToString();
-            cargos.Monto = decimal.Parse(DtgDatosCargo.Rows[fila].Cells["COSTO"].Value.ToString());
-            cargos.Id_Reserva = seleccion;
-
+            if (e.RowIndex >= 0)//Correccion
+            {
+                cargos.Id_Cargo = int.Parse(DtgDatosCargo.Rows[fila].Cells["Id_Cargo"].Value.ToString());
+                cargos.Concepto = DtgDatosCargo.Rows[fila].Cells["CONCEPTO"].Value.ToString();
+                cargos.Monto = decimal.Parse(DtgDatosCargo.Rows[fila].Cells["COSTO"].Value.ToString());
+                cargos.Id_Reserva = seleccion;
+            }
         }
 
 
@@ -191,6 +205,7 @@ namespace SGH_v0._1
         //Coloca el texto fantasma en la busqueda
         private void TxtHuesped_Leave(object sender, EventArgs e)
         {
+            seleccion = 0;
             if(string.IsNullOrWhiteSpace(TxtHuesped.Text))
             {
                 TxtHuesped.Text = "Buscar huesped...";
